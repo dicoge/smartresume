@@ -4,7 +4,7 @@ import en from './en'
 
 export const i18n = createI18n({
   legacy: false,
-  locale: 'zh-TW',
+  locale: 'en',
   fallbackLocale: 'en',
   messages: {
     'zh-TW': zhTW,

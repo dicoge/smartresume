@@ -2,19 +2,29 @@
 import { useI18n } from 'vue-i18n'
 import type { Project } from '../../types'
 
+import { ref } from 'vue'
+
 defineProps<{
   project: Project
 }>()
 
 const { t } = useI18n()
+const imageError = ref(false)
 </script>
 
 <template>
   <div class="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
     <!-- Project Image -->
     <div class="relative h-48 bg-gradient-to-br from-primary-500 to-primary-700 overflow-hidden">
-      <div class="absolute inset-0 flex items-center justify-center">
-        <span class="text-6xl text-white/20">{{ project.id === 'tradeGuard' ? '📈' : project.id === 'webShareee' ? '🔗' : project.id === 'aiReview' ? '🤖' : '🚀' }}</span>
+      <img 
+        v-if="project.image && !imageError"
+        :src="project.image" 
+        :alt="t(`projects.${project.id}.title`)"
+        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+        @error="imageError = true"
+      />
+      <div v-else class="absolute inset-0 flex items-center justify-center">
+        <span class="text-6xl text-white/80">{{ project.id === 'tradeGuard' ? '📈' : project.id === 'webShareee' ? '🔗' : project.id === 'aiReview' ? '🤖' : '🚀' }}</span>
       </div>
       <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
         <div class="flex gap-3">

@@ -26,6 +26,9 @@ export default {
     devops: {
       title: 'DevOps',
     },
+    production: {
+      title: 'Production Deployment',
+    },
   },
   projects: {
     title: 'Projects',
@@ -41,7 +44,7 @@ export default {
       description: 'Convenient online file sharing platform supporting multiple formats with secure encryption.',
     },
     aiReview: {
-      title: 'AI Review',
+      title: 'AI CodeReview',
       description: 'AI-powered code review tool that automatically detects issues and provides improvement suggestions.',
     },
     template: {

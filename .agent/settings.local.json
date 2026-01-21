@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(pkill:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git tag:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(chmod:*)",
+      "Skill(skill-creator)",
+      "Bash(python3:*)",
+      "Skill(deploy)",
+      "Bash(./deploy.sh:*)"
+    ]
+  }
+}

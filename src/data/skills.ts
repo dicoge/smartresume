@@ -21,4 +21,9 @@ export const skills: Skill[] = [
     icon: '🚀',
     items: ['Docker', 'Kubernetes', 'GitHub Actions', 'AWS', 'Linux'],
   },
+  {
+    id: 'production',
+    icon: '🌐',
+    items: ['Nginx', 'PM2', 'SSL/TLS', 'CI/CD', 'Monitoring'],
+  },
 ]

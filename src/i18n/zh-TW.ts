@@ -26,6 +26,9 @@ export default {
     devops: {
       title: 'DevOps',
     },
+    production: {
+      title: '生產環境部署',
+    },
   },
   projects: {
     title: '專案作品',
@@ -41,7 +44,7 @@ export default {
       description: '便捷的線上檔案分享平台，支援多種檔案格式與安全加密。',
     },
     aiReview: {
-      title: 'AI Review',
+      title: 'AI CodeReview',
       description: 'AI 驅動的程式碼審查工具，自動偵測潛在問題並提供改進建議。',
     },
     template: {
