@@ -68,12 +68,12 @@ export default {
     },
   },
   techStack: {
-    title: '技術棧與技能',
-    subtitle: '我使用的技術與工具',
-    languages: '程式語言',
-    frameworks: '框架',
-    tools: '工具與平台',
-    specializations: '專業領域',
+    title: '技術棧與開發技能',
+    subtitle: '我所使用的技術棧與現代化開發流程',
+    languages: '核心程式語言',
+    frameworks: '前端與 Web 框架',
+    ai_stack: 'AI 原生開發工程',
+    specializations: '專業技術領域',
   },
   stats: {
     title: 'GitHub 統計',

@@ -54,3 +54,13 @@
   - 支援 Python (FastAPI), Node.js (Express), Go (Gin) 三種後端選項。
   - 導入 SDD (Specification-Driven Development) 概念，自動生成 AI 開發指引文件。
   - 大幅降低新專案的環境建置成本。
+
+
+## Project: scalpingTrade
+- **Initial Entry**: {"stats": ["📊 8 Indicators", "🔔 Smart Alerts"], "tags": ["Python", "REST API", "Real-time", "Vibe Code", "AI"]}
+
+## Project: webShareee
+- **Initial Entry**: {"tags": ["React", "Node.js"]}
+
+## Project: subscreen
+- **Initial Entry**: {"tags": ["MicroPython", "Touch UI", "SmartScreen", "IoT"]}

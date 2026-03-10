@@ -1,19 +1,19 @@
 import type { Project } from '../types'
 
 export const projects: Project[] = [
-{
+  {
     id: 'scalpingTrade',
     emoji: '📈',
     category: 'FinTech',
-    tags: ['Python', 'REST API', 'Real-time'],
-    stats: ['⭐ V3.1', '📊 8 Indicators', '🔔 Smart Alerts'],
+    tags: ['Python', 'REST API', 'Real-time', 'Vibe Code', 'AI'],
+    stats: ['📊 8 Indicators', '🔔 Smart Alerts'],
     github: 'https://github.com/Lewsiafat/scalping-trade',
   },
   {
     id: 'lazyBrother',
     emoji: '🤖',
     category: 'FinTech',
-    tags: ['Python', 'LLM', 'SMC'],
+    tags: ['Python', 'LLM', 'SMC', 'AI'],
     stats: ['⭐ 1 Star', '🧠 AI-Powered'],
     github: 'https://github.com/Lewsiafat/LazyBrother',
   },
@@ -21,9 +21,17 @@ export const projects: Project[] = [
     id: 'aiCodeReview',
     emoji: '🔍',
     category: 'AI Tools',
-    tags: ['Python', 'Gemini AI', 'CLI'],
+    tags: ['Python', 'AI', 'CLI'],
     stats: ['⭐ 3 Stars', '🚀 CLI-based'],
     github: 'https://github.com/Lewsiafat/AICodeReviewCLI',
+  },
+  {
+    id: 'subscreen',
+    emoji: '🖥️',
+    category: 'IoT',
+    tags: ['MicroPython', 'Touch UI', 'SmartScreen', 'IoT'],
+    stats: ['⭐ 1 Star', '👆 Touch Display'],
+    github: 'https://github.com/Lewsiafat/Subscreen',
   },
   {
     id: 'picoreW',
@@ -37,17 +45,9 @@ export const projects: Project[] = [
     id: 'webShareee',
     emoji: '🔗',
     category: 'Full-Stack',
-    tags: ['React', 'Node.js', 'S3'],
+    tags: ['React', 'Node.js'],
     stats: ['⭐ 1 Star', '📁 File Sharing'],
     github: 'https://github.com/Lewsiafat/WebShareee',
     demo: 'https://lewsi.ddns.net/WebShareee/',
-  },
-  {
-    id: 'subscreen',
-    emoji: '🖥️',
-    category: 'IoT',
-    tags: ['MicroPython', 'Presto', 'Touch UI'],
-    stats: ['⭐ 1 Star', '👆 Touch Display'],
-    github: 'https://github.com/Lewsiafat/Subscreen',
   },
 ]

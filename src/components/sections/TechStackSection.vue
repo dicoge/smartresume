@@ -7,7 +7,7 @@ const { t } = useI18n()
 const categoryTitleMap: Record<string, string> = {
   languages: 'techStack.languages',
   frameworks: 'techStack.frameworks',
-  tools: 'techStack.tools',
+  ai_stack: 'techStack.ai_stack',
   specializations: 'techStack.specializations',
 }
 </script>

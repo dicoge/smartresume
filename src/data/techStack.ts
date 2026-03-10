@@ -12,9 +12,9 @@ export const techCategories: TechCategory[] = [
     items: ['Vue.js 3', 'Flask / FastAPI', 'TailwindCSS', 'Bootstrap', 'Vite'],
   },
   {
-    id: 'tools',
-    icon: '🔧',
-    items: ['Git & GitHub', 'GitHub Actions', 'VS Code', 'Linux/Unix CLI', 'Raspberry Pi'],
+    id: 'ai_stack',
+    icon: '🧠',
+    items: ['Antigravity', 'Gemini CLI', 'Claude Code', 'SDD (Spec-Driven Development)', 'AI Skills', 'Vibe Coding', 'AI Agents', 'NanoClaw Deploy', 'MCP (Model Context Protocol)', 'AI-Assisted Full-stack'],
   },
   {
     id: 'specializations',

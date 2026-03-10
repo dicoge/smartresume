@@ -69,10 +69,10 @@ export default {
   },
   techStack: {
     title: 'Tech Stack & Skills',
-    subtitle: 'Technologies and tools I work with',
-    languages: 'Languages',
-    frameworks: 'Frameworks',
-    tools: 'Tools & Platforms',
+    subtitle: 'Core Technologies and Modern Workflows',
+    languages: 'Programming Languages',
+    frameworks: 'Web Frameworks & Frontend',
+    ai_stack: 'AI-Native Engineering',
     specializations: 'Specializations',
   },
   stats: {
