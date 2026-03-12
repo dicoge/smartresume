@@ -7,7 +7,7 @@ export default {
   },
   hero: {
     name: 'Lewis Chan',
-    subtitle: 'FinTech Developer | Embedded Systems Enthusiast | AI Toolmaker',
+    subtitle: 'FinTech Developer | AI Co-Developer | AI Toolmaker',
     typingText1: 'Building intelligent trading systems with 8+ technical indicators...',
     typingText2: 'Creating IoT solutions for Raspberry Pi Pico W...',
     typingText3: 'Developing AI-powered developer tools...',

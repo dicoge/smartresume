@@ -26,7 +26,7 @@ const scrollToTop = () => {
             </svg>
           </a>
           <a
-            href="https://linkedin.com/in/lewischan"
+            href="https://www.linkedin.com/in/lewis-chan-78234221/"
             target="_blank"
             rel="noopener noreferrer"
             class="text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"

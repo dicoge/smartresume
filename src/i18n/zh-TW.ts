@@ -7,7 +7,7 @@ export default {
   },
   hero: {
     name: 'Lewis Chan',
-    subtitle: 'FinTech 開發者 | 嵌入式系統愛好者 | AI 工具打造者',
+    subtitle: 'FinTech 開發者 | AI協同開發者 | AI 工具打造者',
     typingText1: '打造具備 8+ 技術指標的智能交易系統...',
     typingText2: '為 Raspberry Pi Pico W 打造 IoT 解決方案...',
     typingText3: '開發 AI 驅動的開發者工具...',
