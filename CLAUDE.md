@@ -63,8 +63,17 @@ TheFooter（社交連結 + Back to Top）
 - **色盤**：primary #4b7049（森林綠）、secondary #9ba38f（鼠尾草）、accent #c4ccaa（橄欖綠）、dark-bg #253124（深林）。
 - **字體**：Space Grotesk + Noto Sans TC。
 
+## Resume Single Source of Truth（進行中）
+
+`ref_src/main.md` 為履歷與 Portfolio 的單一資料源，涵蓋完整個人檔案。搭配 `/resume` skill 透過 guided Q&A 更新，並互動式同步至網站檔案。
+
+- **設計規格**：`docs/superpowers/specs/2026-04-09-resume-single-source-of-truth-design.md`
+- **Skill 位置**：`~/.claude/skills/resume/SKILL.md`
+- **資料流**：`main.md` →（skill sync）→ `src/data/*.ts` + `src/i18n/*.ts` → （手動）→ `public/resume_*.pdf`
+
 ## Customization
 
+- **建議使用 `/resume` skill** 更新履歷與 Portfolio 資料（完成後）
 - 個人資訊：編輯 `src/i18n/zh-TW.ts` 和 `src/i18n/en.ts`
 - 專案：編輯 `src/data/projects.ts`（同步更新 i18n 翻譯檔）
 - 技能條：編輯 `src/data/skills.ts`
