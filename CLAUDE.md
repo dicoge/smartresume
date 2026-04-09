@@ -5,16 +5,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 個人 Portfolio Landing Page（Tech Dark 風格），使用 Vue 3 + Vite + TypeScript + Tailwind CSS 建構。
-展示個人簡介、技能進度條、6 個精選專案（FinTech / IoT / AI Tools / Full-Stack）、技術棧、GitHub 統計與聯絡表單。
+展示個人簡介、技能進度條、7 個精選專案（FinTech / IoT / AI Tools / Full-Stack / Game）、技術棧、GitHub 統計與聯絡表單。
 支援深色/淺色模式切換與多語言（繁體中文/英文），Hero 區塊含打字動畫效果。
 
 ## Commands
 
 ```bash
-npm run dev      # 啟動開發伺服器
-npm run build    # TypeScript 型別檢查 (vue-tsc) + Vite 建置
-npm run preview  # 預覽建置結果
-npm run deploy   # 建置並部署至 VPS (rsync dist/ 到 lewsi.ddns.net)
+npm run dev        # 啟動開發伺服器
+npm run build      # TypeScript 型別檢查 (vue-tsc) + Vite 建置
+npm run preview    # 預覽建置結果
+npm run deploy     # 建置並部署至 VPS (rsync dist/ 到 lewsi.ddns.net，需 bash)
+npm run deploy:ps  # 同上，PowerShell 版本
 ```
 
 ## Architecture
@@ -37,7 +38,7 @@ src/
 TheHeader（固定頂部，導覽：About / Projects / Tech Stack / Contact）
   HeroSection          — 全屏、打字動畫、漸層背景、CTA
   AboutSection         — 個人介紹 + 技能進度條（IntersectionObserver 動畫）
-  ProjectsSection      — 篩選按鈕（All/FinTech/IoT/AI Tools/Full-Stack）+ 6 專案卡片（3 欄）
+  ProjectsSection      — 篩選按鈕（All/FinTech/IoT/AI Tools/Full-Stack/Game）+ 7 專案卡片（3 欄）
   TechStackSection     — 4 欄技術分類清單
   StatsSection         — 4 個 GitHub 統計卡片
   ContactSection       — 聯絡資訊 + 表單（placeholder，待接後端）
@@ -59,8 +60,8 @@ TheFooter（社交連結 + Back to Top）
 - **技能條動畫**：`AboutSection` 使用 `IntersectionObserver` 觸發，初始 `width: 0` → 實際百分比的 CSS transition。
 - **深色模式**：透過 `document.documentElement.classList.add('dark')` 切換，偏好設定存於 `localStorage('theme')`。
 - **語言設定**：存於 `localStorage('locale')`，預設偵測瀏覽器語言。
-- **色盤**：primary #667eea（藍紫）、secondary #764ba2（紫）、accent #10b981（綠）。
-- **字體**：Inter + Noto Sans TC。
+- **色盤**：primary #4b7049（森林綠）、secondary #9ba38f（鼠尾草）、accent #c4ccaa（橄欖綠）、dark-bg #253124（深林）。
+- **字體**：Space Grotesk + Noto Sans TC。
 
 ## Customization
 
