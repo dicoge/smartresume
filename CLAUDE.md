@@ -4,11 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Portfolio template website + AI Agent resume management system. Built with Vue 3 + Vite + TypeScript + Tailwind CSS.
-Provides a ready-to-use personal Portfolio Landing Page (Tech Dark style) with an AI Agent Skill for automated resume data management.
-Users can update all website content and resume PDFs through the `/update-resume` skill without manually editing multiple files.
+AI-powered personal branding toolkit: Portfolio website + resume management + job application automation.
+Built with Vue 3 + Vite + TypeScript + Tailwind CSS. Supports dark/light mode and i18n (Traditional Chinese / English).
 
-Supports dark/light mode toggle and i18n (Traditional Chinese / English) with typing animation in the Hero section.
+Users can update all website content and resume PDFs through AI Skills (`/update-resume`, `/jd-match`, `/job-apply`, `/job-release`, `/theme-extractor`) without manually editing multiple files.
 
 ## Commands
 
@@ -35,6 +34,14 @@ ref_src/
 ├── main.md            # Resume SSOT (Single Source of Truth)
 ├── resume_zh.md       # Chinese resume markdown (PDF source)
 └── resume_en.md       # English resume markdown (PDF source)
+
+output/                # AI Skills output
+├── jd-analysis/       # JD match analysis reports
+├── cover-letters/     # Generated cover letters
+└── releases/          # Archived application packages (committed by /job-release)
+
+.claude/skills/        # Skill definitions (read by Claude Code)
+.agent/skills/         # Skill definitions (read by other agents, synced with .claude/)
 ```
 
 ## Page Structure (Section Order)
@@ -65,18 +72,39 @@ TheFooter (social links + Back to Top)
 - **Skill bar animation**: `AboutSection` uses `IntersectionObserver` to trigger CSS transition from `width: 0` to actual percentage.
 - **Dark mode**: Toggles via `document.documentElement.classList.add('dark')`, preference stored in `localStorage('theme')`.
 - **Locale**: Stored in `localStorage('locale')`, defaults to browser language detection.
-- **Color palette**: primary #4b7049 (forest green), secondary #9ba38f (sage), accent #c4ccaa (olive), dark-bg #253124 (deep forest).
+- **Color palette**: Autumn Sunset theme — primary #f4a261 (coral), secondary #c1666b (terracotta), accent #e9c46a (warm sand), dark-bg #264653 (deep teal).
 - **Fonts**: Space Grotesk + Noto Sans TC.
 
-## Resume Management — AI Agent Skill
+## AI Skills
 
-`ref_src/main.md` is the Single Source of Truth (SSOT) for all resume and portfolio data.
-Use the `/update-resume` skill for guided Q&A updates with interactive sync to website files.
+All skills are stored in `.claude/skills/` and `.agent/skills/` (identical content).
 
-- **SSOT file**: `ref_src/main.md`
-- **Design spec**: `docs/superpowers/specs/2026-04-09-resume-single-source-of-truth-design.md`
-- **Skill location**: `.claude/skills/` and `.agent/skills/` (identical content)
+### Resume & Job Application Pipeline
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| `update-resume` | `/update-resume` | Interactive resume update, SSOT sync to website + PDF |
+| `jd-match` | `/jd-match` | JD match analysis + Cover Letter generation |
+| `job-apply` | `/job-apply` | Create `apply/*` branch, customize resume for target job |
+| `job-release` | `/job-release` | Archive application package to `output/releases/` |
+| `theme-extractor` | `/theme-extractor` | Extract color palette from URL/screenshot and apply |
+
+### Pipeline Flow
+
+```
+/jd-match → /job-apply → /job-release
+```
+
+- `/jd-match`: Analyze JD, produce match report + cover letter in `output/`
+- `/job-apply`: Create `apply/{company}-{position}` branch, customize `ref_src/main.md`, sync website + PDF
+- `/job-release`: Archive PDFs, JD analysis, cover letter, main.md snapshot, dist/ to `output/releases/{company}-{date}/`
+
+### Key Concepts
+
+- **SSOT**: `ref_src/main.md` is the single source of truth for all resume and portfolio data
 - **Data flow**: `main.md` → (skill sync) → `src/data/*.ts` + `src/i18n/*.ts` → `public/resume_*.pdf`
+- **Branch strategy**: `master` stays generic; `apply/*` branches hold per-job customization
+- **Design spec**: `docs/superpowers/specs/2026-04-09-resume-single-source-of-truth-design.md`
 
 ### Quick Start (Using as Template)
 
