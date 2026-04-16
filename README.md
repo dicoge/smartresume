@@ -97,9 +97,9 @@ npm run build
 
 ```mermaid
 flowchart LR
-    A["main.md SSOT"] -- update-resume --> B["data + i18n"]
-    A -- PDF --> C["resume PDF"]
-    B -- build --> D["Portfolio"]
+    A[ref_src/main.md\nSSOT] -->|update-resume| B[src/data + i18n]
+    A -->|PDF 產生| C[resume PDF]
+    B -->|npm run build| D[Portfolio 網站]
 ```
 
 ---
@@ -147,15 +147,16 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    A(["發現目標職缺"]) --> B["jd-match 職缺比對分析"]
-    B --> C{"匹配度OK?"}
-    C -- 是 --> D["job-apply 客製化履歷"]
-    C -- 否 --> E(["跳過"])
-    D --> F["job-release 封存資料包"]
-    F --> G[("releases")]
+    A([發現目標職缺]) --> B[/jd-match 職缺比對分析/]
+    B --> C{匹配度 OK?}
+    C -->|是| D[/job-apply 建立應徵紀錄/]
+    C -->|否| E([跳過此職缺])
+    D --> F[整理\n・cover letter\n・履歷 PDF・應徵資料]
+    F --> G[/job-release 封存應徵資料包/]
+    G --> H[(output/releases/\ncompany-date/)]
 
     style A fill:#4b7049,color:#fff
-    style G fill:#253124,color:#9ba38f
+    style H fill:#253124,color:#9ba38f
 ```
 
 ---
