@@ -1,12 +1,17 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { githubStats } from '../../data/stats'
+import { useScrollReveal } from '../../composables/useScrollReveal'
 
 const { t } = useI18n()
+
+const sectionRef = ref<HTMLElement | null>(null)
+useScrollReveal(sectionRef)
 </script>
 
 <template>
-  <section class="py-20 bg-primary-50 dark:bg-dark-card/50">
+  <section ref="sectionRef" class="py-20 bg-primary-50 dark:bg-dark-card/50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">{{ t('stats.title') }}</h2>
       <p class="section-subtitle">{{ t('stats.subtitle') }}</p>

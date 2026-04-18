@@ -29,7 +29,7 @@ const closeMenu = () => {
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <a href="#" class="text-xl font-bold gradient-text">
-          LC
+          {{ t('hero.initials') }}
         </a>
 
         <!-- Desktop Navigation -->

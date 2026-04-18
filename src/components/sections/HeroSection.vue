@@ -16,7 +16,7 @@ const typingTexts = computed(() => [
   t('hero.typingText4'),
 ])
 
-const { displayText } = useTyping(typingTexts.value)
+const { displayText } = useTyping(typingTexts)
 
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })

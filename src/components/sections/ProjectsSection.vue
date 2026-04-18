@@ -4,9 +4,13 @@ import { useI18n } from 'vue-i18n'
 import ProjectCard from '../ui/ProjectCard.vue'
 import { projects } from '../../data/projects'
 import type { ProjectCategory } from '../../types'
+import { useScrollReveal } from '../../composables/useScrollReveal'
 
 const { t } = useI18n()
 const activeFilter = ref<ProjectCategory>('All')
+
+const sectionRef = ref<HTMLElement | null>(null)
+useScrollReveal(sectionRef)
 
 const filters: { key: string; value: ProjectCategory }[] = [
   { key: 'projects.filterAll', value: 'All' },
@@ -25,7 +29,7 @@ const filteredProjects = computed(() => {
 </script>
 
 <template>
-  <section id="projects" class="py-20 bg-primary-50 dark:bg-dark-card/50">
+  <section ref="sectionRef" id="projects" class="py-20 bg-primary-50 dark:bg-dark-card/50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">{{ t('projects.title') }}</h2>
       <p class="section-subtitle">{{ t('projects.subtitle') }}</p>

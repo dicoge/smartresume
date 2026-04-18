@@ -2,8 +2,12 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { skillBars } from '../../data/skills'
+import { useScrollReveal } from '../../composables/useScrollReveal'
 
 const { t } = useI18n()
+
+const sectionRef = ref<HTMLElement | null>(null)
+useScrollReveal(sectionRef)
 const skillsVisible = ref(false)
 const skillsRef = ref<HTMLElement | null>(null)
 let observer: IntersectionObserver | null = null
@@ -29,7 +33,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section id="about" class="py-20 bg-ivory dark:bg-dark-bg">
+  <section ref="sectionRef" id="about" class="py-20 bg-ivory dark:bg-dark-bg">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">{{ t('about.title') }}</h2>
       <p class="section-subtitle">{{ t('about.subtitle') }}</p>

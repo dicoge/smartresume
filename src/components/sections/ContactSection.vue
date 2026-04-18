@@ -1,8 +1,17 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { contact } from '../../data/contact'
+import { useScrollReveal } from '../../composables/useScrollReveal'
 
 const { t } = useI18n()
+
+const sectionRef = ref<HTMLElement | null>(null)
+useScrollReveal(sectionRef)
+
+// Formspree endpoint — replace YOUR_FORM_ID with your Formspree form ID
+// Get one free at https://formspree.io (no backend needed)
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
 
 const form = ref({
   name: '',
@@ -11,13 +20,43 @@ const form = ref({
   message: '',
 })
 
-const handleSubmit = () => {
-  alert('Thank you for your message! This feature will be connected to a backend service soon.')
+const status = ref<'idle' | 'sending' | 'success' | 'error'>('idle')
+
+const handleSubmit = async () => {
+  if (FORMSPREE_ENDPOINT.includes('YOUR_FORM_ID')) {
+    // Formspree not configured — show a helpful message
+    status.value = 'error'
+    setTimeout(() => (status.value = 'idle'), 4000)
+    return
+  }
+
+  status.value = 'sending'
+  try {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        name: form.value.name,
+        email: form.value.email,
+        subject: form.value.subject,
+        message: form.value.message,
+      }),
+    })
+    if (res.ok) {
+      status.value = 'success'
+      form.value = { name: '', email: '', subject: 'inquiry', message: '' }
+    } else {
+      status.value = 'error'
+    }
+  } catch {
+    status.value = 'error'
+  }
+  setTimeout(() => (status.value = 'idle'), 5000)
 }
 </script>
 
 <template>
-  <section id="contact" class="py-20 bg-ivory dark:bg-dark-bg">
+  <section ref="sectionRef" id="contact" class="py-20 bg-ivory dark:bg-dark-bg">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">{{ t('contact.title') }}</h2>
       <p class="section-subtitle">{{ t('contact.subtitle') }}</p>
@@ -32,7 +71,9 @@ const handleSubmit = () => {
               <span class="text-2xl">🐙</span>
               <div>
                 <div class="font-medium text-primary-900 dark:text-white">{{ t('contact.github') }}</div>
-                <a href="https://github.com/sample-user" target="_blank" rel="noopener noreferrer" class="text-primary-500 hover:text-primary-400">@sample-user</a>
+                <a :href="contact.github.url" target="_blank" rel="noopener noreferrer" class="text-primary-500 hover:text-primary-400">
+                  {{ contact.github.handle }}
+                </a>
               </div>
             </div>
 
@@ -40,7 +81,9 @@ const handleSubmit = () => {
               <span class="text-2xl">📧</span>
               <div>
                 <div class="font-medium text-primary-900 dark:text-white">{{ t('contact.email') }}</div>
-                <a href="mailto:alex.chen@example.com" class="text-primary-500 hover:text-primary-400">alex.chen@example.com</a>
+                <a :href="`mailto:${contact.email.address}`" class="text-primary-500 hover:text-primary-400">
+                  {{ contact.email.address }}
+                </a>
               </div>
             </div>
 
@@ -48,7 +91,7 @@ const handleSubmit = () => {
               <span class="text-2xl">📍</span>
               <div>
                 <div class="font-medium text-primary-900 dark:text-white">{{ t('contact.location') }}</div>
-                <span>{{ t('contact.locationValue') }}</span>
+                <span>{{ contact.location }}</span>
               </div>
             </div>
           </div>
@@ -67,6 +110,16 @@ const handleSubmit = () => {
         <!-- Contact Form -->
         <div class="bg-primary-50 dark:bg-dark-card p-8 rounded-2xl border border-primary-100 dark:border-dark-border">
           <h3 class="text-accent-500 font-semibold text-lg mb-6">{{ t('contact.formTitle') }}</h3>
+
+          <!-- Success message -->
+          <div v-if="status === 'success'" class="mb-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-700 dark:text-green-400 text-sm">
+            ✅ {{ t('contact.successMessage') }}
+          </div>
+
+          <!-- Error message -->
+          <div v-else-if="status === 'error'" class="mb-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-700 dark:text-red-400 text-sm">
+            ⚠️ {{ t('contact.errorMessage') }}
+          </div>
 
           <form @submit.prevent="handleSubmit" class="space-y-5">
             <div>
@@ -115,8 +168,13 @@ const handleSubmit = () => {
               />
             </div>
 
-            <button type="submit" class="btn-primary w-full">
-              {{ t('contact.send') }} →
+            <button
+              type="submit"
+              :disabled="status === 'sending'"
+              class="btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              <span v-if="status === 'sending'">{{ t('contact.sending') }}...</span>
+              <span v-else>{{ t('contact.send') }} →</span>
             </button>
           </form>
         </div>
