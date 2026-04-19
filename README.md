@@ -259,6 +259,25 @@ npm run preview # 預覽建構結果
 
 ---
 
+### 🔐 環境變數
+
+在專案根目錄建立 `.env.local`（已被 `.gitignore` 排除）來設定選用變數：
+
+```bash
+# Google Analytics（選用）— 未設定則 GA 腳本不會注入
+VITE_GA_ID=G-XXXXXXXXXX
+
+# Contact form Formspree ID（選用）— 未設定則表單送出會顯示錯誤提示
+VITE_FORMSPREE_ID=xxxxxxxx
+```
+
+| 變數 | 必填 | 用途 |
+|------|------|------|
+| `VITE_GA_ID` | 否 | Google Analytics 4 追蹤 ID（格式 `G-XXXXXXXXXX`）。由 [src/analytics.ts](src/analytics.ts) 在執行時讀取，若未設定則完全略過注入 `gtag.js`。 |
+| `VITE_FORMSPREE_ID` | 否 | [Formspree](https://formspree.io) 表單 ID（取自 form URL `formspree.io/f/<id>` 的 `<id>` 部分）。未設定時 [ContactSection.vue](src/components/sections/ContactSection.vue) 的送出動作會顯示錯誤，提示使用者改寄 Email。 |
+
+---
+
 ## 🇬🇧 English Guide
 
 ### ✨ Features
@@ -407,3 +426,22 @@ SmartResume/
 | i18n | vue-i18n (zh-TW / EN) |
 | Build | Vite + TypeScript |
 | AI Skills | Claude Code / General Agent / Gemini CLI |
+
+---
+
+### 🔐 Environment Variables
+
+Create `.env.local` at the project root (gitignored) for optional config:
+
+```bash
+# Google Analytics (optional) — gtag.js is skipped entirely when unset
+VITE_GA_ID=G-XXXXXXXXXX
+
+# Contact form Formspree ID (optional) — form shows an error toast when unset
+VITE_FORMSPREE_ID=xxxxxxxx
+```
+
+| Variable | Required | Purpose |
+|----------|----------|---------|
+| `VITE_GA_ID` | No | Google Analytics 4 measurement ID (`G-XXXXXXXXXX`). Read at runtime by [src/analytics.ts](src/analytics.ts); when unset the gtag script is not injected at all. |
+| `VITE_FORMSPREE_ID` | No | [Formspree](https://formspree.io) form ID — the `<id>` part of `formspree.io/f/<id>`. When unset [ContactSection.vue](src/components/sections/ContactSection.vue) gracefully shows an error prompting users to email you directly. |

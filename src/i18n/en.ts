@@ -7,6 +7,7 @@ export default {
   },
   hero: {
     name: 'Alex Chen',
+    initials: 'AC',
     subtitle: 'Full-Stack Developer | AI Enthusiast | Open Source Contributor',
     typingText1: 'Building high-performance web applications...',
     typingText2: 'Exploring AI and machine learning possibilities...',
@@ -99,6 +100,9 @@ export default {
     messageLabel: 'Message',
     messagePlaceholder: 'Your message...',
     send: 'Send Message',
+    sending: 'Sending',
+    successMessage: "Message sent! I'll get back to you soon.",
+    errorMessage: 'Failed to send. Please email me directly using the address above.',
   },
   footer: {
     designedBy: 'Designed & Built by Alex Chen',

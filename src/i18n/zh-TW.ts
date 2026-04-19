@@ -7,6 +7,7 @@ export default {
   },
   hero: {
     name: 'Alex Chen',
+    initials: 'AC',
     subtitle: '全端開發者 | AI 愛好者 | 開源貢獻者',
     typingText1: '打造高效能的 Web 應用程式...',
     typingText2: '探索 AI 與機器學習的可能性...',
@@ -99,6 +100,9 @@ export default {
     messageLabel: '訊息',
     messagePlaceholder: '您的訊息...',
     send: '發送訊息',
+    sending: '發送中',
+    successMessage: '訊息已送出！我會盡快回覆您。',
+    errorMessage: '發送失敗，請直接寄信至上方 Email。',
   },
   footer: {
     designedBy: 'Designed & Built by Alex Chen',

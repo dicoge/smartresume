@@ -1,8 +1,13 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { techCategories } from '../../data/techStack'
+import { useScrollReveal } from '../../composables/useScrollReveal'
 
 const { t } = useI18n()
+
+const sectionRef = ref<HTMLElement | null>(null)
+useScrollReveal(sectionRef)
 
 const categoryTitleMap: Record<string, string> = {
   languages: 'techStack.languages',
@@ -13,7 +18,7 @@ const categoryTitleMap: Record<string, string> = {
 </script>
 
 <template>
-  <section id="tech" class="py-20 bg-ivory dark:bg-dark-bg">
+  <section ref="sectionRef" id="tech" class="py-20 bg-ivory dark:bg-dark-bg">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">{{ t('techStack.title') }}</h2>
       <p class="section-subtitle">{{ t('techStack.subtitle') }}</p>

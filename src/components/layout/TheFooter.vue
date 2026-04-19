@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { contact } from '../../data/contact'
 
 const { t } = useI18n()
 
@@ -15,7 +16,7 @@ const scrollToTop = () => {
         <!-- Social Links -->
         <div class="flex items-center space-x-6">
           <a
-            href="https://github.com/sample-user"
+            :href="contact.github.url"
             target="_blank"
             rel="noopener noreferrer"
             class="text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
@@ -26,7 +27,7 @@ const scrollToTop = () => {
             </svg>
           </a>
           <a
-            href="https://www.linkedin.com/in/sample-user/"
+            :href="contact.linkedin.url"
             target="_blank"
             rel="noopener noreferrer"
             class="text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
@@ -37,7 +38,7 @@ const scrollToTop = () => {
             </svg>
           </a>
           <a
-            href="mailto:alex.chen@example.com"
+            :href="`mailto:${contact.email.address}`"
             class="text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
             aria-label="Email"
           >
