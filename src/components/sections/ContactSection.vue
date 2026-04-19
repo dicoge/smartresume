@@ -9,9 +9,12 @@ const { t } = useI18n()
 const sectionRef = ref<HTMLElement | null>(null)
 useScrollReveal(sectionRef)
 
-// Formspree endpoint — replace YOUR_FORM_ID with your Formspree form ID
-// Get one free at https://formspree.io (no backend needed)
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+// Set VITE_FORMSPREE_ID in .env.local to enable the contact form.
+// Get a free form ID at https://formspree.io (no backend needed).
+const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_ID
+const FORMSPREE_ENDPOINT = FORMSPREE_FORM_ID
+  ? `https://formspree.io/f/${FORMSPREE_FORM_ID}`
+  : ''
 
 const form = ref({
   name: '',
@@ -23,7 +26,7 @@ const form = ref({
 const status = ref<'idle' | 'sending' | 'success' | 'error'>('idle')
 
 const handleSubmit = async () => {
-  if (FORMSPREE_ENDPOINT.includes('YOUR_FORM_ID')) {
+  if (!FORMSPREE_ENDPOINT) {
     // Formspree not configured — show a helpful message
     status.value = 'error'
     setTimeout(() => (status.value = 'idle'), 4000)

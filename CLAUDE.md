@@ -93,4 +93,13 @@ Use the `/update-resume` skill for guided Q&A updates with interactive sync to w
 - Skill bars: Edit `src/data/skills.ts`
 - Tech stack: Edit `src/data/techStack.ts` (sync i18n translation files)
 - GitHub stats: Edit `src/data/stats.ts` (sync i18n translation files)
-- Contact form: Currently a UI placeholder, can integrate Formspree or similar services
+- Contact form: Uses Formspree. Set `VITE_FORMSPREE_ID` in `.env.local` (get a free form ID at [formspree.io](https://formspree.io)). When unset the form shows an error prompting users to email directly — no submission is attempted.
+
+## Environment Variables
+
+Optional `.env.local` at project root (gitignored):
+
+| Variable | Purpose |
+|----------|---------|
+| `VITE_GA_ID` | Google Analytics 4 measurement ID (`G-XXXXXXXXXX`). Read at runtime by [src/analytics.ts](src/analytics.ts); when unset the gtag script is not injected at all. |
+| `VITE_FORMSPREE_ID` | [Formspree](https://formspree.io) form ID — the `<id>` part of `formspree.io/f/<id>`. Used by [ContactSection.vue](src/components/sections/ContactSection.vue). Absent → contact form shows a friendly error instead of submitting. |
