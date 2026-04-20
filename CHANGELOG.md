@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 Format based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.2.1] - 2026-04-20
+
+### Fixed
+- **README clone URL** — replaced real GitHub username `Lewsifat` with `<your-username>` placeholder in both zh-TW and English Quick Start sections
+- **Stale `stats.ts` id naming** — renamed `pythonPercent` → `tsPercent` to match the TypeScript label (was a legacy name from before the template conversion)
+- **Docs/font drift** — CLAUDE.md / AGENTS.md now correctly state the bundled fonts as `Inter + Noto Sans TC` (was outdated `Space Grotesk`)
+
+### Removed
+- **Orphan project category filters** — `FinTech` / `IoT` / `Game` dropped from `ProjectCategory` union, i18n keys (`filterFinTech` / `filterIoT` / `filterGame`), and `ProjectsSection.vue` filter list; they no longer matched any entry in `projects.ts`
+- **Legacy `.gemini/skills/`** — deleted `repo-sync` and `project-info-manager` (referenced non-existent paths and leaked an author-specific GitHub URL via comments); the `.gemini/` directory is now gone entirely
+
+### Added
+- **Content audit artifacts** — `specs/scan-for-old-projects-info-or-personal.md` (spec), `specs/scan-for-old-projects-info-or-personal-walkthrough.md`, and `output/content-audit-2026-04-20.md` (full audit report with fix status and open follow-ups)
+
 ## [1.2.0] - 2026-04-20
 
 ### Added
