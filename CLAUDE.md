@@ -135,4 +135,6 @@ Optional `.env.local` at project root (gitignored):
 
 ## Deployment
 
-Manual deploy via GitHub Actions is configured in [.github/workflows/deploy.yml](.github/workflows/deploy.yml) (trigger: `workflow_dispatch`). Full setup — SSH deploy key, GitHub Secrets, Nginx server block, troubleshooting — is documented in [docs/deployment.md](docs/deployment.md).
+Fork users: start with [docs/deploy-options.md](docs/deploy-options.md) for step-by-step guides covering Vercel, Netlify, Cloudflare Pages, and GitHub Pages. Each doc ships in zh (`.md`) and en (`.en.md`).
+
+For self-hosted VPS with the built-in `.github/workflows/deploy.yml` (trigger: `workflow_dispatch`) — SSH deploy key, GitHub Secrets, and Nginx server block — see [docs/deployment.md](docs/deployment.md) / [docs/deployment.en.md](docs/deployment.en.md).

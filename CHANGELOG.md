@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 Format based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.3.1] - 2026-04-21
+
+### Added
+- **`docs/deploy-options.md`** — fork-friendly deployment guide covering Vercel / Netlify / Cloudflare Pages / GitHub Pages with a quick-comparison table and step-by-step instructions (intentionally excludes self-hosted VPS; defers to `deployment.md`)
+- **`docs/deploy-options.en.md`** and **`docs/deployment.en.md`** — English counterparts of the deployment docs, matching the `README.md` / `README.en.md` bilingual convention; each language version cross-links to the other at the top
+
+### Changed
+- **`docs/deployment.md` sanitized** — personal data replaced with generic placeholders (`lewsi.ddns.net` → `your-domain.example.com`, VPS user `lewsi` → `deploy`, deploy path `/home/lewsi/workspace/SmartResumeBuild/smartresume` → `/var/www/smartresume`) so fork users can follow the doc directly
+- **README deploy sections** — both zh and en versions now link to `docs/deploy-options.md` first and treat `docs/deployment.md` as the advanced/self-hosted VPS option
+
 ## [1.3.0] - 2026-04-20
 
 ### Added
