@@ -1,5 +1,7 @@
 # Deployment — VPS + GitHub Actions
 
+> English version: [deployment.en.md](./deployment.en.md).
+
 本文件說明如何透過 GitHub Actions 手動觸發 `Deploy to VPS` workflow，將 Portfolio 靜態網站部署到自有 VPS（Nginx 架設）。
 
 ## 架構
@@ -8,9 +10,9 @@
 GitHub master → (manual) workflow_dispatch → GitHub Actions runner
     ↓ npm ci → npm run build (VITE_BASE=/smartresume/)
     ↓ rsync dist/ → VPS
-VPS: /home/lewsi/workspace/SmartResumeBuild/smartresume/  ← Nginx root
+VPS: /var/www/smartresume/  ← Nginx root
     ↓
-https://lewsi.ddns.net/smartresume/
+https://your-domain.example.com/smartresume/
 ```
 
 ## 一次性設定（僅需做一次）
@@ -41,17 +43,18 @@ GitHub repo → **Settings** → **Secrets and variables** → **Actions** → *
 
 | Name | Value | 說明 |
 |------|-------|------|
-| `VPS_HOST` | `lewsi.ddns.net` | VPS 連線位址（domain 或 IP） |
-| `VPS_USER` | `lewsi` | SSH 使用者名稱 |
+| `VPS_HOST` | `your-domain.example.com` | VPS 連線位址（domain 或 IP） |
+| `VPS_USER` | `deploy` | SSH 使用者名稱 |
 | `VPS_SSH_KEY` | 步驟 2 複製的整段私鑰 | Deploy key 私鑰 |
-| `VPS_DEPLOY_PATH` | `/home/lewsi/workspace/SmartResumeBuild/smartresume` | 部署目標目錄（不要加結尾斜線） |
+| `VPS_DEPLOY_PATH` | `/var/www/smartresume` | 部署目標目錄（不要加結尾斜線） |
 
 ### 4. 在 VPS 建立目標目錄並設定 Nginx
 
 建立目錄：
 
 ```bash
-mkdir -p /home/lewsi/workspace/SmartResumeBuild/smartresume
+sudo mkdir -p /var/www/smartresume
+sudo chown -R $USER:$USER /var/www/smartresume
 ```
 
 Nginx server block 範例（請依實際站台調整，並記得 `nginx -t && systemctl reload nginx`）：
@@ -59,17 +62,17 @@ Nginx server block 範例（請依實際站台調整，並記得 `nginx -t && sy
 ```nginx
 server {
     listen 80;
-    server_name lewsi.ddns.net;
+    server_name your-domain.example.com;
 
     location /smartresume/ {
-        alias /home/lewsi/workspace/SmartResumeBuild/smartresume/;
+        alias /var/www/smartresume/;
         try_files $uri $uri/ /smartresume/index.html;
         index index.html;
     }
 }
 ```
 
-> 後續若要啟用 HTTPS，可用 `certbot --nginx -d lewsi.ddns.net` 自動設定 Let's Encrypt 憑證。
+> 後續若要啟用 HTTPS，可用 `certbot --nginx -d your-domain.example.com` 自動設定 Let's Encrypt 憑證。
 
 ## 觸發部署
 

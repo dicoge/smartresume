@@ -251,7 +251,7 @@ npm run build   # TypeScript 型別檢查 + Vite 建構
 npm run preview # 預覽建構結果
 ```
 
-建構產出在 `dist/` 目錄，可部署到 GitHub Pages、Vercel、Netlify 或自有 VPS。
+建構產出在 `dist/` 目錄，可部署到 GitHub Pages、Vercel、Netlify、Cloudflare Pages 或自有 VPS。各平台的步驟整理於 [docs/deploy-options.md](docs/deploy-options.md)（推薦 fork 使用者先看這份）。
 
 **GitHub Actions 部署到 VPS（subpath）**
 

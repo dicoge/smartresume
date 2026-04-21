@@ -56,7 +56,7 @@ Interactive Q&A — AI syncs everything to website files and generates resume PD
 npm run build
 ```
 
-For GitHub Actions deployment to a VPS (subpath, e.g. `/smartresume/`), see [docs/deployment.md](docs/deployment.md) for SSH key setup, GitHub Secrets, and Nginx config. Pass `VITE_BASE` at build time:
+Output lives in `dist/` — deploy to any static host. See [docs/deploy-options.en.md](docs/deploy-options.en.md) for step-by-step guides (Vercel, Netlify, Cloudflare Pages, GitHub Pages). For self-hosted VPS + GitHub Actions, see [docs/deployment.en.md](docs/deployment.en.md). For a subpath build (e.g. `/smartresume/`), pass `VITE_BASE`:
 
 ```bash
 VITE_BASE=/smartresume/ npm run build
