@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 Format based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.3.2] - 2026-04-27
+
+### Added
+- **Education / 學歷 in `update-resume` skill workflow** — `update-resume` SKILL.md (mirrored across `.claude/` and `.agent/`) now treats Education as a first-class step rather than a thin menu addition: Step 2 menu adds option 8 `更新 Education (學歷)`; Step 3 has an Education-specific Q&A block (school zh/en, department zh/en, degree, dates, optional notes) plus a `main.md` insertion-format example; Step 4 lists the Education item structural format; Step 6 covers school-name conventions and degree abbreviations (BS / MS / PhD) in the translation notes; the web-sync mapping table marks Education as resume-only; Step 8 summary adds a `學歷異動` field; Notes section lists Education alongside Professional Summary and Work Experience as resume-only content
+- **Sample Education entries** in `ref_src/main.md`, `ref_src/resume_zh.md`, and `ref_src/resume_en.md` — placeholder data (Sample University, Sample Senior High School) demonstrating the section format for fork users
+- **Regenerated** `public/resume_zh.pdf` / `public/resume_en.pdf` to include the new Education section, verified to land between Work Experience and Side Projects
+
+### Fixed
+- **Stale filename references in `update-resume` SKILL.md** — five locations across File Locations, Step 6 sync, and Step 7 PDF generation pointed at `ref_src/resume_new.md`, a file removed during the Apr 10 cleanup. They now point at `ref_src/resume_zh.md`. Also removed the `歷史版本（不需更新）` line that referenced the long-gone `resume_full.md` / `resume_updated.md`. The PDF generation step now runs end-to-end without manual filename substitution
+
 ## [1.3.1] - 2026-04-21
 
 ### Added
