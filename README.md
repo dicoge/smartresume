@@ -258,7 +258,7 @@ npm run preview # 預覽建構結果
 兩種方式擇一（皆於 [docs/deployment.md](docs/deployment.md) 完整說明）：
 
 - **GitHub Actions：** 內建 `.github/workflows/deploy.yml`（手動觸發），SSH key 放 GitHub Secrets
-- **本機 build + rsync：** `npm run deploy`（讀 `.env.local`），不依賴 CI、本機直接推送
+- **本機 build + rsync：** `npm run deploy`（讀 `.env` 或 `.env.local`），不依賴 CI、本機直接推送
 
 若部署到 subpath（例如 `/smartresume/`），build 時需帶 `VITE_BASE` 環境變數：
 

@@ -98,9 +98,9 @@ Open `dist/index.html` and you should see `<script src="/smartresume/assets/xxx.
 
 If you don't want to use GitHub Actions (private projects, don't want SSH keys in GitHub Secrets, want to deploy immediately without waiting on CI), use the bundled `scripts/deploy.sh` to build locally and rsync to your VPS.
 
-### 1. Configure `.env.local`
+### 1. Configure the env file
 
-Create `.env.local` at the project root (already gitignored, never committed):
+Create `.env` or `.env.local` at the project root (both gitignored, never committed; if both exist, `.env.local` overrides `.env`, matching Vite's convention):
 
 ```bash
 VPS_HOST=your-domain.example.com

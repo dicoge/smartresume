@@ -98,9 +98,9 @@ npm run preview -- --base /smartresume/
 
 如果你不想用 GitHub Actions（例如：私人專案、不想把 SSH key 放 GitHub Secrets、想立即部署不等 CI），可改用本機腳本 `scripts/deploy.sh`，直接從本機 `npm run build` 後 rsync 到 VPS。
 
-### 1. 設定 `.env.local`
+### 1. 設定環境變數檔
 
-在專案根目錄建立 `.env.local`（已被 `.gitignore`，不會 commit）：
+在專案根目錄建立 `.env` 或 `.env.local`（兩者都已被 `.gitignore`，不會 commit；若兩個都存在，`.env.local` 會覆蓋 `.env`，比照 Vite 慣例）：
 
 ```bash
 VPS_HOST=your-domain.example.com

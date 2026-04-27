@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # Local build + rsync to VPS — alternative to the GitHub Actions workflow.
 #
-# Reads VPS settings from .env.local (gitignored). Required keys:
+# Reads VPS settings from .env and/or .env.local (both gitignored).
+# Loading order matches Vite convention: .env first, .env.local overrides.
+# Required keys:
 #   VPS_HOST              — VPS hostname or IP (no protocol)
 #   VPS_USER              — SSH user
 #   VPS_DEPLOY_PATH       — target dir on VPS (no trailing slash)
@@ -14,16 +16,22 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-if [ ! -f .env.local ]; then
-  echo "✗ .env.local not found at $(pwd)/.env.local"
-  echo "  Create it with: VPS_HOST, VPS_USER, VPS_DEPLOY_PATH"
+loaded=0
+for env_file in .env .env.local; do
+  if [ -f "$env_file" ]; then
+    set -a
+    # shellcheck disable=SC1090
+    source "$env_file"
+    set +a
+    loaded=1
+  fi
+done
+
+if [ "$loaded" -eq 0 ]; then
+  echo "✗ Neither .env nor .env.local found at $(pwd)"
+  echo "  Create one with: VPS_HOST, VPS_USER, VPS_DEPLOY_PATH"
   exit 1
 fi
-
-set -a
-# shellcheck disable=SC1091
-source .env.local
-set +a
 
 : "${VPS_HOST:?VPS_HOST required in .env.local}"
 : "${VPS_USER:?VPS_USER required in .env.local}"
