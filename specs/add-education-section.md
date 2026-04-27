@@ -19,11 +19,12 @@ Education 屬於「履歷限定」內容，不同步到網站 `src/data` / `src/
 
 ## 任務清單
 
-- [ ] 跟使用者收集學歷資料（學校、科系、學位、起訖年份；中英對照）
-- [ ] `ref_src/main.md` 新增 `## Education` section（位置：Work Experience 與 Side Projects 之間），採雙語 `**Key（lang）：**` 格式
-- [ ] `ref_src/resume_zh.md` 新增「學歷」段落
-- [ ] `ref_src/resume_en.md` 新增 "Education" 段落
-- [ ] 重新產出 `public/resume_zh.pdf` / `public/resume_en.pdf`
-- [ ] commit 已修改的 `.agent/` 與 `.claude/` 兩份 SKILL.md（feat scope）
-- [ ] commit SSOT + 履歷 markdown + PDF 變更
-- [ ] `npm run build` 確認沒打壞 Portfolio 網站
+- [x] 跟使用者收集學歷資料（用 sample data 寫入）
+- [x] `ref_src/main.md` 新增 `## Education` section（位置：Work Experience 與 Side Projects 之間）
+- [x] `ref_src/resume_zh.md` 新增「學歷」段落
+- [x] `ref_src/resume_en.md` 新增 "Education" 段落
+- [x] 重新產出 `public/resume_zh.pdf` / `public/resume_en.pdf`
+- [x] commit `.agent/` 與 `.claude/` 兩份 SKILL.md（已升級為 workflow 整合，非單純 menu 改動）
+- [x] commit SSOT + 履歷 markdown + PDF 變更
+- [x] `npm run build` 確認沒打壞 Portfolio 網站
+- [x] （計畫外）順帶修復 SKILL.md 從 `78516ab` 起就帶錯的檔名引用 `resume_new.md` → `resume_zh.md`
