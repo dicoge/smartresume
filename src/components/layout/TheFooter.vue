@@ -4,6 +4,9 @@ import { contact } from '../../data/contact'
 
 const { t } = useI18n()
 
+const buildSha = __BUILD_SHA__
+const buildTime = __BUILD_TIME__
+
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
@@ -56,6 +59,9 @@ const scrollToTop = () => {
         </p>
         <p class="text-secondary-500 dark:text-primary-400 text-xs">
           {{ t('footer.madeWith') }}
+        </p>
+        <p class="text-secondary-400 dark:text-primary-500 text-[10px] opacity-60 font-mono">
+          build {{ buildSha }} · {{ buildTime }}
         </p>
 
         <!-- Back to Top -->

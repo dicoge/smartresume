@@ -4,6 +4,8 @@ import i18n from './i18n'
 import { initAnalytics } from './analytics'
 import './style.css'
 
+console.info(`[SmartResume] build ${__BUILD_SHA__} · ${__BUILD_TIME__}`)
+
 const app = createApp(App)
 app.use(i18n)
 app.mount('#app')
