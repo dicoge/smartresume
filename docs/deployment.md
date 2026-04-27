@@ -94,6 +94,57 @@ npm run preview -- --base /smartresume/
 
 打開 `dist/index.html` 可看到 `<script src="/smartresume/assets/xxx.js">` 前綴已加上。
 
+## 替代方式：本機 build + rsync 部署
+
+如果你不想用 GitHub Actions（例如：私人專案、不想把 SSH key 放 GitHub Secrets、想立即部署不等 CI），可改用本機腳本 `scripts/deploy.sh`，直接從本機 `npm run build` 後 rsync 到 VPS。
+
+### 1. 設定 `.env.local`
+
+在專案根目錄建立 `.env.local`（已被 `.gitignore`，不會 commit）：
+
+```bash
+VPS_HOST=your-domain.example.com
+VPS_USER=deploy
+VPS_DEPLOY_PATH=/home/deploy/smartresume
+# VITE_BASE=/smartresume/   # 選填，預設 /smartresume/
+```
+
+### 2. 確保 SSH 金鑰可用
+
+本機需能直接 `ssh ${VPS_USER}@${VPS_HOST}` 登入（建議透過 `~/.ssh/config` 設定 alias 與 IdentityFile）。
+
+### 3. 部署
+
+```bash
+npm run deploy
+```
+
+腳本會：
+1. 從 `.env.local` 讀設定
+2. `VITE_BASE=${VITE_BASE} npm run build`
+3. `rsync -avz --delete dist/ ${VPS_USER}@${VPS_HOST}:${VPS_DEPLOY_PATH}/`
+
+### 4. 一次性 symlink 設定（將 Nginx root 指向 deploy 目錄）
+
+如果你希望檔案實際存放在 user-space（例如 `/home/<user>/<path>/smartresume`，方便不用 sudo 寫入），但 Nginx 設定指向 `/var/www/smartresume`，可建立 symlink。在 VPS 上執行**一次**：
+
+```bash
+# 一次性指令：在 VPS 上執行
+sudo ln -s /home/<user>/<path>/smartresume /var/www/smartresume
+
+# 驗證
+ls -la /var/www/smartresume
+# lrwxrwxrwx ... /var/www/smartresume -> /home/<user>/<path>/smartresume
+```
+
+> 若 `/var/www/smartresume` 已是非 symlink 的目錄／檔案，先 `sudo rm -rf /var/www/smartresume` 再建立 symlink，**並確保你想要的內容已備份**。
+
+如此 Nginx 設定中的 `alias /var/www/smartresume/` 不需更動，新部署會被透明地導向 user-space 的真實目錄。
+
+### 與 GitHub Actions 並用？
+
+兩種方式都會 rsync 到同一個 `VPS_DEPLOY_PATH`，**選一種用即可**。混用會讓 `--delete` 互相覆蓋，造成 race condition。
+
 ## 疑難排解
 
 | 症狀 | 可能原因 |

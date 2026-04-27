@@ -94,6 +94,57 @@ npm run preview -- --base /smartresume/
 
 Open `dist/index.html` and you should see `<script src="/smartresume/assets/xxx.js">` — the prefix is applied.
 
+## Alternative: local build + rsync deploy
+
+If you don't want to use GitHub Actions (private projects, don't want SSH keys in GitHub Secrets, want to deploy immediately without waiting on CI), use the bundled `scripts/deploy.sh` to build locally and rsync to your VPS.
+
+### 1. Configure `.env.local`
+
+Create `.env.local` at the project root (already gitignored, never committed):
+
+```bash
+VPS_HOST=your-domain.example.com
+VPS_USER=deploy
+VPS_DEPLOY_PATH=/home/deploy/smartresume
+# VITE_BASE=/smartresume/   # optional, defaults to /smartresume/
+```
+
+### 2. Make sure SSH keys work
+
+Your local machine must be able to `ssh ${VPS_USER}@${VPS_HOST}` directly (configure an alias and `IdentityFile` in `~/.ssh/config` for convenience).
+
+### 3. Deploy
+
+```bash
+npm run deploy
+```
+
+The script will:
+1. Source `.env.local`
+2. Run `VITE_BASE=${VITE_BASE} npm run build`
+3. `rsync -avz --delete dist/ ${VPS_USER}@${VPS_HOST}:${VPS_DEPLOY_PATH}/`
+
+### 4. One-time symlink (point Nginx root at the deploy directory)
+
+If you'd rather keep the deployed files in user-space (e.g. `/home/<user>/<path>/smartresume`, no `sudo` needed for each rsync) while Nginx still serves from `/var/www/smartresume`, create a symlink. Run **once** on the VPS:
+
+```bash
+# One-time command, run on the VPS
+sudo ln -s /home/<user>/<path>/smartresume /var/www/smartresume
+
+# Verify
+ls -la /var/www/smartresume
+# lrwxrwxrwx ... /var/www/smartresume -> /home/<user>/<path>/smartresume
+```
+
+> If `/var/www/smartresume` already exists as a regular file/directory, `sudo rm -rf /var/www/smartresume` first — **back up first if it has content you want to keep**.
+
+The Nginx server block's `alias /var/www/smartresume/` line stays unchanged; new deploys are transparently routed to the user-space directory.
+
+### Using both at the same time?
+
+Both methods rsync to the same `VPS_DEPLOY_PATH`. **Pick one** — mixing them causes `--delete` to clobber each other and creates a race condition.
+
 ## Troubleshooting
 
 | Symptom | Likely cause |

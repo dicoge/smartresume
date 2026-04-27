@@ -253,9 +253,13 @@ npm run preview # 預覽建構結果
 
 建構產出在 `dist/` 目錄，可部署到 GitHub Pages、Vercel、Netlify、Cloudflare Pages 或自有 VPS。各平台的步驟整理於 [docs/deploy-options.md](docs/deploy-options.md)（推薦 fork 使用者先看這份）。
 
-**GitHub Actions 部署到 VPS（subpath）**
+**部署到自有 VPS（subpath）**
 
-本專案已內建 `.github/workflows/deploy.yml`（手動觸發）。設定 SSH deploy key、GitHub Secrets、Nginx server block 的完整步驟見 [docs/deployment.md](docs/deployment.md)。
+兩種方式擇一（皆於 [docs/deployment.md](docs/deployment.md) 完整說明）：
+
+- **GitHub Actions：** 內建 `.github/workflows/deploy.yml`（手動觸發），SSH key 放 GitHub Secrets
+- **本機 build + rsync：** `npm run deploy`（讀 `.env.local`），不依賴 CI、本機直接推送
+
 若部署到 subpath（例如 `/smartresume/`），build 時需帶 `VITE_BASE` 環境變數：
 
 ```bash

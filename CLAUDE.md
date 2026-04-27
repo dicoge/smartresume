@@ -137,4 +137,8 @@ Optional `.env.local` at project root (gitignored):
 
 Fork users: start with [docs/deploy-options.md](docs/deploy-options.md) for step-by-step guides covering Vercel, Netlify, Cloudflare Pages, and GitHub Pages. Each doc ships in zh (`.md`) and en (`.en.md`).
 
-For self-hosted VPS with the built-in `.github/workflows/deploy.yml` (trigger: `workflow_dispatch`) — SSH deploy key, GitHub Secrets, and Nginx server block — see [docs/deployment.md](docs/deployment.md) / [docs/deployment.en.md](docs/deployment.en.md).
+For self-hosted VPS, two options:
+- **GitHub Actions:** `.github/workflows/deploy.yml` (trigger: `workflow_dispatch`) — SSH deploy key in GitHub Secrets
+- **Local build + rsync:** `npm run deploy` (driven by `scripts/deploy.sh`, reads `.env.local`) — no CI, deploys from your own machine
+
+Setup details (SSH keys, Secrets / `.env.local`, Nginx server block, optional `/var/www/smartresume` symlink) in [docs/deployment.md](docs/deployment.md) / [docs/deployment.en.md](docs/deployment.en.md).

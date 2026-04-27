@@ -56,7 +56,7 @@ Interactive Q&A — AI syncs everything to website files and generates resume PD
 npm run build
 ```
 
-Output lives in `dist/` — deploy to any static host. See [docs/deploy-options.en.md](docs/deploy-options.en.md) for step-by-step guides (Vercel, Netlify, Cloudflare Pages, GitHub Pages). For self-hosted VPS + GitHub Actions, see [docs/deployment.en.md](docs/deployment.en.md). For a subpath build (e.g. `/smartresume/`), pass `VITE_BASE`:
+Output lives in `dist/` — deploy to any static host. See [docs/deploy-options.en.md](docs/deploy-options.en.md) for step-by-step guides (Vercel, Netlify, Cloudflare Pages, GitHub Pages). Self-hosted VPS supports two flavors (covered in [docs/deployment.en.md](docs/deployment.en.md)): GitHub Actions (`.github/workflows/deploy.yml`, manual trigger) **or** local build + rsync (`npm run deploy`, reads `.env.local`). For a subpath build (e.g. `/smartresume/`), pass `VITE_BASE`:
 
 ```bash
 VITE_BASE=/smartresume/ npm run build
