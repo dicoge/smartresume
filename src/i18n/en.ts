@@ -58,6 +58,26 @@ export default {
       subtitle: 'Front-end & Back-end Dashboard',
       description: 'Full-stack admin panel built with Vue 3 + Vuetify + Element Plus + Node.js backend. Features user management, data dashboards, and role-based access control.',
     },
+    dcbotCash: {
+      title: 'DCBOT Cash Bot',
+      subtitle: 'Discord Expense Tracker Bot',
+      description: 'Real-time expense tracking and query bot on Discord, supporting multi-currency and category statistics for easy management of shared expenses among community members.',
+    },
+    dcbotAdmin: {
+      title: 'DCBOT Admin Bot',
+      subtitle: 'Discord Server Management Automation',
+      description: 'Discord server management bot providing automated administration, permission control, and server status monitoring for server operators.',
+    },
+    dcbotAnswerbook: {
+      title: 'DCBOT Answer Bot',
+      subtitle: 'Discord Knowledge Q&A System',
+      description: 'Discord knowledge Q&A bot with quiz management, instant scoring, and feedback — perfect for educational training and community engagement.',
+    },
+    webPageSlip: {
+      title: 'Web Page Scroll Effects',
+      subtitle: 'Interactive Scroll Visual Experience',
+      description: 'Interactive scrolling visual experience built with Vue and CSS Animation, featuring smooth transitions and captivating visual effects.',
+    },
   },
   techStack: {
     title: 'Tech Stack & Skills',

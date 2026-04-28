@@ -58,6 +58,26 @@ export default {
       subtitle: '前後台管理系統',
       description: 'Vue 3 + Vuetify + Element Plus 建構的全端管理系統，具備會員管理、數據看板、權限控制等完整功能，伺服器端使用 Node.js。',
     },
+    dcbotCash: {
+      title: 'DCBOT 記帳機器人',
+      subtitle: 'Discord 記帳管理機器人',
+      description: 'Discord 平台上即時記帳與查詢的機器人，支援多貨幣、分類統計，讓社群成員輕鬆管理共同花費。',
+    },
+    dcbotAdmin: {
+      title: 'DCBOT 管理機器人',
+      subtitle: 'Discord 管理自動化工具',
+      description: 'Discord 伺服器管理機器人，提供自動化管理、權限控制和伺服器狀態監控等實用功能。',
+    },
+    dcbotAnswerbook: {
+      title: 'DCBOT 答題機器人',
+      subtitle: 'Discord 知識問答系統',
+      description: 'Discord 知識問答機器人，建立題庫、進行測驗，即時評分與回饋，適用於教育訓練與社群互動。',
+    },
+    webPageSlip: {
+      title: '網頁滑動效果展示',
+      subtitle: '互動式滾動視覺體驗',
+      description: '運用 Vue 與 CSS Animation 打造的互動式滾動視覺效果網頁，帶來流暢的瀏覽體驗與吸睛的視覺過渡。',
+    },
   },
   techStack: {
     title: '技術棧與開發技能',
