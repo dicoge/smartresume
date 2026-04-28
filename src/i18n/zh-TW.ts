@@ -7,7 +7,7 @@ export default {
   },
   hero: {
     name: '石少斌',
-    initials: 'SB',
+    initials: 'SP',
     subtitle: '鈊象電子高階工程師 | Unity 開發 | 全端技術',
     typingText1: '打造優質的 Unity 遊戲體驗...',
     typingText2: '探索 Web 前後端整合開發...',

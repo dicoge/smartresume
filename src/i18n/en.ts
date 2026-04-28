@@ -6,8 +6,8 @@ export default {
     contact: 'Contact',
   },
   hero: {
-    name: 'Shi Shaobin',
-    initials: 'SB',
+    name: 'Shih Shao Pin',
+    initials: 'SP',
     subtitle: 'Senior Engineer at Gamania | Unity Developer | Full-Stack Developer',
     typingText1: 'Building high-quality Unity game experiences...',
     typingText2: 'Exploring full-stack web development...',
@@ -19,7 +19,7 @@ export default {
   },
   about: {
     title: 'About Me',
-    subtitle: "Hi, I'm Shi Shaobin, an engineer specializing in game and software development.",
+    subtitle: "Hi, I'm Shih Shao Pin, an engineer specializing in game and software development.",
     whatIDo: 'What I Do',
     whatIDoContent: 'I specialize in Unity game development while also maintaining full-stack web development skills with Node.js and Vue.js.',
     currentFocus: 'Currently focused on:',
@@ -102,8 +102,8 @@ export default {
     errorMessage: 'Failed to send. Please email me directly using the address above.',
   },
   footer: {
-    designedBy: 'Designed & Built by Shi Shaobin',
-    copyright: '© 2026 Shi Shaobin. All rights reserved.',
+    designedBy: 'Designed & Built by Shih Shao Pin',
+    copyright: '© 2026 Shih Shao Pin. All rights reserved.',
     madeWith: 'Made with Vue 3 + Tailwind CSS',
     backToTop: 'Back to Top',
   },
