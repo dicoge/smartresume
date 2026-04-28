@@ -3,16 +3,16 @@
 
 export const contact = {
   github: {
-    url: 'https://github.com/sample-user',
-    handle: '@sample-user',
+    url: 'https://github.com/dicoge',
+    handle: '@dicoge',
   },
   linkedin: {
-    url: 'https://www.linkedin.com/in/sample-user/',
-    handle: 'sample-user',
+    url: '',
+    handle: '',
   },
   email: {
-    address: 'alex.chen@example.com',
+    address: 'kin169999@gmail.com',
   },
-  location: 'Taiwan (UTC+8)',
-  portfolio: 'https://example.com',
+  location: 'Taiwan',
+  portfolio: '',
 }

@@ -4,21 +4,21 @@ export const techCategories: TechCategory[] = [
   {
     id: 'languages',
     icon: '💻',
-    items: ['TypeScript', 'Python', 'JavaScript', 'Go', 'Shell'],
+    items: ['C#', 'JavaScript', 'TypeScript', 'Python'],
   },
   {
     id: 'frameworks',
     icon: '🎨',
-    items: ['Vue.js 3', 'React', 'FastAPI', 'TailwindCSS', 'Vite'],
+    items: ['Unity', 'Unity UI (uGUI)', 'Vue.js 3', 'Node.js', 'Express'],
   },
   {
     id: 'ai_stack',
     icon: '🧠',
-    items: ['LLM Integration', 'AI Agents', 'Prompt Engineering', 'RAG'],
+    items: ['Unity AI', 'Game Design Patterns', 'Cross-platform Development'],
   },
   {
     id: 'specializations',
     icon: '🎯',
-    items: ['REST API Design', 'Cloud Deployment', 'CI/CD', 'Docker'],
+    items: ['Game Development', 'Performance Optimization', 'Full-Stack Development', 'Cross-platform Deployment'],
   },
 ]

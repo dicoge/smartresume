@@ -1,8 +1,8 @@
 import type { SkillBar } from '../types'
 
 export const skillBars: SkillBar[] = [
-  { name: 'TypeScript', percentage: 85 },
-  { name: 'Python', percentage: 80 },
-  { name: 'JavaScript', percentage: 75 },
-  { name: 'Go', percentage: 60 },
+  { name: 'Unity', percentage: 85 },
+  { name: 'C#', percentage: 80 },
+  { name: 'Node.js', percentage: 75 },
+  { name: 'Vue.js', percentage: 70 },
 ]
