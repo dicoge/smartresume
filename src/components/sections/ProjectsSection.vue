@@ -53,6 +53,12 @@ const filteredProjects = computed(() => {
           :key="project.id"
           :project="project"
         />
+        <div
+          v-if="filteredProjects.length === 0"
+          class="col-span-full text-center py-12 text-secondary-500 dark:text-accent-400"
+        >
+          {{ t('projects.noProjects') }}
+        </div>
       </div>
     </div>
   </section>

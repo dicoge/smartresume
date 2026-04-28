@@ -30,6 +30,7 @@ const scrollToTop = () => {
             </svg>
           </a>
           <a
+            v-if="contact.linkedin.url"
             :href="contact.linkedin.url"
             target="_blank"
             rel="noopener noreferrer"

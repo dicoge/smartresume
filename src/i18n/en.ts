@@ -37,6 +37,7 @@ export default {
     filterTool: 'Tool',
     viewCode: 'GitHub',
     liveDemo: 'Live Demo',
+    noProjects: '尚無此分類作品',
     holoHunter: {
       title: 'HoloHunter Card Hunter',
       subtitle: 'Virtual Card Price Lookup',

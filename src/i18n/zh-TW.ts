@@ -37,6 +37,7 @@ export default {
     filterTool: '工具',
     viewCode: 'GitHub',
     liveDemo: '線上展示',
+    noProjects: '尚無此分類作品',
     holoHunter: {
       title: 'HoloHunter 卡牌獵人',
       subtitle: '虛擬卡牌查價工具',
