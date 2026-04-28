@@ -37,20 +37,25 @@ export default {
     filterTool: '工具',
     viewCode: 'GitHub',
     liveDemo: '線上展示',
-    taskBoard: {
-      title: '待補充',
-      subtitle: '作品開發中',
-      description: '即將上線的作品，敬請期待。',
+    holoHunter: {
+      title: 'HoloHunter 卡牌獵人',
+      subtitle: '虛擬卡牌查價工具',
+      description: 'hololive 官方卡牌遊戲（hOCG）查價 App，支援卡號/成員搜尋、遊々亭實時價格、PWA 安裝。技術栈：Expo + React Native Web + TypeScript + Vercel Edge Functions + Puppeteer 爬蟲。',
     },
-    weatherDash: {
-      title: '待補充',
-      subtitle: '作品開發中',
-      description: '即將上線的作品，敬請期待。',
+    vueExcelDashboard: {
+      title: 'Excel 動態儀表板',
+      subtitle: 'Excel 數據視覺化',
+      description: '上傳 Excel 檔案即時轉為互動式圖表。支援長條圖、折線圖、圓餅圖等，整合 ECharts + XLSX 解析，Vite 熱更新開發。',
     },
-    devToolkit: {
-      title: '待補充',
-      subtitle: '作品開發中',
-      description: '即將上線的作品，敬請期待。',
+    chatGptLineBot: {
+      title: 'ChatGPT LINE 機器人',
+      subtitle: 'AI 對話機器人',
+      description: '整合 LINE Messaging API 與 ChatGPT 的對話機器人，支援 Docker 部署，即時回覆用戶問題。應用於客服與社群互動場景。',
+    },
+    vueManageSystem: {
+      title: 'Vue 全端管理系統',
+      subtitle: '前後台管理系統',
+      description: 'Vue 3 + Vuetify + Element Plus 建構的全端管理系統，具備會員管理、數據看板、權限控制等完整功能，伺服器端使用 Node.js。',
     },
   },
   techStack: {

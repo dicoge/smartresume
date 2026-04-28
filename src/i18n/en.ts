@@ -37,20 +37,25 @@ export default {
     filterTool: 'Tool',
     viewCode: 'GitHub',
     liveDemo: 'Live Demo',
-    taskBoard: {
-      title: 'Coming Soon',
-      subtitle: 'Project under development',
-      description: 'Stay tuned for upcoming projects.',
+    holoHunter: {
+      title: 'HoloHunter Card Hunter',
+      subtitle: 'Virtual Card Price Lookup',
+      description: 'hOCG (hololive Official Card Game) price checker app with card search, yuyu-tei real-time pricing, and PWA install support. Built with Expo + React Native Web + TypeScript + Vercel Edge Functions + Puppeteer.',
     },
-    weatherDash: {
-      title: 'Coming Soon',
-      subtitle: 'Project under development',
-      description: 'Stay tuned for upcoming projects.',
+    vueExcelDashboard: {
+      title: 'Excel Dynamic Dashboard',
+      subtitle: 'Excel Data Visualization',
+      description: 'Upload Excel files and instantly transform them into interactive charts — bar, line, pie and more. Powered by ECharts + XLSX parser with Vite HMR dev experience.',
     },
-    devToolkit: {
-      title: 'Coming Soon',
-      subtitle: 'Project under development',
-      description: 'Stay tuned for upcoming projects.',
+    chatGptLineBot: {
+      title: 'ChatGPT LINE Bot',
+      subtitle: 'AI Chat Bot',
+      description: 'LINE Messaging API integrated with ChatGPT for conversational AI. Dockerized deployment for real-time user support and community engagement.',
+    },
+    vueManageSystem: {
+      title: 'Vue Full-Stack Admin System',
+      subtitle: 'Front-end & Back-end Dashboard',
+      description: 'Full-stack admin panel built with Vue 3 + Vuetify + Element Plus + Node.js backend. Features user management, data dashboards, and role-based access control.',
     },
   },
   techStack: {
