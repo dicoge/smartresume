@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 Format based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.3.3] - 2026-04-28
+
+### Added
+- **`npm run deploy`** — new local-build-and-rsync alternative to the GitHub Actions workflow. Driven by `scripts/deploy.sh`, sources `.env` then `.env.local` (Vite convention; both gitignored), validates `VPS_HOST` / `VPS_USER` / `VPS_DEPLOY_PATH`, runs `VITE_BASE=… npm run build`, then `rsync -avz --delete dist/` to the VPS. Picks one path or the other — mixing both rsync clients with `--delete` would race
+- **Build marker in footer + console** — `vite.config.ts` injects `__BUILD_SHA__` (from `git rev-parse --short HEAD`, falling back to `dev`) and `__BUILD_TIME__` (`YYYY-MM-DD HH:mm UTC`) via Vite's `define`. `TheFooter.vue` renders a `text-[10px] opacity-60 font-mono` `build <sha> · <time>` line; `main.ts` also `console.info`'s the same string on app boot. After deploying, refreshing the site (cache-busted) shows the new SHA, confirming the build landed on the server. Bundle grew ~240 bytes
+- **One-time symlink command in deployment docs** — `sudo ln -s /home/<user>/<path>/smartresume /var/www/smartresume` lets the deployed files live in user-space (no sudo per rsync) while Nginx still serves through `/var/www/smartresume`. Documented in both `docs/deployment.md` and `docs/deployment.en.md` alongside the new Alternative section
+
+### Changed
+- **Deployment docs split into two methods** — `docs/deployment.md` and `docs/deployment.en.md` now cover GitHub Actions and local `npm run deploy` side by side, with shared one-time-setup steps (SSH deploy key, GitHub Secrets / `.env`, Nginx server block) and per-method workflows
+- **`CLAUDE.md`, `README.md`, `README.en.md`** surface both deployment paths and link to the same deployment doc
+
 ## [1.3.2] - 2026-04-27
 
 ### Added
