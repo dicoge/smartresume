@@ -126,6 +126,10 @@ export default {
     sending: 'Sending',
     successMessage: "Message sent! I'll get back to you soon.",
     errorMessage: 'Failed to send. Please email me directly using the address above.',
+    errorNameRequired: 'Name is required',
+    errorEmailRequired: 'Email is required',
+    errorEmailInvalid: 'Please enter a valid email address',
+    errorMessageRequired: 'Message is required',
   },
   footer: {
     designedBy: 'Designed & Built by Shih Shao Pin',

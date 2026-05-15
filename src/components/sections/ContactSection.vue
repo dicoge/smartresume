@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { contact } from '../../data/contact'
 import { useScrollReveal } from '../../composables/useScrollReveal'
@@ -16,16 +16,71 @@ const FORMSPREE_ENDPOINT = FORMSPREE_FORM_ID
   ? `https://formspree.io/f/${FORMSPREE_FORM_ID}`
   : ''
 
-const form = ref({
+interface FormData {
+  name: string
+  email: string
+  subject: string
+  message: string
+  _gotcha: string
+}
+
+const form = reactive<FormData>({
   name: '',
   email: '',
   subject: 'inquiry',
+  message: '',
+  _gotcha: '',
+})
+
+interface FormErrors {
+  name: string
+  email: string
+  message: string
+}
+
+const errors = reactive<FormErrors>({
+  name: '',
+  email: '',
   message: '',
 })
 
 const status = ref<'idle' | 'sending' | 'success' | 'error'>('idle')
 
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+function validate(): boolean {
+  let valid = true
+  errors.name = ''
+  errors.email = ''
+  errors.message = ''
+
+  if (!form.name.trim()) {
+    errors.name = t('contact.errorNameRequired')
+    valid = false
+  }
+
+  if (!form.email.trim()) {
+    errors.email = t('contact.errorEmailRequired')
+    valid = false
+  } else if (!emailRegex.test(form.email.trim())) {
+    errors.email = t('contact.errorEmailInvalid')
+    valid = false
+  }
+
+  if (!form.message.trim()) {
+    errors.message = t('contact.errorMessageRequired')
+    valid = false
+  }
+
+  return valid
+}
+
 const handleSubmit = async () => {
+  if (!validate()) return
+
+  // Honeypot check — if filled, silently reject
+  if (form._gotcha) return
+
   if (!FORMSPREE_ENDPOINT) {
     // Formspree not configured — show a helpful message
     status.value = 'error'
@@ -39,15 +94,19 @@ const handleSubmit = async () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
-        name: form.value.name,
-        email: form.value.email,
-        subject: form.value.subject,
-        message: form.value.message,
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message,
       }),
     })
     if (res.ok) {
       status.value = 'success'
-      form.value = { name: '', email: '', subject: 'inquiry', message: '' }
+      form.name = ''
+      form.email = ''
+      form.subject = 'inquiry'
+      form.message = ''
+      form._gotcha = ''
     } else {
       status.value = 'error'
     }
@@ -125,15 +184,22 @@ const handleSubmit = async () => {
           </div>
 
           <form @submit.prevent="handleSubmit" class="space-y-5">
+            <!-- Honeypot field — hidden from real users, catches bots -->
+            <div style="position: absolute; left: -9999px" aria-hidden="true">
+              <label for="_gotcha">Don't fill this field</label>
+              <input id="_gotcha" v-model="form._gotcha" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
             <div>
               <label class="block text-sm text-secondary-600 dark:text-accent-400 mb-1">{{ t('contact.nameLabel') }} *</label>
               <input
                 v-model="form.name"
                 type="text"
-                required
                 :placeholder="t('contact.namePlaceholder')"
                 class="w-full px-4 py-3 bg-ivory dark:bg-dark-bg border border-primary-100 dark:border-dark-border rounded-lg text-primary-900 dark:text-white focus:outline-none focus:border-primary-500"
+                :class="{ 'border-red-500 dark:border-red-400': errors.name }"
               />
+              <p v-if="errors.name" class="mt-1 text-xs text-red-500 dark:text-red-400">{{ errors.name }}</p>
             </div>
 
             <div>
@@ -141,10 +207,11 @@ const handleSubmit = async () => {
               <input
                 v-model="form.email"
                 type="email"
-                required
                 :placeholder="t('contact.emailPlaceholder')"
                 class="w-full px-4 py-3 bg-ivory dark:bg-dark-bg border border-primary-100 dark:border-dark-border rounded-lg text-primary-900 dark:text-white focus:outline-none focus:border-primary-500"
+                :class="{ 'border-red-500 dark:border-red-400': errors.email }"
               />
+              <p v-if="errors.email" class="mt-1 text-xs text-red-500 dark:text-red-400">{{ errors.email }}</p>
             </div>
 
             <div>
@@ -164,11 +231,12 @@ const handleSubmit = async () => {
               <label class="block text-sm text-secondary-600 dark:text-accent-400 mb-1">{{ t('contact.messageLabel') }} *</label>
               <textarea
                 v-model="form.message"
-                required
                 :placeholder="t('contact.messagePlaceholder')"
                 rows="4"
                 class="w-full px-4 py-3 bg-ivory dark:bg-dark-bg border border-primary-100 dark:border-dark-border rounded-lg text-primary-900 dark:text-white focus:outline-none focus:border-primary-500 resize-y"
+                :class="{ 'border-red-500 dark:border-red-400': errors.message }"
               />
+              <p v-if="errors.message" class="mt-1 text-xs text-red-500 dark:text-red-400">{{ errors.message }}</p>
             </div>
 
             <button

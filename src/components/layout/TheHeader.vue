@@ -3,15 +3,17 @@ import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ThemeToggle from './ThemeToggle.vue'
 import LanguageSwitcher from './LanguageSwitcher.vue'
+import { useActiveSection } from '../../composables/useActiveSection'
 
 const { t } = useI18n()
 const isMenuOpen = ref(false)
+const { activeSection } = useActiveSection()
 
 const navLinks = [
-  { key: 'nav.about', href: '#about' },
-  { key: 'nav.projects', href: '#projects' },
-  { key: 'nav.techStack', href: '#tech' },
-  { key: 'nav.contact', href: '#contact' },
+  { key: 'nav.about', href: '#about', id: 'about' },
+  { key: 'nav.projects', href: '#projects', id: 'projects' },
+  { key: 'nav.techStack', href: '#tech', id: 'tech' },
+  { key: 'nav.contact', href: '#contact', id: 'contact' },
 ]
 
 const toggleMenu = () => {
@@ -21,6 +23,7 @@ const toggleMenu = () => {
 const closeMenu = () => {
   isMenuOpen.value = false
 }
+
 </script>
 
 <template>
@@ -38,9 +41,16 @@ const closeMenu = () => {
             v-for="link in navLinks"
             :key="link.href"
             :href="link.href"
-            class="text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium"
+            class="transition-colors font-medium relative"
+            :class="activeSection === link.id
+              ? 'text-primary-500 dark:text-primary-400'
+              : 'text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400'"
           >
             {{ t(link.key) }}
+            <span
+              v-if="activeSection === link.id"
+              class="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary-500 dark:bg-primary-400 rounded-full"
+            />
           </a>
         </div>
 
@@ -92,7 +102,10 @@ const closeMenu = () => {
             :key="link.href"
             :href="link.href"
             @click="closeMenu"
-            class="text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium"
+            class="transition-colors font-medium"
+            :class="activeSection === link.id
+              ? 'text-primary-500 dark:text-primary-400'
+              : 'text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400'"
           >
             {{ t(link.key) }}
           </a>

@@ -1,7 +1,9 @@
 // Contact & social links — single source of truth
 // Update this file via /update-resume skill or edit directly
 
-export const contact = {
+import type { ContactData } from '../types'
+
+export const contact: ContactData = {
   github: {
     url: 'https://github.com/dicoge',
     handle: '@dicoge',

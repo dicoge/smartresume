@@ -126,6 +126,10 @@ export default {
     sending: '發送中',
     successMessage: '訊息已發送！我會盡快回覆。',
     errorMessage: '發送失敗，請直接寄 email 聯繫。',
+    errorNameRequired: '請輸入姓名',
+    errorEmailRequired: '請輸入 Email',
+    errorEmailInvalid: '請輸入有效的 Email 格式',
+    errorMessageRequired: '請輸入訊息',
   },
   footer: {
     designedBy: 'Designed & Built by 石少斌',

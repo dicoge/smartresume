@@ -29,3 +29,11 @@ export interface GitHubStat {
 export type ThemeMode = 'light' | 'dark'
 
 export type Locale = 'zh-TW' | 'en'
+
+export interface ContactData {
+  github: { url: string; handle: string }
+  linkedin: { url: string; handle: string }
+  email: { address: string }
+  location: string
+  portfolio: string
+}

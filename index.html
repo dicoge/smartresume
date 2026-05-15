@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
   <head>
+    <script>
+      (function() {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })()
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Google Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,6 +25,12 @@
     <meta name="description" content="4年Unity/全端工程師，專精遊戲開發與現代化Web技術" />
     <meta name="author" content="石少斌 Shih Shao Pin" />
     <meta name="keywords" content="全端工程師, Unity, Vue, Node.js, 遊戲開發, Web技術, Taiwan" />
+
+    <!-- PWA / Mobile -->
+    <meta name="theme-color" content="#264653">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="石少斌 Portfolio">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -34,6 +50,50 @@
 
     <!-- Canonical -->
     <link rel="canonical" href="https://dicoge.com/" />
+
+    <!-- Hreflang -->
+    <link rel="alternate" href="https://dicoge.com/" hreflang="zh-TW" />
+    <link rel="alternate" href="https://dicoge.com/?lang=en" hreflang="en" />
+    <link rel="alternate" href="https://dicoge.com/" hreflang="x-default" />
+
+    <!-- Structured Data - Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "石少斌",
+      "alternateName": "Shih Shao Pin",
+      "givenName": "Shao Pin",
+      "familyName": "Shih",
+      "email": "kin169999@gmail.com",
+      "url": "https://dicoge.com/",
+      "image": "https://dicoge.com/og-image.png",
+      "jobTitle": "Senior Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "鈊象電子"
+      },
+      "knowsAbout": ["Unity", "Vue.js", "Node.js", "TypeScript", "Game Development"],
+      "sameAs": [
+        "https://github.com/dicoge"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data - WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "石少斌 Shih Shao Pin - 全端工程師",
+      "url": "https://dicoge.com/",
+      "description": "4年Unity/全端工程師，專精遊戲開發與現代化Web技術",
+      "author": {
+        "@type": "Person",
+        "name": "石少斌"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="app"></div>
