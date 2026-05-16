@@ -12,7 +12,7 @@ const { t } = useI18n()
 <template>
   <div data-testid="project-card" class="group rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 project-card-dark" style="background-color: var(--bg-secondary); border: 1px solid var(--border);">
     <!-- Emoji Header -->
-    <div class="h-48 flex items-center justify-center text-7xl" style="background: linear-gradient(135deg, var(--accent), #818cf8);">
+    <div class="h-48 flex items-center justify-center text-7xl" style="background: linear-gradient(135deg, #e76f51, #e9c46a);">
       {{ project.emoji }}
     </div>
 

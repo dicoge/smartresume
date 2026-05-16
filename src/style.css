@@ -9,12 +9,16 @@
   --bg-tertiary: #1a1a25;
   --text-primary: #f0f0f5;
   --text-secondary: #8888a0;
-  --accent: #6366f1;
-  --accent-glow: rgba(99, 102, 241, 0.3);
+  --primary: #f4a261;
+  --secondary: #c1666b;
+  --accent: #e9c46a;
+  --primary-glow: rgba(244, 162, 97, 0.3);
+  --secondary-glow: rgba(193, 102, 107, 0.3);
+  --accent-glow: rgba(233, 196, 106, 0.3);
   --border: #2a2a3a;
   --gradient-hero: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
-  --gradient-accent: linear-gradient(135deg, #6366f1, #818cf8);
-  --gradient-accent-hover: linear-gradient(135deg, #4f46e5, #6366f1);
+  --gradient-accent: linear-gradient(135deg, #e76f51, #e9c46a);
+  --gradient-accent-hover: linear-gradient(135deg, #f4a261, #e76f51);
   --red-error: #ef4444;
 }
 

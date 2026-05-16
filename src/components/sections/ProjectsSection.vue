@@ -43,7 +43,7 @@ const filteredProjects = computed(() => {
             ? 'bg-primary-500 text-white border-primary-500'
             : ''"
           :style="activeFilter === filter.value
-            ? { backgroundColor: 'var(--accent)', color: 'white', borderColor: 'var(--accent)' }
+            ? { backgroundColor: '#e76f51', color: 'white', borderColor: '#e76f51' }
             : { backgroundColor: 'var(--bg-tertiary)', color: 'var(--text-secondary)', borderColor: 'var(--border)' }"
         >
           {{ t(filter.key) }}
