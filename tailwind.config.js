@@ -9,32 +9,32 @@ export default {
     extend: {
       colors: {
         primary: {
-          50: '#fef7ed',
-          100: '#fdecd5',
-          200: '#fad5aa',
-          300: '#f6b86d',
-          400: '#f4a261', // Coral
-          500: '#e76f51', // Burnt Orange
-          600: '#d45a3a',
-          700: '#b04428',
-          800: '#8d371f',
-          900: '#743018',
+          50: '#1a1a25',
+          100: '#2a2a3a',
+          200: '#3a3a4f',
+          300: '#6366f1',
+          400: '#818cf8',
+          500: '#6366f1', // Indigo accent
+          600: '#4f46e5',
+          700: '#4338ca',
+          800: '#3730a3',
+          900: '#312e81',
         },
         secondary: {
-          500: '#c1666b', // Terracotta
-          600: '#a85459',
+          500: '#8888a0',
+          600: '#6b6b82',
         },
         accent: {
-          400: '#f4c97e',
-          500: '#e9c46a', // Warm Sand
-          600: '#d4b05a',
+          400: '#8888a0',
+          500: '#6366f1', // Indigo accent
+          600: '#4f46e5',
         },
         dark: {
-          bg: '#264653', // Deep Teal
-          card: '#2d5460',
-          border: '#3a6b78',
+          bg: '#0a0a0f',    // Deep black with blue tint
+          card: '#12121a',   // Card background
+          border: '#2a2a3a', // Border color
         },
-        ivory: '#fef9f4', // Warm White
+        ivory: '#0a0a0f', // Override ivory to deep black for dark theme
       },
       fontFamily: {
         sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
@@ -48,10 +48,15 @@ export default {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
         },
+        glow: {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(99, 102, 241, 0.2)' },
+          '50%': { boxShadow: '0 0 40px rgba(99, 102, 241, 0.4)' },
+        },
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease forwards',
         blink: 'blink 1s step-end infinite',
+        glow: 'glow 2s ease-in-out infinite',
       },
     },
   },

@@ -2,70 +2,214 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── CSS Variables for Dark Theme ─────────────────────────────────── */
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-tertiary: #1a1a25;
+  --text-primary: #f0f0f5;
+  --text-secondary: #8888a0;
+  --accent: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.3);
+  --border: #2a2a3a;
+  --gradient-hero: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+  --gradient-accent: linear-gradient(135deg, #6366f1, #818cf8);
+  --gradient-accent-hover: linear-gradient(135deg, #4f46e5, #6366f1);
+  --red-error: #ef4444;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply font-sans antialiased bg-ivory text-primary-900 dark:bg-dark-bg dark:text-ivory;
+    @apply font-sans antialiased;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  /* Light mode override when no dark class */
+  html:not(.dark) body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', 'Noto Sans TC', sans-serif;
     font-weight: 700;
+    color: var(--text-primary);
   }
 
-  /* Global transition for smooth interactions — more selective to avoid conflicts */
+  /* Global transition for smooth interactions */
   *,
   *::before,
   *::after {
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: var(--accent);
+    color: white;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
   }
 }
 
 @layer components {
   .btn-primary {
     @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-white;
-    background: linear-gradient(135deg, #e76f51, #e9c46a);
+    background: var(--gradient-accent);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    position: relative;
+    overflow: hidden;
   }
 
   .btn-primary:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(231, 111, 81, 0.25);
+    box-shadow: 0 10px 30px var(--accent-glow);
+  }
+
+  .btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: var(--gradient-accent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    filter: blur(12px);
+  }
+
+  .btn-primary:hover::after {
+    opacity: 0.5;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold border-2 border-primary-500 text-primary-500;
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold;
     background: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .btn-secondary:hover {
-    @apply bg-primary-500 text-white;
+    background: var(--accent);
+    color: white;
     transform: scale(1.02);
+    box-shadow: 0 5px 20px var(--accent-glow);
   }
 
   .section-title {
     @apply text-4xl font-bold text-center mb-4;
-    background: linear-gradient(135deg, #e76f51, #e9c46a);
+    background: var(--gradient-accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
   .section-subtitle {
-    @apply text-center text-secondary-500 dark:text-accent-400 mb-12 text-lg;
+    @apply text-center mb-12 text-lg;
+    color: var(--text-secondary);
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #e76f51, #e9c46a);
+    background: var(--gradient-accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* Card component for dark theme */
+  .dark-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .dark-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+    transform: translateY(-2px);
+  }
+
+  /* Chip / Tag component */
+  .dark-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 9999px;
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .dark-chip:hover {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+
+  /* Input styling */
+  .dark-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+  .dark-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+  }
+
+  .dark-input::placeholder {
+    color: var(--text-secondary);
+  }
+
+  /* Glow line decoration */
+  .glow-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.3;
+  }
+
+  /* Project card hover effect */
+  .project-card-dark {
+    transition: all 0.3s ease;
+  }
+
+  .project-card-dark:hover {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 30px var(--accent-glow);
   }
 }
 
@@ -76,6 +220,10 @@
 
   .animation-delay-400 {
     animation-delay: 400ms;
+  }
+
+  .text-shadow-glow {
+    text-shadow: 0 0 20px var(--accent-glow);
   }
 }
 
@@ -111,9 +259,9 @@
 .skeleton-shimmer {
   background: linear-gradient(
     90deg,
-    theme('colors.primary.100') 25%,
-    theme('colors.primary.50') 50%,
-    theme('colors.primary.100') 75%
+    var(--bg-tertiary) 25%,
+    var(--bg-secondary) 50%,
+    var(--bg-tertiary) 75%
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s ease-in-out infinite;
@@ -122,9 +270,9 @@
 .dark .skeleton-shimmer {
   background: linear-gradient(
     90deg,
-    theme('colors.dark.border') 25%,
-    theme('colors.dark.card') 50%,
-    theme('colors.dark.border') 75%
+    var(--border) 25%,
+    var(--bg-tertiary) 50%,
+    var(--border) 75%
   );
   background-size: 200% 100%;
 }

@@ -8,17 +8,17 @@ export const techCategories: TechCategory[] = [
   },
   {
     id: 'frameworks',
-    icon: '🎨',
-    items: ['Unity', 'Unity UI (uGUI)', 'Vue.js 3', 'Node.js', 'Express'],
+    icon: '🎮',
+    items: ['Unity', 'Unity UI (uGUI)', 'Vue.js 3', 'Nuxt', 'Node.js', 'Express', 'React', 'Expo'],
   },
   {
     id: 'ai_stack',
     icon: '🧠',
-    items: ['Unity AI', 'Game Design Patterns', 'Cross-platform Development'],
+    items: ['Unity AI', 'Game Design Patterns', 'HTML5 Canvas', 'Puppeteer'],
   },
   {
     id: 'specializations',
     icon: '🎯',
-    items: ['Game Development', 'Performance Optimization', 'Full-Stack Development', 'Cross-platform Deployment'],
+    items: ['Game Development', 'Performance Optimization', 'Full-Stack Development', 'Cross-platform Deployment', 'Vercel'],
   },
 ]

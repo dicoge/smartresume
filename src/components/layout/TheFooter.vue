@@ -13,7 +13,7 @@ const scrollToTop = () => {
 </script>
 
 <template>
-  <footer class="bg-primary-50 dark:bg-dark-card border-t border-primary-100 dark:border-dark-border">
+  <footer style="background-color: var(--bg-primary); border-top: 1px solid var(--border);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="flex flex-col items-center text-center space-y-6">
         <!-- Social Links -->
@@ -22,7 +22,8 @@ const scrollToTop = () => {
             :href="contact.github.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+            class="transition-colors"
+            style="color: var(--text-secondary);"
             aria-label="GitHub"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -34,7 +35,8 @@ const scrollToTop = () => {
             :href="contact.linkedin.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+            class="transition-colors"
+            style="color: var(--text-secondary);"
             aria-label="LinkedIn"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -43,7 +45,8 @@ const scrollToTop = () => {
           </a>
           <a
             :href="`mailto:${contact.email.address}`"
-            class="text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+            class="transition-colors"
+            style="color: var(--text-secondary);"
             aria-label="Email"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,23 +55,24 @@ const scrollToTop = () => {
           </a>
         </div>
 
-        <p class="text-secondary-600 dark:text-accent-400 text-sm">
+        <p class="text-sm" style="color: var(--text-secondary);">
           {{ t('footer.designedBy') }}
         </p>
-        <p class="text-secondary-500 dark:text-primary-400 text-xs">
+        <p class="text-xs" style="color: var(--text-secondary); opacity: 0.7;">
           {{ t('footer.copyright') }}
         </p>
-        <p class="text-secondary-500 dark:text-primary-400 text-xs">
+        <p class="text-xs" style="color: var(--text-secondary); opacity: 0.7;">
           {{ t('footer.madeWith') }}
         </p>
-        <p class="text-secondary-400 dark:text-primary-500 text-[10px] opacity-60 font-mono">
+        <p class="text-[10px] opacity-60 font-mono" style="color: var(--text-secondary);">
           build {{ buildSha }} · {{ buildTime }}
         </p>
 
         <!-- Back to Top -->
         <button
           @click="scrollToTop"
-          class="text-primary-500 hover:text-primary-400 transition-colors text-sm font-medium"
+          class="transition-colors text-sm font-medium"
+          style="color: var(--accent);"
         >
           {{ t('footer.backToTop') }} ↑
         </button>

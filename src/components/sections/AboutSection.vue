@@ -33,22 +33,22 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section ref="sectionRef" id="about" class="py-20 bg-ivory dark:bg-dark-bg">
+  <section ref="sectionRef" id="about" class="py-20" style="background-color: var(--bg-primary);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">{{ t('about.title') }}</h2>
       <p class="section-subtitle">{{ t('about.subtitle') }}</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
         <!-- What I Do -->
-        <div class="bg-primary-50 dark:bg-dark-card p-8 rounded-2xl border border-primary-100 dark:border-dark-border">
-          <h3 class="text-accent-500 font-semibold text-lg mb-4 flex items-center gap-2">
+        <div class="p-8 rounded-2xl" style="background-color: var(--bg-secondary); border: 1px solid var(--border);">
+          <h3 class="font-semibold text-lg mb-4 flex items-center gap-2" style="color: var(--accent);">
             🎯 {{ t('about.whatIDo') }}
           </h3>
-          <p class="text-secondary-600 dark:text-accent-400 leading-relaxed mb-4">
+          <p class="leading-relaxed mb-4" style="color: var(--text-secondary);">
             {{ t('about.whatIDoContent') }}
           </p>
-          <p class="text-accent-500 font-semibold mb-2">{{ t('about.currentFocus') }}</p>
-          <ul class="text-secondary-600 dark:text-accent-400 space-y-1">
+          <p class="font-semibold mb-2" style="color: var(--accent);">{{ t('about.currentFocus') }}</p>
+          <ul class="space-y-1" style="color: var(--text-secondary);">
             <li>• {{ t('about.focus1') }}</li>
             <li>• {{ t('about.focus2') }}</li>
             <li>• {{ t('about.focus3') }}</li>
@@ -56,8 +56,8 @@ onUnmounted(() => {
         </div>
 
         <!-- Skills -->
-        <div ref="skillsRef" class="bg-primary-50 dark:bg-dark-card p-8 rounded-2xl border border-primary-100 dark:border-dark-border">
-          <h3 class="text-accent-500 font-semibold text-lg mb-4 flex items-center gap-2">
+        <div ref="skillsRef" class="p-8 rounded-2xl" style="background-color: var(--bg-secondary); border: 1px solid var(--border);">
+          <h3 class="font-semibold text-lg mb-4 flex items-center gap-2" style="color: var(--accent);">
             💻 {{ t('about.skillsTitle') }}
           </h3>
           <div
@@ -66,13 +66,13 @@ onUnmounted(() => {
             class="mb-4 last:mb-0"
           >
             <div class="flex justify-between mb-1 text-sm">
-              <span class="text-primary-900 dark:text-white font-medium">{{ skill.name }}</span>
-              <span class="text-secondary-500 dark:text-accent-400">{{ skill.percentage }}%</span>
+              <span style="color: var(--text-primary); font-weight: 500;">{{ skill.name }}</span>
+              <span style="color: var(--text-secondary);">{{ skill.percentage }}%</span>
             </div>
-            <div class="h-2 bg-primary-100 dark:bg-dark-border rounded-full overflow-hidden">
+            <div class="h-2 rounded-full overflow-hidden" style="background-color: var(--border);">
               <div
                 class="h-full rounded-full transition-all duration-1000 ease-out"
-                style="background: linear-gradient(90deg, #e76f51, #e9c46a)"
+                style="background: linear-gradient(90deg, var(--accent), #818cf8)"
                 :style="{ width: skillsVisible ? `${skill.percentage}%` : '0%' }"
               />
             </div>

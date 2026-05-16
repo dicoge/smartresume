@@ -26,7 +26,7 @@ const filteredProjects = computed(() => {
 </script>
 
 <template>
-  <section ref="sectionRef" id="projects" class="py-20 bg-primary-50 dark:bg-dark-card/50">
+  <section ref="sectionRef" id="projects" class="py-20" style="background-color: var(--bg-primary);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">{{ t('projects.title') }}</h2>
       <p class="section-subtitle">{{ t('projects.subtitle') }}</p>
@@ -40,7 +40,10 @@ const filteredProjects = computed(() => {
           class="px-5 py-2 rounded-full text-sm font-medium border transition-all duration-300"
           :class="activeFilter === filter.value
             ? 'bg-primary-500 text-white border-primary-500'
-            : 'bg-ivory dark:bg-dark-card text-secondary-600 dark:text-accent-400 border-primary-100 dark:border-dark-border hover:border-primary-500 hover:text-primary-500'"
+            : ''"
+          :style="activeFilter === filter.value
+            ? { backgroundColor: 'var(--accent)', color: 'white', borderColor: 'var(--accent)' }
+            : { backgroundColor: 'var(--bg-tertiary)', color: 'var(--text-secondary)', borderColor: 'var(--border)' }"
         >
           {{ t(filter.key) }}
         </button>
@@ -55,7 +58,8 @@ const filteredProjects = computed(() => {
         />
         <div
           v-if="filteredProjects.length === 0"
-          class="col-span-full text-center py-12 text-secondary-500 dark:text-accent-400"
+          class="col-span-full text-center py-12"
+          style="color: var(--text-secondary);"
         >
           {{ t('projects.noProjects') }}
         </div>

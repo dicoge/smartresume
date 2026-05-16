@@ -56,10 +56,23 @@ export function useScrollReveal(
           }
         })
       },
-      { threshold },
+      { threshold: 0.1 },
     )
 
     observer.observe(target.value)
+
+    // Fallback: force visibility if IntersectionObserver never fires (3s timeout)
+    setTimeout(() => {
+      if (!isVisible.value && target.value) {
+        target.value.classList.remove(hiddenClass)
+        target.value.classList.add(visibleClass)
+        isVisible.value = true
+        if (observer) {
+          observer.disconnect()
+          observer = null
+        }
+      }
+    }, 3000)
   })
 
   onUnmounted(() => {

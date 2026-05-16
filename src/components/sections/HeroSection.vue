@@ -25,9 +25,13 @@ const scrollTo = (id: string) => {
 </script>
 
 <template>
-  <section class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden bg-gradient-to-br from-ivory to-primary-100 dark:from-dark-bg dark:to-primary-900">
-    <!-- Decorative orb -->
-    <div class="absolute -top-48 -right-48 w-[500px] h-[500px] rounded-full bg-primary-500/10 dark:bg-primary-500/20 blur-3xl pointer-events-none" />
+  <section class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden" style="background: var(--gradient-hero);">
+    <!-- Decorative orb - accent glow -->
+    <div class="absolute -top-48 -right-48 w-[600px] h-[600px] rounded-full" style="background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%); pointer-events: none;" />
+    <div class="absolute -bottom-48 -left-48 w-[500px] h-[500px] rounded-full" style="background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%); pointer-events: none;" />
+
+    <!-- Glow line at bottom of hero -->
+    <div class="absolute bottom-0 left-0 right-0 h-px" style="background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0.3;"></div>
 
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center animate-fade-in-up">
       <!-- Name -->
@@ -36,12 +40,12 @@ const scrollTo = (id: string) => {
       </h1>
 
       <!-- Subtitle -->
-      <p class="text-xl sm:text-2xl font-semibold text-accent-500 mb-4">
+      <p class="text-xl sm:text-2xl font-semibold mb-4" style="color: var(--accent);">
         {{ t('hero.subtitle') }}
       </p>
 
       <!-- Typing animation -->
-      <div class="text-lg sm:text-xl text-secondary-500 dark:text-accent-400 min-h-[2em] mb-8 font-medium">
+      <div class="text-lg sm:text-xl min-h-[2em] mb-8 font-medium" style="color: var(--text-secondary);">
         <span>{{ displayText }}</span>
         <span class="animate-blink">|</span>
       </div>

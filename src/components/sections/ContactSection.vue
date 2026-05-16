@@ -118,49 +118,49 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <section ref="sectionRef" id="contact" class="py-20 bg-ivory dark:bg-dark-bg">
+  <section ref="sectionRef" id="contact" class="py-20" style="background-color: var(--bg-primary);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">{{ t('contact.title') }}</h2>
       <p class="section-subtitle">{{ t('contact.subtitle') }}</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
         <!-- Contact Info -->
-        <div class="bg-primary-50 dark:bg-dark-card p-8 rounded-2xl border border-primary-100 dark:border-dark-border">
-          <h3 class="text-accent-500 font-semibold text-lg mb-6">{{ t('contact.infoTitle') }}</h3>
+        <div class="p-8 rounded-2xl" style="background-color: var(--bg-secondary); border: 1px solid var(--border);">
+          <h3 class="font-semibold text-lg mb-6" style="color: var(--accent);">{{ t('contact.infoTitle') }}</h3>
 
           <div class="space-y-6">
-            <div class="flex items-center gap-4 text-secondary-600 dark:text-accent-400">
+            <div class="flex items-center gap-4" style="color: var(--text-secondary);">
               <span class="text-2xl">🐙</span>
               <div>
-                <div class="font-medium text-primary-900 dark:text-white">{{ t('contact.github') }}</div>
-                <a :href="contact.github.url" target="_blank" rel="noopener noreferrer" class="text-primary-500 hover:text-primary-400">
+                <div class="font-medium" style="color: var(--text-primary);">{{ t('contact.github') }}</div>
+                <a :href="contact.github.url" target="_blank" rel="noopener noreferrer" style="color: var(--accent);" class="hover:opacity-80">
                   {{ contact.github.handle }}
                 </a>
               </div>
             </div>
 
-            <div class="flex items-center gap-4 text-secondary-600 dark:text-accent-400">
+            <div class="flex items-center gap-4" style="color: var(--text-secondary);">
               <span class="text-2xl">📧</span>
               <div>
-                <div class="font-medium text-primary-900 dark:text-white">{{ t('contact.email') }}</div>
-                <a :href="`mailto:${contact.email.address}`" class="text-primary-500 hover:text-primary-400">
+                <div class="font-medium" style="color: var(--text-primary);">{{ t('contact.email') }}</div>
+                <a :href="`mailto:${contact.email.address}`" style="color: var(--accent);" class="hover:opacity-80">
                   {{ contact.email.address }}
                 </a>
               </div>
             </div>
 
-            <div class="flex items-center gap-4 text-secondary-600 dark:text-accent-400">
+            <div class="flex items-center gap-4" style="color: var(--text-secondary);">
               <span class="text-2xl">📍</span>
               <div>
-                <div class="font-medium text-primary-900 dark:text-white">{{ t('contact.location') }}</div>
+                <div class="font-medium" style="color: var(--text-primary);">{{ t('contact.location') }}</div>
                 <span>{{ contact.location }}</span>
               </div>
             </div>
           </div>
 
-          <div class="mt-6 pt-6 border-t border-primary-100 dark:border-dark-border">
-            <p class="text-secondary-600 dark:text-accent-400 text-sm mb-2">{{ t('contact.interests') }}</p>
-            <ul class="text-secondary-600 dark:text-accent-400 text-sm space-y-1">
+          <div class="mt-6 pt-6 border-t" style="border-color: var(--border);">
+            <p class="text-sm mb-2" style="color: var(--text-secondary);">{{ t('contact.interests') }}</p>
+            <ul class="text-sm space-y-1" style="color: var(--text-secondary);">
               <li>• {{ t('contact.interest1') }}</li>
               <li>• {{ t('contact.interest2') }}</li>
               <li>• {{ t('contact.interest3') }}</li>
@@ -170,16 +170,16 @@ const handleSubmit = async () => {
         </div>
 
         <!-- Contact Form -->
-        <div class="bg-primary-50 dark:bg-dark-card p-8 rounded-2xl border border-primary-100 dark:border-dark-border">
-          <h3 class="text-accent-500 font-semibold text-lg mb-6">{{ t('contact.formTitle') }}</h3>
+        <div class="p-8 rounded-2xl" style="background-color: var(--bg-secondary); border: 1px solid var(--border);">
+          <h3 class="font-semibold text-lg mb-6" style="color: var(--accent);">{{ t('contact.formTitle') }}</h3>
 
           <!-- Success message -->
-          <div v-if="status === 'success'" class="mb-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-700 dark:text-green-400 text-sm">
+          <div v-if="status === 'success'" class="mb-4 p-4 rounded-lg text-sm" style="background-color: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); color: #4ade80;">
             ✅ {{ t('contact.successMessage') }}
           </div>
 
           <!-- Error message -->
-          <div v-else-if="status === 'error'" class="mb-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-700 dark:text-red-400 text-sm">
+          <div v-else-if="status === 'error'" class="mb-4 p-4 rounded-lg text-sm" style="background-color: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171;">
             ⚠️ {{ t('contact.errorMessage') }}
           </div>
 
@@ -191,34 +191,35 @@ const handleSubmit = async () => {
             </div>
 
             <div>
-              <label class="block text-sm text-secondary-600 dark:text-accent-400 mb-1">{{ t('contact.nameLabel') }} *</label>
+              <label class="block text-sm mb-1" style="color: var(--text-secondary);">{{ t('contact.nameLabel') }} *</label>
               <input
                 v-model="form.name"
                 type="text"
                 :placeholder="t('contact.namePlaceholder')"
-                class="w-full px-4 py-3 bg-ivory dark:bg-dark-bg border border-primary-100 dark:border-dark-border rounded-lg text-primary-900 dark:text-white focus:outline-none focus:border-primary-500"
-                :class="{ 'border-red-500 dark:border-red-400': errors.name }"
+                class="dark-input w-full px-4 py-3 rounded-lg border focus:outline-none transition-colors"
+                :style="{ borderColor: errors.name ? '#ef4444' : 'var(--border)', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)' }"
               />
-              <p v-if="errors.name" class="mt-1 text-xs text-red-500 dark:text-red-400">{{ errors.name }}</p>
+              <p v-if="errors.name" class="mt-1 text-xs" style="color: #ef4444;">{{ errors.name }}</p>
             </div>
 
             <div>
-              <label class="block text-sm text-secondary-600 dark:text-accent-400 mb-1">{{ t('contact.emailLabel') }} *</label>
+              <label class="block text-sm mb-1" style="color: var(--text-secondary);">{{ t('contact.emailLabel') }} *</label>
               <input
                 v-model="form.email"
                 type="email"
                 :placeholder="t('contact.emailPlaceholder')"
-                class="w-full px-4 py-3 bg-ivory dark:bg-dark-bg border border-primary-100 dark:border-dark-border rounded-lg text-primary-900 dark:text-white focus:outline-none focus:border-primary-500"
-                :class="{ 'border-red-500 dark:border-red-400': errors.email }"
+                class="dark-input w-full px-4 py-3 rounded-lg border focus:outline-none transition-colors"
+                :style="{ borderColor: errors.email ? '#ef4444' : 'var(--border)', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)' }"
               />
-              <p v-if="errors.email" class="mt-1 text-xs text-red-500 dark:text-red-400">{{ errors.email }}</p>
+              <p v-if="errors.email" class="mt-1 text-xs" style="color: #ef4444;">{{ errors.email }}</p>
             </div>
 
             <div>
-              <label class="block text-sm text-secondary-600 dark:text-accent-400 mb-1">{{ t('contact.subjectLabel') }}</label>
+              <label class="block text-sm mb-1" style="color: var(--text-secondary);">{{ t('contact.subjectLabel') }}</label>
               <select
                 v-model="form.subject"
-                class="w-full px-4 py-3 bg-ivory dark:bg-dark-bg border border-primary-100 dark:border-dark-border rounded-lg text-primary-900 dark:text-white focus:outline-none focus:border-primary-500"
+                class="dark-input w-full px-4 py-3 rounded-lg border focus:outline-none transition-colors"
+                style="border-color: var(--border); background-color: var(--bg-secondary); color: var(--text-primary);"
               >
                 <option value="inquiry">{{ t('contact.subjectOptions.inquiry') }}</option>
                 <option value="collaboration">{{ t('contact.subjectOptions.collaboration') }}</option>
@@ -228,15 +229,15 @@ const handleSubmit = async () => {
             </div>
 
             <div>
-              <label class="block text-sm text-secondary-600 dark:text-accent-400 mb-1">{{ t('contact.messageLabel') }} *</label>
+              <label class="block text-sm mb-1" style="color: var(--text-secondary);">{{ t('contact.messageLabel') }} *</label>
               <textarea
                 v-model="form.message"
                 :placeholder="t('contact.messagePlaceholder')"
                 rows="4"
-                class="w-full px-4 py-3 bg-ivory dark:bg-dark-bg border border-primary-100 dark:border-dark-border rounded-lg text-primary-900 dark:text-white focus:outline-none focus:border-primary-500 resize-y"
-                :class="{ 'border-red-500 dark:border-red-400': errors.message }"
+                class="dark-input w-full px-4 py-3 rounded-lg border focus:outline-none transition-colors resize-y"
+                :style="{ borderColor: errors.message ? '#ef4444' : 'var(--border)', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)' }"
               />
-              <p v-if="errors.message" class="mt-1 text-xs text-red-500 dark:text-red-400">{{ errors.message }}</p>
+              <p v-if="errors.message" class="mt-1 text-xs" style="color: #ef4444;">{{ errors.message }}</p>
             </div>
 
             <button

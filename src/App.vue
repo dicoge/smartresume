@@ -30,7 +30,7 @@ const SkeletonWithCards = {
           <div class="h-8 w-48 skeleton-shimmer rounded-lg"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div v-for="i in 3" :key="i" class="rounded-2xl overflow-hidden border border-primary-100/20 dark:border-dark-border/20">
+          <div v-for="i in 3" :key="i" class="rounded-2xl overflow-hidden border border-[var(--border)]/20" style="background-color: var(--bg-secondary);">
             <div class="h-48 skeleton-shimmer"></div>
             <div class="p-6 space-y-3">
               <div class="h-5 w-3/4 skeleton-shimmer rounded-lg"></div>
@@ -58,7 +58,7 @@ const SkeletonGrid = {
           <div class="h-8 w-48 skeleton-shimmer rounded-lg"></div>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div v-for="i in columns" :key="i" class="p-6 rounded-2xl border border-primary-100/20 dark:border-dark-border/20">
+          <div v-for="i in columns" :key="i" class="p-6 rounded-2xl border border-[var(--border)]/20" style="background-color: var(--bg-secondary);">
             <div class="h-10 w-20 skeleton-shimmer rounded-lg mx-auto mb-3"></div>
             <div class="h-4 w-24 skeleton-shimmer rounded-lg mx-auto"></div>
           </div>
@@ -111,7 +111,7 @@ useTheme()
 </script>
 
 <template>
-  <div class="min-h-screen bg-ivory dark:bg-dark-bg transition-colors duration-200">
+  <div class="min-h-screen" style="background-color: var(--bg-primary); color: var(--text-primary);">
     <TheHeader />
     <main>
       <HeroSection />

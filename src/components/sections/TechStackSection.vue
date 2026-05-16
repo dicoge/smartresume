@@ -18,7 +18,7 @@ const categoryTitleMap: Record<string, string> = {
 </script>
 
 <template>
-  <section ref="sectionRef" id="tech" class="py-20 bg-ivory dark:bg-dark-bg">
+  <section ref="sectionRef" id="tech" class="py-20" style="background-color: var(--bg-primary);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">{{ t('techStack.title') }}</h2>
       <p class="section-subtitle">{{ t('techStack.subtitle') }}</p>
@@ -27,9 +27,10 @@ const categoryTitleMap: Record<string, string> = {
         <div
           v-for="category in techCategories"
           :key="category.id"
-          class="bg-primary-50 dark:bg-dark-card p-6 rounded-2xl border border-primary-100 dark:border-dark-border"
+          class="p-6 rounded-2xl transition-all duration-300"
+          style="background-color: var(--bg-secondary); border: 1px solid var(--border);"
         >
-          <h3 class="text-accent-500 font-semibold mb-4 flex items-center gap-2">
+          <h3 class="font-semibold mb-4 flex items-center gap-2" style="color: var(--accent);">
             <span>{{ category.icon }}</span>
             {{ t(categoryTitleMap[category.id]) }}
           </h3>
@@ -37,9 +38,10 @@ const categoryTitleMap: Record<string, string> = {
             <li
               v-for="item in category.items"
               :key="item"
-              class="text-secondary-600 dark:text-accent-400 text-sm flex items-center gap-2"
+              class="text-sm flex items-center gap-2"
+              style="color: var(--text-secondary);"
             >
-              <span class="text-primary-500 font-bold">▹</span>
+              <span style="color: var(--accent); font-weight: bold;">▹</span>
               {{ item }}
             </li>
           </ul>

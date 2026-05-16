@@ -11,7 +11,7 @@ useScrollReveal(sectionRef)
 </script>
 
 <template>
-  <section ref="sectionRef" class="py-20 bg-primary-50 dark:bg-dark-card/50">
+  <section ref="sectionRef" class="py-20" style="background-color: var(--bg-secondary);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">{{ t('stats.title') }}</h2>
       <p class="section-subtitle">{{ t('stats.subtitle') }}</p>
@@ -20,12 +20,13 @@ useScrollReveal(sectionRef)
         <div
           v-for="stat in githubStats"
           :key="stat.id"
-          class="bg-ivory dark:bg-dark-card p-6 rounded-2xl border border-primary-100 dark:border-dark-border text-center"
+          class="p-6 rounded-2xl text-center transition-all duration-300"
+          style="background-color: var(--bg-secondary); border: 1px solid var(--border);"
         >
           <div class="text-4xl font-extrabold gradient-text mb-2">
             {{ stat.value }}
           </div>
-          <div class="text-secondary-600 dark:text-accent-400 text-sm">
+          <div class="text-sm" style="color: var(--text-secondary);">
             {{ t(`stats.${stat.id}`) }}
           </div>
         </div>
