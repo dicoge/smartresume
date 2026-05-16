@@ -8,7 +8,7 @@ export default {
   hero: {
     name: 'Shih Shao Pin',
     initials: 'SP',
-    subtitle: 'Senior Engineer at Gamania | Unity Developer | Full-Stack Developer',
+    subtitle: 'Senior Engineer at 鈊象電子 | Unity Developer | Full-Stack Developer',
     typingText1: 'Building immersive Unity game experiences...',
     typingText2: 'Crafting efficient Node.js API services...',
     typingText3: 'Creating smooth Vue.js web interfaces...',
