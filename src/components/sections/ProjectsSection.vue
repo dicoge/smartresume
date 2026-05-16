@@ -17,6 +17,7 @@ const filters: { key: string; value: ProjectCategory }[] = [
   { key: 'projects.filterAITools', value: 'AI Tools' },
   { key: 'projects.filterFullStack', value: 'Full-Stack' },
   { key: 'projects.filterTool', value: 'Tool' },
+  { key: 'projects.filterGame', value: 'Game' },
 ]
 
 const filteredProjects = computed(() => {

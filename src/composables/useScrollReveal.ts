@@ -56,7 +56,7 @@ export function useScrollReveal(
           }
         })
       },
-      { threshold: 0.1 },
+      { threshold: threshold ?? 0.1 },
     )
 
     observer.observe(target.value)

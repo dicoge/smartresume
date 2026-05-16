@@ -36,9 +36,10 @@ export default {
     filterAITools: 'AI Tools',
     filterFullStack: 'Full-Stack',
     filterTool: 'Tool',
+    filterGame: 'Game',
     viewCode: 'GitHub',
     liveDemo: 'Live Demo',
-    noProjects: '尚無此分類作品',
+    noProjects: 'No projects in this category',
     holoHunter: {
       title: 'HoloHunter Card Hunter',
       subtitle: 'Virtual Card Price Lookup',
