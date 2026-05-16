@@ -36,7 +36,7 @@ export default {
     filterAITools: 'AI 工具',
     filterFullStack: '全端',
 filterTool: '工具',
-    filterGame: 'Game',
+    filterGame: '遊戲',
     viewCode: 'GitHub',
     liveDemo: '線上展示',
     noProjects: '尚無此分類作品',
