@@ -15,7 +15,7 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['vite.svg', 'og-image.png'],
+      includeAssets: ['icon-192.svg', 'icon-512.svg', 'icon-maskable.svg'],
       manifest: {
         name: '石少斌 Shih Shao Pin - 全端工程師',
         short_name: '石少斌 Portfolio',
@@ -27,8 +27,9 @@ export default defineConfig({
         lang: 'zh-TW',
         start_url: '/',
         icons: [
-          { src: '/vite.svg', sizes: '192x192', type: 'image/svg+xml' },
-          { src: '/og-image.png', sizes: '512x512', type: 'image/png' },
+          { src: '/icon-192.svg', sizes: '192x192', type: 'image/svg+xml' },
+          { src: '/icon-512.svg', sizes: '512x512', type: 'image/svg+xml' },
+          { src: '/icon-maskable.svg', sizes: '512x512', type: 'image/svg+xml', purpose: 'maskable' },
         ],
       },
       workbox: {

@@ -2,13 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── CSS Variables for Dark Theme ─────────────────────────────────── */
+/* ── CSS Variables for Light / Dark Theme ──────────────────────────── */
+
+/* Light mode defaults */
 :root {
+  --bg-primary: #fef9f4;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f5f0eb;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a5a;
+  --text-muted: #8a8a9a;
+  --primary: #f4a261;
+  --secondary: #c1666b;
+  --accent: #e9c46a;
+  --primary-glow: rgba(244, 162, 97, 0.15);
+  --secondary-glow: rgba(193, 102, 107, 0.15);
+  --accent-glow: rgba(233, 196, 106, 0.15);
+  --border: #e0d5d0;
+  --card-bg: #ffffff;
+  --gradient-hero: linear-gradient(135deg, #fef9f4 0%, #f5e6da 100%);
+  --gradient-accent: linear-gradient(135deg, #e76f51, #e9c46a);
+  --gradient-accent-hover: linear-gradient(135deg, #f4a261, #e76f51);
+  --red-error: #ef4444;
+}
+
+/* Dark mode overrides */
+.dark {
   --bg-primary: #0a0a0f;
   --bg-secondary: #12121a;
   --bg-tertiary: #1a1a25;
   --text-primary: #f0f0f5;
   --text-secondary: #8888a0;
+  --text-muted: #6a6a80;
   --primary: #f4a261;
   --secondary: #c1666b;
   --accent: #e9c46a;
@@ -16,6 +41,7 @@
   --secondary-glow: rgba(193, 102, 107, 0.3);
   --accent-glow: rgba(233, 196, 106, 0.3);
   --border: #2a2a3a;
+  --card-bg: #12121a;
   --gradient-hero: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
   --gradient-accent: linear-gradient(135deg, #e76f51, #e9c46a);
   --gradient-accent-hover: linear-gradient(135deg, #f4a261, #e76f51);
