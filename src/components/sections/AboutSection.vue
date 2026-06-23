@@ -52,6 +52,7 @@ onUnmounted(() => {
             <li>• {{ t('about.focus1') }}</li>
             <li>• {{ t('about.focus2') }}</li>
             <li>• {{ t('about.focus3') }}</li>
+            <li>• {{ t('about.focus4') }}</li>
           </ul>
         </div>
 

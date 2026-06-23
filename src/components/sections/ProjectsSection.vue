@@ -38,7 +38,7 @@ const filteredProjects = computed(() => {
           v-for="filter in filters"
           :key="filter.value"
           @click="activeFilter = filter.value"
-          class="px-5 py-2 rounded-full text-sm font-medium border transition-all duration-300"
+          class="px-5 py-2 rounded-full text-sm font-medium border transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary-500"
           :class="activeFilter === filter.value
             ? 'bg-primary-500 text-white border-primary-500'
             : ''"

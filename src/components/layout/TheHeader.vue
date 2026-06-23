@@ -27,7 +27,7 @@ const closeMenu = () => {
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 bg-ivory/80 dark:bg-dark-bg/95 backdrop-blur-md border-b border-primary-100 dark:border-dark-border">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-dark-bg/80 dark:bg-dark-bg/95 backdrop-blur-md border-b border-primary-100 dark:border-dark-border">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
@@ -41,7 +41,7 @@ const closeMenu = () => {
             v-for="link in navLinks"
             :key="link.href"
             :href="link.href"
-            class="transition-colors font-medium relative"
+            class="transition-colors font-medium relative focus-visible:ring-2 focus-visible:ring-primary-500 rounded-md"
             :class="activeSection === link.id
               ? 'text-primary-500 dark:text-primary-400'
               : 'text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400'"
@@ -102,7 +102,7 @@ const closeMenu = () => {
             :key="link.href"
             :href="link.href"
             @click="closeMenu"
-            class="transition-colors font-medium"
+            class="transition-colors font-medium focus-visible:ring-2 focus-visible:ring-primary-500 rounded-md"
             :class="activeSection === link.id
               ? 'text-primary-500 dark:text-primary-400'
               : 'text-secondary-500 dark:text-accent-400 hover:text-primary-500 dark:hover:text-primary-400'"

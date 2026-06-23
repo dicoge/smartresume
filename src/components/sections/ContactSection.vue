@@ -35,12 +35,14 @@ const form = reactive<FormData>({
 interface FormErrors {
   name: string
   email: string
+  subject: string
   message: string
 }
 
 const errors = reactive<FormErrors>({
   name: '',
   email: '',
+  subject: '',
   message: '',
 })
 
@@ -52,6 +54,7 @@ function validate(): boolean {
   let valid = true
   errors.name = ''
   errors.email = ''
+  errors.subject = ''
   errors.message = ''
 
   if (!form.name.trim()) {
@@ -64,6 +67,11 @@ function validate(): boolean {
     valid = false
   } else if (!emailRegex.test(form.email.trim())) {
     errors.email = t('contact.errorEmailInvalid')
+    valid = false
+  }
+
+  if (!form.subject.trim()) {
+    errors.subject = t('contact.errorSubjectRequired')
     valid = false
   }
 
@@ -156,6 +164,16 @@ const handleSubmit = async () => {
                 <span>{{ contact.location }}</span>
               </div>
             </div>
+
+            <div v-if="contact.portfolio" class="flex items-center gap-4" style="color: var(--text-secondary);">
+              <span class="text-2xl">🔗</span>
+              <div>
+                <div class="font-medium" style="color: var(--text-primary);">{{ t('contact.portfolio') }}</div>
+                <a :href="contact.portfolio" target="_blank" rel="noopener noreferrer" style="color: var(--accent);" class="hover:opacity-80">
+                  {{ contact.portfolio }}
+                </a>
+              </div>
+            </div>
           </div>
 
           <div class="mt-6 pt-6 border-t" style="border-color: var(--border);">
@@ -191,51 +209,56 @@ const handleSubmit = async () => {
             </div>
 
             <div>
-              <label class="block text-sm mb-1" style="color: var(--text-secondary);">{{ t('contact.nameLabel') }} *</label>
+              <label for="contact-name" class="block text-sm mb-1" style="color: var(--text-secondary);">{{ t('contact.nameLabel') }} *</label>
               <input
+                id="contact-name"
                 v-model="form.name"
                 type="text"
                 :placeholder="t('contact.namePlaceholder')"
                 class="dark-input w-full px-4 py-3 rounded-lg border focus:outline-none transition-colors"
-                :style="{ borderColor: errors.name ? '#ef4444' : 'var(--border)', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)' }"
+                :style="{ backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', borderColor: errors.name ? '#ef4444' : undefined }"
               />
               <p v-if="errors.name" class="mt-1 text-xs" style="color: #ef4444;">{{ errors.name }}</p>
             </div>
 
             <div>
-              <label class="block text-sm mb-1" style="color: var(--text-secondary);">{{ t('contact.emailLabel') }} *</label>
+              <label for="contact-email" class="block text-sm mb-1" style="color: var(--text-secondary);">{{ t('contact.emailLabel') }} *</label>
               <input
+                id="contact-email"
                 v-model="form.email"
                 type="email"
                 :placeholder="t('contact.emailPlaceholder')"
                 class="dark-input w-full px-4 py-3 rounded-lg border focus:outline-none transition-colors"
-                :style="{ borderColor: errors.email ? '#ef4444' : 'var(--border)', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)' }"
+                :style="{ backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', borderColor: errors.email ? '#ef4444' : undefined }"
               />
               <p v-if="errors.email" class="mt-1 text-xs" style="color: #ef4444;">{{ errors.email }}</p>
             </div>
 
             <div>
-              <label class="block text-sm mb-1" style="color: var(--text-secondary);">{{ t('contact.subjectLabel') }}</label>
+              <label for="contact-subject" class="block text-sm mb-1" style="color: var(--text-secondary);">{{ t('contact.subjectLabel') }}</label>
               <select
+                id="contact-subject"
                 v-model="form.subject"
                 class="dark-input w-full px-4 py-3 rounded-lg border focus:outline-none transition-colors"
-                style="border-color: var(--border); background-color: var(--bg-secondary); color: var(--text-primary);"
+                :style="{ backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', borderColor: errors.subject ? '#ef4444' : undefined }"
               >
                 <option value="inquiry">{{ t('contact.subjectOptions.inquiry') }}</option>
                 <option value="collaboration">{{ t('contact.subjectOptions.collaboration') }}</option>
                 <option value="question">{{ t('contact.subjectOptions.question') }}</option>
                 <option value="other">{{ t('contact.subjectOptions.other') }}</option>
               </select>
+              <p v-if="errors.subject" class="mt-1 text-xs" style="color: #ef4444;">{{ errors.subject }}</p>
             </div>
 
             <div>
-              <label class="block text-sm mb-1" style="color: var(--text-secondary);">{{ t('contact.messageLabel') }} *</label>
+              <label for="contact-message" class="block text-sm mb-1" style="color: var(--text-secondary);">{{ t('contact.messageLabel') }} *</label>
               <textarea
+                id="contact-message"
                 v-model="form.message"
                 :placeholder="t('contact.messagePlaceholder')"
                 rows="4"
                 class="dark-input w-full px-4 py-3 rounded-lg border focus:outline-none transition-colors resize-y"
-                :style="{ borderColor: errors.message ? '#ef4444' : 'var(--border)', backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)' }"
+                :style="{ backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)', borderColor: errors.message ? '#ef4444' : undefined }"
               />
               <p v-if="errors.message" class="mt-1 text-xs" style="color: #ef4444;">{{ errors.message }}</p>
             </div>

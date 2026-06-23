@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import { useTheme } from '../../composables/useTheme'
+import { useI18n } from 'vue-i18n'
 
 const { theme, toggleTheme } = useTheme()
+const { t } = useI18n()
 </script>
 
 <template>
   <button
     @click="toggleTheme"
     class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
-    :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+    :aria-label="theme === 'dark' ? t('theme.light') : t('theme.dark')"
   >
     <svg
       v-if="theme === 'light'"

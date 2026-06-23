@@ -10,7 +10,7 @@
 ## Hero
 
 **Subtitle（zh-TW）：** 鈊象電子高階工程師 | Unity 開發 | 全端技術
-**Subtitle（en）：** Senior Engineer at Gamania | Unity Developer | Full-Stack Developer
+**Subtitle（en）：** Senior Engineer at IGS | Unity Developer | Full-Stack Developer
 
 **typingText1（zh-TW）：** 打造優質的 Unity 遊戲體驗...
 **typingText1（en）：** Building high-quality Unity game experiences...
@@ -56,9 +56,12 @@
 ### Skill Bars
 
 - Unity (85%)
-- Node.js (75%)
-- Vue.js (70%)
 - C# (80%)
+- Node.js (75%)
+- TypeScript (70%)
+- Vue.js (70%)
+- Python (55%)
+- React / Expo (50%)
 
 ### Languages 💻
 
@@ -78,8 +81,12 @@
 - Unity
 - Unity UI (uGUI)
 - Vue.js 3
+- Nuxt
 - Node.js
 - Express
+- React
+- Expo
+- React Native
 
 ### Specializations 🎯
 
@@ -87,15 +94,16 @@
 **Label（en）：** Specializations
 
 - Game Development
-- Cross-platform Deployment
 - Performance Optimization
 - Full-Stack Development
+- Cross-platform App Development
+- Vercel / Render Deployment
 
 ---
 
 ## Work Experience
 
-### 高階工程師 (Senior Engineer) | 鈊象電子 (Gamania)
+### 高階工程師 (Senior Engineer) | 鈊象電子 (IGS)
 *2022年 - 至今 (4年)*
 
 在鈊象電子擔任高階工程師，負責遊戲專案開發與技術支援。
@@ -111,15 +119,72 @@
 
 ## Side Projects
 
-（待補充）
+### Pixel Office 🏢
+**Category:** AI Tools
+**Tags:** JavaScript, Phaser Canvas, Node.js, Render
+**GitHub:** https://github.com/dicoge/pixel-office
+**Demo:** https://pixel-office-eanf.onrender.com
+
+像素風格 AI Agent 團隊管理系統 — Phaser.js Canvas 打造即時辦公室視圖。
+
+### HoloHunter 🃏
+**Category:** AI Tools
+**Tags:** React Native, TypeScript, Puppeteer, Vercel KV
+**GitHub:** https://github.com/dicoge/hunterCard
+**Demo:** https://card-hunter-mu.vercel.app
+
+Virtual Card Price Lookup App for hololive Official Card Game (hOCG).
+
+### Vue Excel Dashboard 📊
+**Category:** Full-Stack
+**Tags:** Vue 3, ECharts, XLSX, Vite
+**GitHub:** https://github.com/dicoge/vue-excel-dashboard
+
+Upload Excel files and instantly transform them into interactive charts.
+
+### Vue Manage System 🖥️
+**Category:** Full-Stack
+**Tags:** Vue, Vuetify, Element Plus, Node.js
+**GitHub:** https://github.com/dicoge/doorlock
+
+Full-stack admin panel with user management, data dashboards, and role-based access control.
+
+### DCBOT Discord Bot Series 🤖
+**Category:** Tool
+**Tags:** JavaScript, Discord.js, Node.js
+**GitHub:** https://github.com/dicoge/DCBOT-cash
+
+A series of three practical Discord bots: expense tracking, server management automation, and knowledge Q&A.
+
+### Web Page Slip 🎨
+**Category:** Tool
+**Tags:** Vue, CSS Animation, Vite
+**GitHub:** https://github.com/dicoge/webPageSlip
+
+Interactive scrolling visual experience built with Vue and CSS Animation.
+
+### DungeonD3 ⚔️
+**Category:** Game
+**Tags:** TypeScript, HTML5 Canvas, Game AI, Vercel
+**GitHub:** https://github.com/dicoge/DungeonD3
+**Demo:** https://dungeon-d3.vercel.app
+
+Hardcore D20 dice-based dungeon crawler with procedural generation.
+
+### PartSmart 💻
+**Category:** AI Tools
+**Tags:** Expo, React Native, TypeScript, Puppeteer, Vercel Edge
+**GitHub:** https://github.com/dicoge/PartSmart
+
+Real-time PC parts price comparison tool aggregating quotes from multiple retailers.
 
 ---
 
 ## GitHub Stats
 
-- **Repos:** 5+
-- **Stars:** 10+
-- **TypeScript Percent:** 40%
+- **Repos:** 10
+- **Stars:** 0
+- **TypeScript Percent:** 20%
 - **Status:** Active
 
 ---

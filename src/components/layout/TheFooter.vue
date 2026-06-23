@@ -71,6 +71,7 @@ const scrollToTop = () => {
         <!-- Back to Top -->
         <button
           @click="scrollToTop"
+          aria-label="Back to top"
           class="transition-colors text-sm font-medium"
           style="color: var(--accent);"
         >

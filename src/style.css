@@ -144,20 +144,6 @@
     background-clip: text;
   }
 
-  /* Card component for dark theme */
-  .dark-card {
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-  }
-
-  .dark-card:hover {
-    border-color: var(--accent);
-    box-shadow: 0 0 20px var(--accent-glow);
-    transform: translateY(-2px);
-  }
-
   /* Chip / Tag component */
   .dark-chip {
     display: inline-flex;
@@ -198,14 +184,6 @@
     color: var(--text-secondary);
   }
 
-  /* Glow line decoration */
-  .glow-line {
-    height: 1px;
-    width: 100%;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
-    opacity: 0.3;
-  }
-
   /* Project card hover effect */
   .project-card-dark {
     transition: all 0.3s ease;
@@ -214,20 +192,6 @@
   .project-card-dark:hover {
     border-color: var(--accent) !important;
     box-shadow: 0 0 30px var(--accent-glow);
-  }
-}
-
-@layer utilities {
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
-
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
-
-  .text-shadow-glow {
-    text-shadow: 0 0 20px var(--accent-glow);
   }
 }
 

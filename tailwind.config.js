@@ -34,7 +34,7 @@ export default {
           card: '#12121a',   // Card background
           border: '#2a2a3a', // Border color
         },
-        ivory: '#0a0a0f', // Override ivory to deep black for dark theme
+        'dark-bg': '#0a0a0f', // Dark background base color
       },
       fontFamily: {
         sans: ['Inter', 'Noto Sans TC', 'sans-serif'],

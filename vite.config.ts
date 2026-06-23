@@ -21,7 +21,7 @@ export default defineConfig({
         short_name: '石少斌 Portfolio',
         description: '4年Unity/全端工程師，專精遊戲開發與現代化Web技術',
         theme_color: '#264653',
-        background_color: '#fef9f4',
+        background_color: '#0a0a0f',
         display: 'standalone',
         orientation: 'portrait-primary',
         lang: 'zh-TW',

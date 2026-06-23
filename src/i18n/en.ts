@@ -8,7 +8,7 @@ export default {
   hero: {
     name: 'Shih Shao Pin',
     initials: 'SP',
-    subtitle: 'Senior Engineer at 鈊象電子 | Unity Developer | Full-Stack Developer',
+    subtitle: 'Senior Engineer at IGS | Unity Developer | Full-Stack Developer',
     typingText1: 'Building immersive Unity game experiences...',
     typingText2: 'Crafting efficient Node.js API services...',
     typingText3: 'Creating smooth Vue.js web interfaces...',
@@ -45,35 +45,25 @@ export default {
       subtitle: 'Virtual Card Price Lookup',
       description: 'hOCG (hololive Official Card Game) price checker app with card search, yuyu-tei real-time pricing, and PWA install support. Built with Expo + React Native Web + TypeScript + Vercel Edge Functions + Puppeteer.',
     },
+    pixelOffice: {
+      title: 'Pixel Office',
+      subtitle: 'AI Agent Team Dashboard',
+      description: 'Pixel-styled AI Agent team management system — real-time office view powered by Phaser.js Canvas with Worker status monitoring, mood bubbles, and autonomous behavior animations. Node.js + sql.js backend deployed on Render.',
+    },
     vueExcelDashboard: {
       title: 'Excel Dynamic Dashboard',
       subtitle: 'Excel Data Visualization',
       description: 'Upload Excel files and instantly transform them into interactive charts — bar, line, pie and more. Powered by ECharts + XLSX parser with Vite HMR dev experience.',
-    },
-    chatGptLineBot: {
-      title: 'ChatGPT LINE Bot',
-      subtitle: 'AI Chat Bot',
-      description: 'LINE Messaging API integrated with ChatGPT for conversational AI. Dockerized deployment for real-time user support and community engagement.',
     },
     vueManageSystem: {
       title: 'Vue Full-Stack Admin System',
       subtitle: 'Front-end & Back-end Dashboard',
       description: 'Full-stack admin panel built with Vue 3 + Vuetify + Element Plus + Node.js backend. Features user management, data dashboards, and role-based access control.',
     },
-    dcbotCash: {
-      title: 'DCBOT Cash Bot',
-      subtitle: 'Discord Expense Tracker Bot',
-      description: 'Real-time expense tracking and query bot on Discord, supporting multi-currency and category statistics for easy management of shared expenses among community members.',
-    },
-    dcbotAdmin: {
-      title: 'DCBOT Admin Bot',
-      subtitle: 'Discord Server Management Automation',
-      description: 'Discord server management bot providing automated administration, permission control, and server status monitoring for server operators.',
-    },
-    dcbotAnswerbook: {
-      title: 'DCBOT Answer Bot',
-      subtitle: 'Discord Knowledge Q&A System',
-      description: 'Discord knowledge Q&A bot with quiz management, instant scoring, and feedback — perfect for educational training and community engagement.',
+    dcbotSeries: {
+      title: 'DCBOT Discord Bot Series',
+      subtitle: 'Expense Tracker - Admin - Q&A',
+      description: 'A series of three practical Discord bots: real-time expense tracking with multi-currency support, server management automation with permission control, and knowledge Q&A with quiz management and instant scoring. Built with JavaScript + Discord.js.',
     },
     webPageSlip: {
       title: 'Web Page Scroll Effects',
@@ -113,6 +103,7 @@ export default {
     infoTitle: 'Contact Information',
     github: 'GitHub',
     email: 'Email',
+    portfolio: 'Portfolio',
     location: 'Location',
     locationValue: 'Taiwan',
     interests: "I'm always interested in:",
@@ -141,6 +132,7 @@ export default {
     errorNameRequired: 'Name is required',
     errorEmailRequired: 'Email is required',
     errorEmailInvalid: 'Please enter a valid email address',
+    errorSubjectRequired: 'Subject is required',
     errorMessageRequired: 'Message is required',
   },
   footer: {

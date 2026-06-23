@@ -12,18 +12,19 @@ function createFilteredProjects(activeFilter: ProjectCategory) {
 }
 
 describe('ProjectsSection filtering', () => {
-  it('should show all 10 projects when filter is "All"', () => {
+  it('should show all 8 projects when filter is "All"', () => {
     const activeFilter = ref<ProjectCategory>('All')
     const filteredProjects = createFilteredProjects(activeFilter.value)
-    expect(filteredProjects.value).toHaveLength(10)
+    expect(filteredProjects.value).toHaveLength(8)
   })
 
-  it('should show 2 projects for "AI Tools" filter (holoHunter, partSmart)', () => {
+  it('should show 3 projects for "AI Tools" filter (holoHunter, pixelOffice, partSmart)', () => {
     const activeFilter = ref<ProjectCategory>('AI Tools')
     const filteredProjects = createFilteredProjects(activeFilter.value)
-    expect(filteredProjects.value).toHaveLength(2)
+    expect(filteredProjects.value).toHaveLength(3)
     const ids = filteredProjects.value.map(p => p.id)
     expect(ids).toContain('holoHunter')
+    expect(ids).toContain('pixelOffice')
     expect(ids).toContain('partSmart')
   })
 
@@ -36,15 +37,12 @@ describe('ProjectsSection filtering', () => {
     expect(ids).toContain('vueManageSystem')
   })
 
-  it('should show 5 projects for "Tool" filter', () => {
+  it('should show 2 projects for "Tool" filter (dcbotSeries, webPageSlip)', () => {
     const activeFilter = ref<ProjectCategory>('Tool')
     const filteredProjects = createFilteredProjects(activeFilter.value)
-    expect(filteredProjects.value).toHaveLength(5)
+    expect(filteredProjects.value).toHaveLength(2)
     const ids = filteredProjects.value.map(p => p.id)
-    expect(ids).toContain('chatGptLineBot')
-    expect(ids).toContain('dcbotCash')
-    expect(ids).toContain('dcbotAdmin')
-    expect(ids).toContain('dcbotAnswerbook')
+    expect(ids).toContain('dcbotSeries')
     expect(ids).toContain('webPageSlip')
   })
 
