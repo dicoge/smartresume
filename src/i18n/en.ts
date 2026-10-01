@@ -1,5 +1,6 @@
 export default {
   motion: {
+    gestureHint: "One gesture, one section · Scroll within longer content",
   "home": "Home",
   "experience": "Experience",
   "experienceKicker": "EXPERIENCE / EDUCATION",
@@ -14,7 +15,7 @@ export default {
   "previous": "Previous section",
   "next": "Next section",
   "skip": "Skip to main content",
-  "scroll": "Scroll to explore"
+  "scroll": "Swipe to the next section"
 },
   editorial: {
     demoUnavailable: "Demo currently unavailable",

@@ -7,9 +7,7 @@ const { t } = useI18n()
 const buildSha = __BUILD_SHA__
 const buildTime = __BUILD_TIME__
 
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-}
+
 </script>
 
 <template>
@@ -69,14 +67,14 @@ const scrollToTop = () => {
         </p>
 
         <!-- Back to Top -->
-        <button
-          @click="scrollToTop"
+        <a
+          href="#home"
           aria-label="Back to top"
           class="transition-colors text-sm font-medium"
           style="color: var(--accent);"
         >
           {{ t('footer.backToTop') }} ↑
-        </button>
+        </a>
       </div>
     </div>
   </footer>

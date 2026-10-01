@@ -1,5 +1,6 @@
 export default {
   motion: {
+    gestureHint: "一個手勢切一段・長內容可段內捲動",
   "home": "首頁",
   "experience": "經歷",
   "experienceKicker": "經歷 / 學歷",
@@ -14,7 +15,7 @@ export default {
   "previous": "上一段",
   "next": "下一段",
   "skip": "跳至主要內容",
-  "scroll": "向下捲動探索"
+  "scroll": "滑一下，切換下一段"
 },
   editorial: {
     demoUnavailable: "展示站目前無法連線",
