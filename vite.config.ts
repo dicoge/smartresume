@@ -17,9 +17,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icon-192.svg', 'icon-512.svg', 'icon-maskable.svg'],
       manifest: {
-        name: '石少斌 Shih Shao Pin - 全端工程師',
+        name: '石少斌 SHIH SHAO-PIN - 軟體前端工程師',
         short_name: '石少斌 Portfolio',
-        description: '4年Unity/全端工程師，專精遊戲開發與現代化Web技術',
+        description: '軟體前端工程師，具 Unity / C# 遊戲開發與 Web 個人專案經驗；2022/06 - 2026/09 任職鈊象電子（IGS）',
         theme_color: '#264653',
         background_color: '#0a0a0f',
         display: 'standalone',

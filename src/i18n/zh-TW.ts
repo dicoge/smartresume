@@ -8,7 +8,7 @@ export default {
   hero: {
     name: '石少斌',
     initials: 'SP',
-    subtitle: '鈊象電子高階工程師 | Unity 開發 | 全端技術',
+    subtitle: '軟體前端工程師 | Unity / C# | Web 開發',
     typingText1: '用 Unity 打造沉浸式遊戲體驗...',
     typingText2: 'Node.js 搭建高效 API 服務...',
     typingText3: 'Vue.js 創造流暢 Web 介面...',
@@ -21,7 +21,7 @@ export default {
     title: '關於我',
     subtitle: '嗨，我是石少斌，一位在遊戲與軟體開發領域深耕的工程師。',
     whatIDo: '我做什麼',
-    whatIDoContent: '我專注於 Unity 遊戲開發，同時具備 Node.js 與 Vue.js 全端開發能力。',
+    whatIDoContent: '2022/06 至 2026/09 任職鈊象電子（IGS），擔任軟體前端工程師，使用 Unity / C# 開發遊戲介面與系統功能。個人專案涵蓋 Node.js、Vue.js 與跨平台 App。',
     currentFocus: '目前專注於：',
     focus1: 'Unity 遊戲開發與引擎優化',
     focus2: 'Node.js 後端服務與 API 開發',
@@ -51,9 +51,9 @@ export default {
       description: '像素風格 AI Agent 團隊管理系統 — Phaser.js Canvas 打造即時辦公室視圖，支援 Worker 狀態監控、心情泡泡、自主行為動畫。Node.js + sql.js 後端，Render 雲端部署。',
     },
     vueExcelDashboard: {
-      title: 'Excel 動態儀表板',
-      subtitle: 'Excel 數據視覺化',
-      description: '上傳 Excel 檔案即時轉為互動式圖表。支援長條圖、折線圖、圓餅圖等，整合 ECharts + XLSX 解析，Vite 熱更新開發。',
+      title: 'Excel 資料管理',
+      subtitle: 'Excel 匯入與編輯',
+      description: '提供 Excel 檔案匯入、多工作表瀏覽、欄位編輯與匯出功能。以 Vue 3 + XLSX + Vite 建構。',
     },
     vueManageSystem: {
       title: 'Vue 全端管理系統',

@@ -1,6 +1,6 @@
-# 石少斌 / Shih Shao Pin
+# 石少斌 / SHIH SHAO-PIN
 
-**高階工程師 | Unity & Web 開發者**
+**軟體前端工程師 | Unity / C# | Web 開發**
 
 **Email:** kin169999@gmail.com
 **GitHub:** https://github.com/dicoge
@@ -9,8 +9,8 @@
 
 ## Hero
 
-**Subtitle（zh-TW）：** 鈊象電子高階工程師 | Unity 開發 | 全端技術
-**Subtitle（en）：** Senior Engineer at IGS | Unity Developer | Full-Stack Developer
+**Subtitle（zh-TW）：** 軟體前端工程師 | Unity / C# | Web 開發
+**Subtitle（en）：** Software Frontend Engineer | Unity / C# | Web Development
 
 **typingText1（zh-TW）：** 打造優質的 Unity 遊戲體驗...
 **typingText1（en）：** Building high-quality Unity game experiences...
@@ -29,10 +29,10 @@
 ## About
 
 **Subtitle（zh-TW）：** 嗨，我是石少斌，一位在遊戲與軟體開發領域深耕的工程師。
-**Subtitle（en）：** Hi, I'm Shi Shaobin, an engineer specializing in game and software development.
+**Subtitle（en）：** Hi, I'm SHIH SHAO-PIN, an engineer specializing in game and software development.
 
-**What I Do（zh-TW）：** 我專注於 Unity 遊戲開發，同時具備 Node.js 與 Vue.js 全端開發能力。
-**What I Do（en）：** I specialize in Unity game development while also maintaining full-stack web development skills with Node.js and Vue.js.
+**What I Do（zh-TW）：** 2022/06 至 2026/09 任職鈊象電子（IGS），擔任軟體前端工程師，使用 Unity / C# 開發遊戲介面與系統功能。個人專案涵蓋 Node.js、Vue.js 與跨平台 App。
+**What I Do（en）：** From 2022/06 to 2026/09, I worked at IGS as a Software Frontend Engineer, developing game interfaces and systems with Unity / C#. My personal projects cover Node.js, Vue.js, and cross-platform apps.
 
 **Focus1（zh-TW）：** Unity 遊戲開發與引擎優化
 **Focus1（en）：** Unity game development and engine optimization
@@ -47,7 +47,7 @@
 
 ## Professional Summary
 
-在鈊象電子擔任高階工程師，擁有 4 年 Unity 遊戲開發經驗，同時熟悉 Web 全端開發。專精於遊戲邏輯設計、效能優化以及跨平台部署，致力於打造優質的遊戲與互動體驗。
+曾於 2022/06 至 2026/09 任職鈊象電子（IGS），擔任軟體前端工程師，使用 Unity / C# 參與《海王捕魚》開發。經驗涵蓋遊戲 UI 與系統整合、道具與裝備功能、活動禮包，以及 Timeline / Spine 動畫整合。另以個人專案實作 Web、跨平台 App 與 AI 工具介面，尋找軟體與 AI 應用工程相關機會。
 
 ---
 
@@ -103,16 +103,19 @@
 
 ## Work Experience
 
-### 高階工程師 (Senior Engineer) | 鈊象電子 (IGS)
-*2022年 - 至今 (4年)*
+### 軟體前端工程師 (Software Frontend Engineer) | 鈊象電子 (IGS)
+*2022/06 - 2026/09*
 
-在鈊象電子擔任高階工程師，負責遊戲專案開發與技術支援。
+- 使用 Unity / C# 參與《海王捕魚》的遊戲客戶端開發。
+- 開發遊戲 UI 並串接系統功能，涵蓋道具、裝備與活動禮包。
+- 整合 Timeline / Spine 動畫與介面流程。
+- 參與資源載入與行動裝置效能調整，撰寫技術文件與交接文件。
 
 ---
 
 ## Education
 
-### 資訊工程學系 (Computer Science and Engineering) | 大葉大學 (Da-Yeh University)
+### 資訊工程研究所 (Graduate Institute of Computer Science and Information Engineering) | 大葉大學 (Da-Yeh University)
 *碩士 / Master's Degree*
 
 ---
@@ -137,10 +140,10 @@ Virtual Card Price Lookup App for hololive Official Card Game (hOCG).
 
 ### Vue Excel Dashboard 📊
 **Category:** Full-Stack
-**Tags:** Vue 3, ECharts, XLSX, Vite
+**Tags:** Vue 3, XLSX, Vite
 **GitHub:** https://github.com/dicoge/vue-excel-dashboard
 
-Upload Excel files and instantly transform them into interactive charts.
+Import Excel files, navigate worksheets, edit cells, and export updated workbooks.
 
 ### Vue Manage System 🖥️
 **Category:** Full-Stack

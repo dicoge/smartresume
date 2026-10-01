@@ -23,7 +23,7 @@ export const projects: Project[] = [
     id: 'vueExcelDashboard',
     emoji: '📊',
     category: 'Full-Stack',
-    tags: ['Vue 3', 'ECharts', 'XLSX', 'Vite'],
+    tags: ['Vue 3', 'XLSX', 'Vite'],
     stats: ['📈 數據視覺化', '⚡ 互動儀表板'],
     github: 'https://github.com/dicoge/vue-excel-dashboard',
   },

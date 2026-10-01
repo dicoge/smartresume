@@ -1,85 +1,52 @@
----
-pdf_options:
-  format: A4
-  margin: 20mm
-stylesheet: []
----
+# SHIH SHAO-PIN
 
-# Alex Chen
+**Software Frontend Engineer | Unity / C# | Web Development**
 
-**Full-Stack Developer | AI Enthusiast | Open Source Contributor**
-
-alex.chen@example.com | [GitHub](https://github.com/sample-user) | [LinkedIn](https://www.linkedin.com/in/sample-user/) | [Portfolio](https://example.com)
-
----
+[kin169999@gmail.com](mailto:kin169999@gmail.com) | [github.com/dicoge](https://github.com/dicoge) | [dicoge.com](https://dicoge.com/)
 
 ## Professional Summary
 
-Full-stack engineer with 8 years of software development experience, specializing in modern web technologies and AI application integration. Proficient in frontend and backend development, API design, and cloud deployment. Currently focused on AI-assisted development tools and workflow automation, with active participation in open source communities.
-
----
+Software frontend engineer with Unity / C# experience at IGS from 2022/06 to 2026/09, contributing to the game 海王捕魚. Work covered game UI and system integration, item and equipment features, event gift packages, and animation integration. Personal projects span web apps, cross-platform apps, and AI-tool interfaces. Seeking software and AI application engineering opportunities.
 
 ## Core Skills
 
-**Languages:** TypeScript (Expert) | Python (Advanced) | JavaScript (Advanced) | Go (Intermediate) | Shell Scripting
+**Game development:** Unity, C#, Unity UI (uGUI), Timeline, Spine
 
-**Web Frameworks & Frontend:** Vue.js 3 | Flask / FastAPI | TailwindCSS | Bootstrap | Vite
+**Web / app projects:** JavaScript, TypeScript, Vue.js, Node.js, React Native, Expo
 
-**AI-Native Engineering:** Claude Code | Gemini CLI | SDD | AI Skills | Vibe Coding | AI Agents | MCP
-
-**Specializations:** Web Architecture | Cloud Deployment | AI/LLM Integration | REST API Design | Real-time Systems
-
----
+**Experience:** UI and system integration, asset loading, mobile performance tuning, technical documentation and handover
 
 ## Work Experience
 
-### Senior Frontend Engineer | TechCorp Inc.
-*2021 - Present (4 years)*
+### Software Frontend Engineer | IGS
 
-- Led migration from Vue 2 to Vue 3 + TypeScript, improving code quality and development efficiency
-- Implemented Code Splitting and Lazy Loading strategies, reducing initial load time by 40%
-- Introduced AI-assisted Code Review workflows, enhancing team code quality
+**2022/06 - 2026/09**
 
-### Full-Stack Engineer | WebStudio Co.
-*2018 - 2021 (3 years)*
+- Contributed to the game client for 海王捕魚 using Unity / C#
+- Developed game UI and integrated systems for items, equipment, and event gift packages
+- Integrated Timeline / Spine animations with interface flows
+- Worked on asset loading and mobile performance tuning; wrote technical and handover documentation
 
-- Designed and implemented RESTful APIs serving 10+ frontend applications
-- Optimized PostgreSQL query performance, reducing critical API response times by 60%
-- Tech stack: Vue.js, Node.js, PostgreSQL, Docker
+## Selected Personal Projects
 
-### Junior Engineer | StartupHub
-*2017 - 2018 (1 year)*
+### Pixel Office | AI Agent Team Dashboard
 
-- Contributed to internal management system development (React, Express, MongoDB)
-- Responsible for frontend component development and unit test writing
+Pixel-styled team dashboard with an office view and worker status display. Built with JavaScript, Node.js, Express, and sql.js.
 
----
+[github.com/dicoge/pixel-office](https://github.com/dicoge/pixel-office)
+
+### HoloHunter | Card Price Lookup App
+
+Card search and price lookup for the hololive Official Card Game. Built with Expo, React Native, TypeScript, and Puppeteer.
+
+[github.com/dicoge/hunterCard](https://github.com/dicoge/hunterCard)
+
+### Vue Excel Dashboard | Spreadsheet Management
+
+Imports Excel files and supports worksheet navigation, cell editing, and export. Built with Vue 3, XLSX, and Vite.
+
+[github.com/dicoge/vue-excel-dashboard](https://github.com/dicoge/vue-excel-dashboard)
 
 ## Education
 
-### Sample University | BS in Computer Science and Engineering
-*2013 - 2017*
-
-- Focused on Software Engineering and Distributed Systems; capstone project delivered a collaborative task-management platform with Vue.js and Node.js
-- GPA 3.8 / 4.0; received Dean's List honors for two consecutive semesters
-
-### Sample Senior High School | Science Track
-*2010 - 2013*
-
-- Served as Vice President of the Computer Science Club; organized campus hackathons and beginner programming workshops
-
----
-
-## Featured Projects
-
-### TaskBoard Pro — Team Task Management Platform
-Kanban-style project management with drag-and-drop interface, real-time multi-user collaboration, and progress tracking via WebSocket.
-**Tech:** Vue 3, Node.js, WebSocket, PostgreSQL | [GitHub](https://github.com/sample-user/taskboard-pro)
-
-### WeatherDash — AI Weather Forecast Dashboard
-Integrates 3 weather data sources with AI-enhanced analysis. Built with FastAPI backend.
-**Tech:** Python, FastAPI, AI, REST API | [GitHub](https://github.com/sample-user/weather-dash)
-
-### DevToolkit — Developer Productivity Toolkit
-CLI tool combining code formatting, JSON validation, and API testing utilities.
-**Tech:** Python, CLI | [GitHub](https://github.com/sample-user/dev-toolkit)
+**Da-Yeh University | Master's degree, Computer Science and Information Engineering**

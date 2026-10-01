@@ -6,9 +6,9 @@ export default {
     contact: 'Contact',
   },
   hero: {
-    name: 'Shih Shao Pin',
+    name: 'SHIH SHAO-PIN',
     initials: 'SP',
-    subtitle: 'Senior Engineer at IGS | Unity Developer | Full-Stack Developer',
+    subtitle: 'Software Frontend Engineer | Unity / C# | Web Development',
     typingText1: 'Building immersive Unity game experiences...',
     typingText2: 'Crafting efficient Node.js API services...',
     typingText3: 'Creating smooth Vue.js web interfaces...',
@@ -19,9 +19,9 @@ export default {
   },
   about: {
     title: 'About Me',
-    subtitle: "Hi, I'm Shih Shao Pin, an engineer specializing in game and software development.",
+    subtitle: "Hi, I'm SHIH SHAO-PIN, an engineer specializing in game and software development.",
     whatIDo: 'What I Do',
-    whatIDoContent: 'I specialize in Unity game development while also maintaining full-stack web development skills with Node.js and Vue.js.',
+    whatIDoContent: 'From 2022/06 to 2026/09, I worked at IGS as a Software Frontend Engineer, developing game interfaces and systems with Unity / C#. My personal projects cover Node.js, Vue.js, and cross-platform apps.',
     currentFocus: 'Currently focused on:',
     focus1: 'Unity game development and engine optimization',
     focus2: 'Node.js backend services and API development',
@@ -51,9 +51,9 @@ export default {
       description: 'Pixel-styled AI Agent team management system — real-time office view powered by Phaser.js Canvas with Worker status monitoring, mood bubbles, and autonomous behavior animations. Node.js + sql.js backend deployed on Render.',
     },
     vueExcelDashboard: {
-      title: 'Excel Dynamic Dashboard',
-      subtitle: 'Excel Data Visualization',
-      description: 'Upload Excel files and instantly transform them into interactive charts — bar, line, pie and more. Powered by ECharts + XLSX parser with Vite HMR dev experience.',
+      title: 'Excel Data Manager',
+      subtitle: 'Excel Import & Editing',
+      description: 'Import Excel files, navigate worksheets, edit cells, and export updated workbooks. Built with Vue 3, XLSX, and Vite.',
     },
     vueManageSystem: {
       title: 'Vue Full-Stack Admin System',
@@ -136,8 +136,8 @@ export default {
     errorMessageRequired: 'Message is required',
   },
   footer: {
-    designedBy: 'Designed & Built by Shih Shao Pin',
-    copyright: '© 2026 Shih Shao Pin. All rights reserved.',
+    designedBy: 'Designed & Built by SHIH SHAO-PIN',
+    copyright: '© 2026 SHIH SHAO-PIN. All rights reserved.',
     madeWith: 'Made with Vue 3 + Tailwind CSS',
     backToTop: 'Back to Top',
   },
