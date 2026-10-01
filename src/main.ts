@@ -10,3 +10,7 @@ const app = createApp(App)
 app.use(i18n)
 app.mount('#app')
 initAnalytics()
+
+import './portfolio.css'
+
+import './motion.css'

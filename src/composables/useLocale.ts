@@ -12,6 +12,7 @@ export function useLocale() {
     if (savedLocale && ['zh-TW', 'en'].includes(savedLocale)) {
       locale.value = savedLocale
     }
+    document.documentElement.lang = locale.value === 'zh-TW' ? 'zh-TW' : 'en'
   }
 
   const setLocale = (newLocale: Locale) => {

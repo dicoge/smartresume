@@ -2,12 +2,10 @@
 import { ref, reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { contact } from '../../data/contact'
-import { useScrollReveal } from '../../composables/useScrollReveal'
 
 const { t } = useI18n()
 
 const sectionRef = ref<HTMLElement | null>(null)
-useScrollReveal(sectionRef)
 
 // Set VITE_FORMSPREE_ID in .env.local to enable the contact form.
 // Get a free form ID at https://formspree.io (no backend needed).
@@ -126,7 +124,7 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <section ref="sectionRef" id="contact" class="py-20" style="background-color: var(--bg-primary);">
+  <section ref="sectionRef" data-section="contact" class="py-20" style="background-color: var(--bg-primary);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title">{{ t('contact.title') }}</h2>
       <p class="section-subtitle">{{ t('contact.subtitle') }}</p>

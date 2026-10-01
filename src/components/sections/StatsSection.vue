@@ -2,12 +2,10 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { githubStats } from '../../data/stats'
-import { useScrollReveal } from '../../composables/useScrollReveal'
 
 const { t } = useI18n()
 
 const sectionRef = ref<HTMLElement | null>(null)
-useScrollReveal(sectionRef)
 </script>
 
 <template>

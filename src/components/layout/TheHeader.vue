@@ -12,6 +12,7 @@ const { activeSection } = useActiveSection()
 const navLinks = [
   { key: 'nav.about', href: '#about', id: 'about' },
   { key: 'nav.projects', href: '#projects', id: 'projects' },
+  { key: 'motion.experience', href: '#experience', id: 'experience' },
   { key: 'nav.techStack', href: '#tech', id: 'tech' },
   { key: 'nav.contact', href: '#contact', id: 'contact' },
 ]
@@ -27,16 +28,16 @@ const closeMenu = () => {
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 bg-dark-bg/80 dark:bg-dark-bg/95 backdrop-blur-md border-b border-primary-100 dark:border-dark-border">
+  <header class="portfolio-header fixed top-0 left-0 right-0 z-50 backdrop-blur-md">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
-        <a href="#" class="text-xl font-bold gradient-text">
-          {{ t('hero.initials') }}
+        <a href="#home" class="portfolio-wordmark text-xl font-bold">
+          {{ t('hero.initials') }} <span class="wordmark-detail">/ {{ t('hero.name') }}</span>
         </a>
 
         <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-8">
+        <div class="hidden lg:flex items-center space-x-5">
           <a
             v-for="link in navLinks"
             :key="link.href"
@@ -55,7 +56,7 @@ const closeMenu = () => {
         </div>
 
         <!-- Desktop Actions -->
-        <div class="hidden md:flex items-center space-x-3">
+        <div class="hidden lg:flex items-center space-x-3">
           <ThemeToggle />
           <LanguageSwitcher />
         </div>
@@ -63,9 +64,10 @@ const closeMenu = () => {
         <!-- Mobile Menu Button -->
         <button
           @click="toggleMenu"
-          class="md:hidden p-2 rounded-lg hover:bg-primary-50 dark:hover:bg-dark-card transition-colors"
+          class="lg:hidden p-2 rounded-lg hover:bg-primary-50 dark:hover:bg-dark-card transition-colors"
           :aria-expanded="isMenuOpen"
-          aria-label="Toggle menu"
+          :aria-label="t('editorial.menu')"
+          aria-controls="mobile-navigation"
         >
           <svg
             class="w-6 h-6 text-primary-500 dark:text-accent-400"
@@ -93,8 +95,9 @@ const closeMenu = () => {
 
       <!-- Mobile Menu -->
       <div
+        id="mobile-navigation"
         v-show="isMenuOpen"
-        class="md:hidden py-4 border-t border-primary-100 dark:border-dark-border"
+        class="lg:hidden py-4 border-t border-primary-100 dark:border-dark-border"
       >
         <div class="flex flex-col space-y-4">
           <a

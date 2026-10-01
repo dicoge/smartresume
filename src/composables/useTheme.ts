@@ -1,16 +1,12 @@
 import { ref, watch, onMounted } from 'vue'
 import type { ThemeMode } from '../types'
 
-const theme = ref<ThemeMode>('light')
+const theme = ref<ThemeMode>('dark')
 
 export function useTheme() {
   const initTheme = () => {
     const savedTheme = localStorage.getItem('theme') as ThemeMode | null
-    if (savedTheme) {
-      theme.value = savedTheme
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      theme.value = 'dark'
-    }
+    theme.value = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark'
     applyTheme()
   }
 

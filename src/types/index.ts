@@ -8,6 +8,7 @@ export interface Project {
   stats: string[]
   github?: string
   demo?: string
+  demoUnavailable?: boolean
 }
 
 export interface SkillBar {

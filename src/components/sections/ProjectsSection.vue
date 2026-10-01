@@ -4,13 +4,11 @@ import { useI18n } from 'vue-i18n'
 import ProjectCard from '../ui/ProjectCard.vue'
 import { projects } from '../../data/projects'
 import type { ProjectCategory } from '../../types'
-import { useScrollReveal } from '../../composables/useScrollReveal'
 
 const { t } = useI18n()
 const activeFilter = ref<ProjectCategory>('All')
 
 const sectionRef = ref<HTMLElement | null>(null)
-useScrollReveal(sectionRef)
 
 const filters: { key: string; value: ProjectCategory }[] = [
   { key: 'projects.filterAll', value: 'All' },
@@ -27,17 +25,19 @@ const filteredProjects = computed(() => {
 </script>
 
 <template>
-  <section ref="sectionRef" id="projects" class="py-20" style="background-color: var(--bg-primary);">
+  <section ref="sectionRef" data-section="projects" class="py-20" style="background-color: var(--bg-primary);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="eyebrow">{{ t('editorial.selectedWork') }}</p>
       <h2 class="section-title">{{ t('projects.title') }}</h2>
       <p class="section-subtitle">{{ t('projects.subtitle') }}</p>
 
       <!-- Filter Buttons -->
-      <div class="flex justify-center flex-wrap gap-3 mb-12">
+      <div class="project-filters flex flex-wrap gap-2 mb-10">
         <button
           v-for="filter in filters"
           :key="filter.value"
           @click="activeFilter = filter.value"
+          :aria-pressed="activeFilter === filter.value"
           class="px-5 py-2 rounded-full text-sm font-medium border transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary-500"
           :class="activeFilter === filter.value
             ? 'bg-primary-500 text-white border-primary-500'
@@ -51,11 +51,12 @@ const filteredProjects = computed(() => {
       </div>
 
       <!-- Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
         <ProjectCard
-          v-for="project in filteredProjects"
+          v-for="(project, index) in filteredProjects"
           :key="project.id"
           :project="project"
+          :index="index"
         />
         <div
           v-if="filteredProjects.length === 0"

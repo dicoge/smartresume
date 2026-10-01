@@ -1,0 +1,13 @@
+<script setup lang="ts">
+defineProps<{ id: string; index: number; label: string }>()
+</script>
+<template>
+  <div :id="id" class="scene-shell" data-motion-state="read">
+    <div class="scene-echo scene-echo-far" aria-hidden="true" />
+    <div class="scene-echo scene-echo-near" aria-hidden="true" />
+    <div class="scene-surface">
+      <div class="scene-caption" aria-hidden="true"><span>{{ String(index).padStart(2, '0') }} / {{ label }}</span><span>〈 {{ id }} 〉</span></div>
+      <slot />
+    </div>
+  </div>
+</template>

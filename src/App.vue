@@ -1,126 +1,53 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from 'vue'
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useTheme } from './composables/useTheme'
-
-// Above the fold — eager load
+import { useScrollScenes } from './composables/useScrollScenes'
+import EngineeringAtmosphere from './components/layout/EngineeringAtmosphere.vue'
+import ScrollScene from './components/layout/ScrollScene.vue'
 import TheHeader from './components/layout/TheHeader.vue'
+import TheFooter from './components/layout/TheFooter.vue'
 import HeroSection from './components/sections/HeroSection.vue'
-
-// Skeleton loading variants — reusable placeholder with elegant shimmer
-const SkeletonWithTitle = {
-  data: () => ({ lines: 5 }),
-  template: `
-    <div class="mx-4 my-8 sm:mx-6 lg:mx-8 py-20">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex justify-center mb-12">
-          <div class="h-8 w-48 skeleton-shimmer rounded-lg"></div>
-        </div>
-        <div class="space-y-4 max-w-3xl mx-auto">
-          <div v-for="i in lines" :key="i" class="h-4 skeleton-shimmer rounded-lg" :style="{ width: (55 + Math.random() * 35) + '%' }"></div>
-        </div>
-      </div>
-    </div>
-  `,
-}
-const SkeletonWithCards = {
-  template: `
-    <div class="mx-4 my-8 sm:mx-6 lg:mx-8 py-20">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex justify-center mb-12">
-          <div class="h-8 w-48 skeleton-shimmer rounded-lg"></div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div v-for="i in 3" :key="i" class="rounded-2xl overflow-hidden border border-[var(--border)]/20" style="background-color: var(--bg-secondary);">
-            <div class="h-48 skeleton-shimmer"></div>
-            <div class="p-6 space-y-3">
-              <div class="h-5 w-3/4 skeleton-shimmer rounded-lg"></div>
-              <div class="h-4 w-1/2 skeleton-shimmer rounded-lg"></div>
-              <div class="h-4 w-full skeleton-shimmer rounded-lg"></div>
-              <div class="h-4 w-5/6 skeleton-shimmer rounded-lg"></div>
-              <div class="flex gap-2 pt-2">
-                <div class="h-6 w-16 skeleton-shimmer rounded-full"></div>
-                <div class="h-6 w-20 skeleton-shimmer rounded-full"></div>
-                <div class="h-6 w-14 skeleton-shimmer rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  `,
-}
-const SkeletonGrid = {
-  data: () => ({ columns: 4 }),
-  template: `
-    <div class="mx-4 my-8 sm:mx-6 lg:mx-8 py-20">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex justify-center mb-12">
-          <div class="h-8 w-48 skeleton-shimmer rounded-lg"></div>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div v-for="i in columns" :key="i" class="p-6 rounded-2xl border border-[var(--border)]/20" style="background-color: var(--bg-secondary);">
-            <div class="h-10 w-20 skeleton-shimmer rounded-lg mx-auto mb-3"></div>
-            <div class="h-4 w-24 skeleton-shimmer rounded-lg mx-auto"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  `,
-}
-const SkeletonFooter = {
-  template: `
-    <div class="mx-4 my-4 py-12">
-      <div class="max-w-6xl mx-auto space-y-4">
-        <div class="flex justify-center gap-4">
-          <div v-for="i in 3" :key="i" class="h-6 w-6 skeleton-shimmer rounded-full"></div>
-        </div>
-        <div class="h-4 w-48 skeleton-shimmer rounded-lg mx-auto"></div>
-        <div class="h-4 w-64 skeleton-shimmer rounded-lg mx-auto"></div>
-      </div>
-    </div>
-  `,
-}
-
-// Below the fold — lazy load
-const AboutSection = defineAsyncComponent({
-  loader: () => import('./components/sections/AboutSection.vue'),
-  loadingComponent: SkeletonWithTitle,
-})
-const ProjectsSection = defineAsyncComponent({
-  loader: () => import('./components/sections/ProjectsSection.vue'),
-  loadingComponent: SkeletonWithCards,
-})
-const TechStackSection = defineAsyncComponent({
-  loader: () => import('./components/sections/TechStackSection.vue'),
-  loadingComponent: SkeletonWithTitle,
-})
-const StatsSection = defineAsyncComponent({
-  loader: () => import('./components/sections/StatsSection.vue'),
-  loadingComponent: SkeletonGrid,
-})
-const ContactSection = defineAsyncComponent({
-  loader: () => import('./components/sections/ContactSection.vue'),
-  loadingComponent: SkeletonWithTitle,
-})
-const TheFooter = defineAsyncComponent({
-  loader: () => import('./components/layout/TheFooter.vue'),
-  loadingComponent: SkeletonFooter,
-})
-
+import AboutSection from './components/sections/AboutSection.vue'
+import ProjectsSection from './components/sections/ProjectsSection.vue'
+import ExperienceSection from './components/sections/ExperienceSection.vue'
+import TechStackSection from './components/sections/TechStackSection.vue'
+import StatsSection from './components/sections/StatsSection.vue'
+import ContactSection from './components/sections/ContactSection.vue'
+const { t } = useI18n()
+const sceneRoot = ref<HTMLElement | null>(null)
+const { activeSceneId, progress, transitionEnergy } = useScrollScenes(sceneRoot)
+const chapters = [
+  { id: 'home', label: 'motion.home', component: HeroSection },
+  { id: 'about', label: 'nav.about', component: AboutSection },
+  { id: 'projects', label: 'nav.projects', component: ProjectsSection },
+  { id: 'experience', label: 'motion.experience', component: ExperienceSection },
+  { id: 'tech', label: 'nav.techStack', component: TechStackSection },
+  { id: 'stats', label: 'stats.title', component: StatsSection },
+  { id: 'contact', label: 'nav.contact', component: ContactSection },
+]
+const activeIndex = computed(() => Math.max(0, chapters.findIndex(chapter => chapter.id === activeSceneId.value)))
 useTheme()
 </script>
-
 <template>
-  <div class="min-h-screen" style="background-color: var(--bg-primary); color: var(--text-primary);">
+  <div class="portfolio-root">
+    <a href="#home" class="skip-link">{{ t('motion.skip') }}</a>
+    <EngineeringAtmosphere :energy="transitionEnergy" :progress="progress" />
     <TheHeader />
-    <main>
-      <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
-      <TechStackSection />
-      <StatsSection />
-      <ContactSection />
+    <div class="scroll-progress" aria-hidden="true" :style="{ transform: 'scaleX(' + progress + ')' }" />
+    <main ref="sceneRoot" class="scene-list">
+      <ScrollScene v-for="(chapter, index) in chapters" :key="chapter.id" :id="chapter.id" :index="index + 1" :label="t(chapter.label)">
+        <component :is="chapter.component" />
+      </ScrollScene>
     </main>
+    <nav class="chapter-rail" :aria-label="t('motion.chapters')">
+      <a v-for="(chapter, index) in chapters" :key="chapter.id" :href="'#' + chapter.id" :aria-label="t(chapter.label)" :aria-current="activeSceneId === chapter.id ? 'location' : undefined"><span>{{ String(index + 1).padStart(2, '0') }}</span><span class="chapter-tooltip">{{ t(chapter.label) }}</span></a>
+    </nav>
+    <nav class="mobile-chapters" :aria-label="t('motion.chapters')">
+      <a :href="'#' + chapters[Math.max(0, activeIndex - 1)].id" :aria-label="t('motion.previous')">↑</a>
+      <span>{{ String(activeIndex + 1).padStart(2, '0') }} / 07 <b>{{ t(chapters[activeIndex].label) }}</b></span>
+      <a :href="'#' + chapters[Math.min(chapters.length - 1, activeIndex + 1)].id" :aria-label="t('motion.next')">↓</a>
+    </nav>
     <TheFooter />
   </div>
 </template>

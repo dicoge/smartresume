@@ -1,4 +1,34 @@
 export default {
+  motion: {
+  "home": "Home",
+  "experience": "Experience",
+  "experienceKicker": "EXPERIENCE / EDUCATION",
+  "employer": "IGS",
+  "education": "Education",
+  "school": "Da-Yeh University",
+  "degree": "Master’s Degree · Graduate Institute of Computer Science and Information Engineering",
+  "work1": "Unity / C# game client development for 海王捕魚.",
+  "work2": "Game UI and system integration for items, equipment and event bundles.",
+  "work3": "Timeline / Spine animation integration; resource loading and mobile performance adjustments.",
+  "chapters": "Section navigation",
+  "previous": "Previous section",
+  "next": "Next section",
+  "skip": "Skip to main content",
+  "scroll": "Scroll to explore"
+},
+  editorial: {
+    demoUnavailable: "Demo currently unavailable",
+  "eyebrow": "PORTFOLIO / SOFTWARE & INTERACTION",
+  "role": "Software Frontend Engineer",
+  "web": "Web development",
+  "intro": "At IGS from 2022/06 to 2026/09, I developed game interfaces and systems with Unity / C#. My personal work extends into Vue.js, Node.js and cross-platform apps.",
+  "personal": "PERSONAL PROJECT",
+  "explore": "Explore the project",
+  "screenshot": "Game capture · detail",
+  "schematic": "Concept illustration",
+  "selectedWork": "SELECTED WORK / PERSONAL PROJECTS",
+  "menu": "Toggle navigation"
+},
   nav: {
     about: 'About',
     projects: 'Projects',
@@ -13,7 +43,7 @@ export default {
     typingText2: 'Crafting efficient Node.js API services...',
     typingText3: 'Creating smooth Vue.js web interfaces...',
     typingText4: 'Turning ideas into code, one line at a time 🚀',
-    viewProjects: 'View My Projects',
+    viewProjects: 'View projects',
     contactMe: 'Contact Me',
     downloadResume: 'Download Resume',
   },

@@ -1,4 +1,34 @@
 export default {
+  motion: {
+  "home": "首頁",
+  "experience": "經歷",
+  "experienceKicker": "經歷 / 學歷",
+  "employer": "鈊象電子 IGS",
+  "education": "學歷",
+  "school": "大葉大學",
+  "degree": "資訊工程研究所・碩士",
+  "work1": "使用 Unity / C# 參與《海王捕魚》遊戲客戶端開發。",
+  "work2": "開發遊戲 UI 與系統串接，涵蓋道具、裝備及活動禮包。",
+  "work3": "整合 Timeline / Spine 動畫，參與資源載入與行動裝置效能調整。",
+  "chapters": "段落導覽",
+  "previous": "上一段",
+  "next": "下一段",
+  "skip": "跳至主要內容",
+  "scroll": "向下捲動探索"
+},
+  editorial: {
+    demoUnavailable: "展示站目前無法連線",
+  "eyebrow": "作品集 / 軟體與互動開發",
+  "role": "軟體前端工程師",
+  "web": "Web 開發",
+  "intro": "2022/06 至 2026/09 任職 IGS，使用 Unity / C# 開發遊戲介面與系統。個人專案延伸至 Vue.js、Node.js 與跨平台 App。",
+  "personal": "個人專案",
+  "explore": "探索作品",
+  "screenshot": "遊戲實際畫面・局部",
+  "schematic": "概念示意",
+  "selectedWork": "作品選集 / 個人專案",
+  "menu": "切換導覽選單"
+},
   nav: {
     about: '關於',
     projects: '作品',

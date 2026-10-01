@@ -3,8 +3,9 @@
   <head>
     <script>
       (function() {
-        var t = localStorage.getItem('theme');
-        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        var t;
+        try { t = localStorage.getItem('theme'); } catch (_) {}
+        if (t !== 'light') {
           document.documentElement.classList.add('dark');
         }
       })()
@@ -18,7 +19,7 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Primary SEO -->
     <title>石少斌 SHIH SHAO-PIN - 軟體前端工程師</title>
@@ -27,7 +28,7 @@
     <meta name="keywords" content="軟體前端工程師, Unity, Vue, Node.js, 遊戲開發, Web技術, Taiwan" />
 
     <!-- PWA / Mobile -->
-    <meta name="theme-color" content="#264653">
+    <meta name="theme-color" content="#080b12">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="石少斌 Portfolio">
