@@ -2,14 +2,57 @@ import type { Project } from '../types'
 
 export const projects: Project[] = [
   {
+    id: "midnightPassport",
+    emoji: "",
+    category: "Game",
+    tags: [
+      "Larch",
+      "Visual Novel"
+    ],
+    stats: []
+  },
+  {
+    id: "tenLivesCity",
+    emoji: "",
+    category: "Game",
+    tags: [
+      "Larch",
+      "RPG",
+      "Turn-based"
+    ],
+    stats: [],
+    status: "inDevelopment"
+  },
+  {
+    id: "neonSpins",
+    emoji: "",
+    category: "Game",
+    tags: [
+      "Larch",
+      "Interactive Game"
+    ],
+    stats: [],
+    status: "prototype"
+  },
+  {
+    id: "emberMoon",
+    emoji: "",
+    category: "Game",
+    tags: [
+      "Larch",
+      "Visual Novel"
+    ],
+    stats: [],
+    status: "inDevelopment"
+  },
+  {
     id: 'holoHunter',
     emoji: '🃏',
     category: 'AI Tools',
     tags: ['React Native', 'TypeScript', 'Puppeteer', 'Vercel KV'],
     stats: ['🤖 AI 工具', '🚀 已上線'],
     github: 'https://github.com/dicoge/hunterCard',
-    demo: 'https://card-hunter-mu.vercel.app',
-    demoUnavailable: true,
+    demo: 'https://holohunter.dicoge.com',
   },
   {
     id: 'pixelOffice',
@@ -51,15 +94,6 @@ export const projects: Project[] = [
     tags: ['Vue', 'CSS Animation', 'Vite'],
     stats: ['🎨 視覺效果', '✨ 互動網頁'],
     github: 'https://github.com/dicoge/webPageSlip',
-  },
-  {
-    id: 'dungeonD3',
-    emoji: '⚔️',
-    category: 'Game',
-    tags: ['TypeScript', 'HTML5 Canvas', 'Game AI', 'Vercel'],
-    stats: ['🎲 D20 系統', '🏰 Roguelike 地城'],
-    github: 'https://github.com/dicoge/DungeonD3',
-    demo: 'https://dungeon-d3.vercel.app',
   },
   {
     id: 'partSmart',

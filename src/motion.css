@@ -227,3 +227,10 @@ html.paged-portfolio, .paged-portfolio body { height:100%; overflow:hidden; over
  .scene-help { display:none; }
 }
 .scene-shell:not([data-active=true]) .kinetic-core { --core-play:paused!important; }
+
+/* Clip the complete transition stage, including projected 3D edges. */
+.scene-list { overflow:hidden; isolation:isolate; border-radius:12px; }
+.scene-shell[data-visible=false] { display:none; }
+.scene-surface { background:var(--scene-panel); backface-visibility:hidden; }
+@media(max-width:767px) { .scene-list { border-radius:8px; } }
+@media print { .scene-list { overflow:visible; } .scene-shell[data-visible=false] { display:block; } }

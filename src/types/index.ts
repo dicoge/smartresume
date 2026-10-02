@@ -9,6 +9,7 @@ export interface Project {
   github?: string
   demo?: string
   demoUnavailable?: boolean
+  status?: 'inDevelopment' | 'prototype'
 }
 
 export interface SkillBar {

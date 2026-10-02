@@ -9,6 +9,7 @@ const { t } = useI18n()
   <article data-testid="project-card" class="portfolio-project" :id="'project-' + project.id">
     <ProjectVisual :project-id="project.id" />
     <div class="project-content">
+      <p v-if="project.status" class="project-status">{{ t('projects.' + project.status) }}</p>
       <div class="project-title-row"><span v-if="index !== undefined" class="project-number" aria-hidden="true">{{ String(index + 1).padStart(2, '0') }}</span><h3>{{ t('projects.' + project.id + '.title') }}</h3></div>
       <p class="project-subtitle">{{ t('projects.' + project.id + '.subtitle') }}</p>
       <p class="project-description">{{ t('projects.' + project.id + '.description') }}</p>

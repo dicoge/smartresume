@@ -3,7 +3,15 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 const props = defineProps<{ projectId: string }>()
 const { t } = useI18n()
-const image = import.meta.env.BASE_URL + 'projects/dungeonD3.jpg'
+const screenshots: Record<string, { file: string; width: number; height: number; caption: string }> = {
+  midnightPassport: { file: 'midnightPassport.webp', width: 1345, height: 770, caption: 'editorial.screenshot' },
+  tenLivesCity: { file: 'tenLivesCity.webp', width: 1092, height: 656, caption: 'editorial.screenshot' },
+  neonSpins: { file: 'neonSpins.webp', width: 1345, height: 837, caption: 'editorial.screenshot' },
+  emberMoon: { file: 'emberMoon.webp', width: 1345, height: 770, caption: 'editorial.screenshot' },
+  holoHunter: { file: 'holoHunter.webp', width: 1440, height: 960, caption: 'editorial.appScreenshot' },
+}
+const image = computed(() => screenshots[props.projectId])
+const imageUrl = computed(() => image.value ? import.meta.env.BASE_URL + 'projects/' + image.value.file : '')
 const motifs: Record<string, string[]> = {
   holoHunter: ['SEARCH', 'COMPARE'], pixelOffice: ['AGENTS', 'CANVAS'],
   vueExcelDashboard: ['IMPORT', 'EDIT', 'EXPORT'], vueManageSystem: ['USERS', 'ROLES'],
@@ -13,9 +21,9 @@ const motifs: Record<string, string[]> = {
 const labels = computed(() => motifs[props.projectId] || [])
 </script>
 <template>
-  <figure v-if="projectId === 'dungeonD3'" class="project-visual project-shot">
-    <img :src="image" :alt="t('editorial.screenshot')" width="480" height="408" loading="lazy" />
-    <figcaption>{{ t('editorial.screenshot') }}</figcaption>
+  <figure v-if="image" class="project-visual project-shot">
+    <img :src="imageUrl" :alt="t('projects.' + projectId + '.title') + ' — ' + t(image.caption)" :width="image.width" :height="image.height" loading="lazy" />
+    <figcaption>{{ t(image.caption) }}</figcaption>
   </figure>
   <div v-else class="project-visual schematic" :class="'visual-' + projectId" role="img" :aria-label="t('editorial.schematic') + ': ' + t('projects.' + projectId + '.subtitle')">
     <span class="visual-caption">{{ t('editorial.schematic') }}</span>

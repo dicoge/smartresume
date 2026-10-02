@@ -154,3 +154,6 @@ footer { border-top:1px solid var(--border); }
  .hero-actions .text-link { flex-basis:100%; padding-top:8px; }
 }
 .portfolio-header button svg { color:var(--text-primary); }
+
+.project-shot { height:auto; aspect-ratio:16 / 10; }
+.project-status { align-self:flex-start; font-size:11px; color:var(--primary); border:1px solid var(--border); border-radius:3px; padding:3px 8px; margin-bottom:12px; }

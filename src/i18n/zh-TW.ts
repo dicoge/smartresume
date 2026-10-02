@@ -18,6 +18,7 @@ export default {
   "scroll": "滑一下，切換下一段"
 },
   editorial: {
+    appScreenshot: "App 實際畫面",
     demoUnavailable: "展示站目前無法連線",
   "eyebrow": "作品集 / 軟體與互動開發",
   "role": "軟體前端工程師",
@@ -61,6 +62,28 @@ export default {
     skillsTitle: '程式語言與技能',
   },
   projects: {
+    inDevelopment: "開發中",
+    prototype: "試作",
+    midnightPassport: {
+      title: "午夜通行證",
+      subtitle: "雨夜車站裡的互動視覺小說",
+      description: "以 Larch 製作的互動故事，透過雨夜車站場景、角色對話與劇情選擇，展開午夜旅程。"
+    },
+    tenLivesCity: {
+      title: "十世城",
+      subtitle: "五章原生 RPG · 開發中",
+      description: "以 Larch 製作的原生 RPG，結合五章探索、隊伍回合戰與輪迴選擇。其他終局與完整平衡仍在驗證。"
+    },
+    neonSpins: {
+      title: "Neon Spins",
+      subtitle: "霓虹拉霸互動試作",
+      description: "以 Larch 製作的互動遊戲試作，結合霓虹拉霸介面、角色對話與任務目標。截圖呈現尚未轉動的初始預覽畫面。"
+    },
+    emberMoon: {
+      title: "燼月問仙",
+      subtitle: "黑暗奇幻仙俠互動故事",
+      description: "以 Larch 製作的黑暗奇幻仙俠故事，在燃燒的月亮之下，以角色對話與劇情選擇展開旅程。"
+    },
     title: '精選作品',
     subtitle: '展示我在遊戲開發與 Web 技術方面的成果',
     filterAll: '全部',

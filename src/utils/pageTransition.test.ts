@@ -32,8 +32,19 @@ describe('discrete page gestures', () => {
   })
   it('ends incoming pages flat and starts outgoing pages flat in both directions', () => {
     for (const direction of [-1, 1]) for (const mobile of [true, false]) {
-      expect(pageKeyframes(direction, true, mobile)[2].transform).toBe('none')
+      expect(pageKeyframes(direction, true, mobile).slice(-1)[0]?.transform).toBe('none')
       expect(pageKeyframes(direction, false, mobile)[0].transform).toBe('none')
+    }
+  })
+  it('never cross-fades readable outgoing and incoming page content', () => {
+    for (const direction of [-1, 1]) for (const mobile of [true, false]) {
+      const outgoing = pageKeyframes(direction, false, mobile)
+      const incoming = pageKeyframes(direction, true, mobile)
+      const outgoingHiddenAt = outgoing.find(frame => frame.opacity === 0)!.offset as number
+      const incomingHiddenThrough = incoming.filter(frame => frame.opacity === 0).slice(-1)[0]!.offset as number
+      expect(outgoingHiddenAt).toBeLessThanOrEqual(incomingHiddenThrough)
+      expect(outgoing.slice(-1)[0]?.opacity).toBe(0)
+      expect(incoming[0].opacity).toBe(0)
     }
   })
 })

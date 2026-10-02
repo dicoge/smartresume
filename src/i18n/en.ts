@@ -18,6 +18,7 @@ export default {
   "scroll": "Swipe to the next section"
 },
   editorial: {
+    appScreenshot: "Actual app screenshot",
     demoUnavailable: "Demo currently unavailable",
   "eyebrow": "PORTFOLIO / SOFTWARE & INTERACTION",
   "role": "Software Frontend Engineer",
@@ -61,6 +62,28 @@ export default {
     skillsTitle: 'Languages & Skills',
   },
   projects: {
+    inDevelopment: "In development",
+    prototype: "Prototype",
+    midnightPassport: {
+      title: "Midnight Passport",
+      subtitle: "A rainy midnight visual novel",
+      description: "An interactive story built in Larch. A rain-soaked station, character dialogue and story choices set the scene for the journey."
+    },
+    tenLivesCity: {
+      title: "Ten Lives City",
+      subtitle: "Five-chapter RPG · In development",
+      description: "A native RPG built in Larch, combining five chapters of exploration, party turn-based battles and reincarnation choices. Endings and game balance are still being validated."
+    },
+    neonSpins: {
+      title: "Neon Spins",
+      subtitle: "Neon slot-machine prototype",
+      description: "An interactive Larch prototype with a neon-lit slot-machine interface, character-led dialogue and a visible mission goal. Shown here in its initial preview state."
+    },
+    emberMoon: {
+      title: "Ember Moon",
+      subtitle: "Dark fantasy cultivation story",
+      description: "A dark fantasy interactive story built in Larch. Character dialogue and story choices unfold beneath a burning moon."
+    },
     title: 'Featured Projects',
     subtitle: 'Showcasing my work in game development and web technologies',
     filterAll: 'All',

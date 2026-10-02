@@ -27,10 +27,17 @@ export function pageKeyframes(direction: number, entering: boolean, mobile: bool
   const x = entering ? -1 : 1
   const edge = `translate3d(${sign * x * (mobile ? 3 : 10)}%,${sign * 52}%,${mobile ? -300 : -720}px) rotateX(${sign * -tilt}deg) rotateY(${sign * (mobile ? 10 : 24)}deg) rotateZ(${sign * -5}deg) scale(.82)`
   const mid = `translate3d(${sign * x * 3}%,${sign * 18}%,${mobile ? -100 : -220}px) rotateX(${sign * -34}deg) rotateY(${sign * 8}deg) rotateZ(${sign * -2}deg)`
-  const frames: Keyframe[] = [
+  // Keep the outgoing and incoming content in separate time windows.
+  // Cross-fading two readable 3D panels makes the previous page look stranded.
+  return entering ? [
     { transform: edge, opacity: 0, offset: 0 },
-    { transform: mid, opacity: .85, offset: .42 },
+    { transform: edge, opacity: 0, offset: .5 },
+    { transform: mid, opacity: .85, offset: .72 },
     { transform: 'none', opacity: 1, offset: 1 },
+  ] : [
+    { transform: 'none', opacity: 1, offset: 0 },
+    { transform: mid, opacity: .85, offset: .24 },
+    { transform: edge, opacity: 0, offset: .46 },
+    { transform: edge, opacity: 0, offset: 1 },
   ]
-  return entering ? frames : frames.slice().reverse().map(frame => ({ ...frame, offset: 1 - Number(frame.offset) }))
 }

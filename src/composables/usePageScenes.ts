@@ -44,7 +44,7 @@ export function usePageScenes(root: Ref<HTMLElement | null>) {
   function navigate(index: number, source: Source, immediate = false) {
     if (index < 0 || index >= scenes.length) return
     if (phase.value === 'animating') {
-      if (source !== 'history') return
+      if (source !== 'history' && source !== 'link') return
       finish()
     }
     if (index === currentIndex.value) {
@@ -54,6 +54,8 @@ export function usePageScenes(root: Ref<HTMLElement | null>) {
     const previous = currentIndex.value, direction = index > previous ? 1 : -1
     targetIndex.value = index
     restoreFocus = source === 'keyboard' || !!(document.activeElement && scenes[previous].contains(document.activeElement))
+    // Reveal layout before measuring a previously display:none scrollport.
+    show(index, true, false)
     const incomingPort = port(index)
     if (incomingPort) incomingPort.scrollTop = (source === 'wheel' || source === 'touch') && direction < 0 ? incomingPort.scrollHeight : 0
     if (source !== 'history') history.pushState(null, '', '#' + scenes[index].id)
@@ -63,15 +65,11 @@ export function usePageScenes(root: Ref<HTMLElement | null>) {
     scenes[index].style.zIndex = '2'; scenes[previous].style.zIndex = '1'
     const duration = innerWidth < 768 ? 680 : 860
     const token = ++sequence, started = performance.now()
-    const options: KeyframeAnimationOptions = { duration, easing: 'cubic-bezier(.22,.65,.2,1)', fill: 'both' }
+    const options: KeyframeAnimationOptions = { duration, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'both' }
     for (const [sceneIndex, entering] of [[previous, false], [index, true]] as const) {
       const surface = scenes[sceneIndex].querySelector<HTMLElement>('.scene-surface')!
       surface.style.willChange = 'transform, opacity'
       animations.push(surface.animate(pageKeyframes(direction, entering, innerWidth < 768), options))
-      scenes[sceneIndex].querySelectorAll<HTMLElement>('.scene-echo').forEach((echo, depth) => {
-        const keys = pageKeyframes(direction, entering, innerWidth < 768).map(key => ({ ...key, transform: (key.transform === 'none' ? '' : key.transform) + ` translateZ(${-90 - depth * 100}px) scale(${1.03 + depth * .025})`, opacity: Number(key.opacity) * .35 }))
-        animations.push(echo.animate(keys, options))
-      })
     }
     const pulse = (now: number) => {
       if (token !== sequence) return

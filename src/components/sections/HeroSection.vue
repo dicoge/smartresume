@@ -4,9 +4,9 @@ import { useI18n } from 'vue-i18n'
 import KineticCore from '../ui/KineticCore.vue'
 import { projects } from '../../data/projects'
 const { t, locale } = useI18n()
-const featured = projects.find(project => project.id === 'dungeonD3')!
+const featured = projects.find(project => project.id === 'midnightPassport')!
 const resumePdfLink = computed(() => import.meta.env.BASE_URL + (locale.value === 'en' ? 'resume_en.pdf' : 'resume_zh.pdf'))
-const screenshot = import.meta.env.BASE_URL + 'projects/dungeonD3.jpg'
+const screenshot = import.meta.env.BASE_URL + 'projects/midnightPassport.webp'
 </script>
 
 <template>
@@ -30,16 +30,16 @@ const screenshot = import.meta.env.BASE_URL + 'projects/dungeonD3.jpg'
         <a :href="resumePdfLink" target="_blank" rel="noopener noreferrer" class="btn-secondary">{{ t('hero.downloadResume') }} <span aria-hidden="true">↓</span></a>
         <a href="#contact" class="text-link">{{ t('hero.contactMe') }} <span aria-hidden="true">↗</span></a>
       </div>
-      <a :href="featured.demo" target="_blank" rel="noopener noreferrer" class="featured-stage" :aria-label="t('projects.dungeonD3.title') + ' — ' + t('projects.liveDemo')">
+      <a href="#projects" class="featured-stage" :aria-label="t('projects.midnightPassport.title') + ' — ' + t('hero.viewProjects')">
         <div class="featured-copy">
           <p class="eyebrow">{{ t('editorial.personal') }} / 01</p>
-          <h2>DungeonD3</h2>
-          <p>{{ t('projects.dungeonD3.subtitle') }}</p>
-          <p class="featured-tech">TypeScript × HTML5 Canvas</p>
+          <h2>{{ t('projects.midnightPassport.title') }}</h2>
+          <p>{{ t('projects.midnightPassport.subtitle') }}</p>
+          <p class="featured-tech">{{ featured.tags.join(' / ') }}</p>
           <span class="featured-link">{{ t('editorial.explore') }} ↗</span>
         </div>
         <figure class="featured-image">
-          <img :src="screenshot" :alt="t('editorial.screenshot')" width="480" height="408" fetchpriority="high" />
+          <img :src="screenshot" :alt="t('editorial.screenshot')" width="1345" height="770" fetchpriority="high" />
           <figcaption>{{ t('editorial.screenshot') }}</figcaption>
         </figure>
       </a>
