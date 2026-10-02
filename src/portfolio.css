@@ -147,7 +147,7 @@ footer { border-top:1px solid var(--border); }
 }
 @media(prefers-reduced-motion:reduce) {
  html { scroll-behavior:auto; }
- *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
+ *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition:none!important; }
 }
 @media(max-width:767px) {
  .hero-actions .btn-primary,.hero-actions .btn-secondary { flex:1 1 0; font-size:13px; gap:8px; white-space:nowrap; }
