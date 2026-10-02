@@ -199,8 +199,9 @@ html.paged-portfolio, .paged-portfolio body { height:100%; overflow:hidden; over
 .scene-shell[data-visible=true], .scene-list:not([data-ready]) .scene-shell:first-child { visibility:visible; }
 .scene-shell[data-active=true] { pointer-events:auto; }
 .scene-surface { height:100%; display:flex; flex-direction:column; overflow:hidden; transform-origin:50% 50%; }
-.scene-caption { flex-shrink:0; }
-.scene-scrollport { flex:1; min-height:0; overflow-y:auto; overflow-x:hidden; overscroll-behavior:contain; scroll-behavior:auto!important; touch-action:pan-y pinch-zoom; scrollbar-width:thin; scrollbar-color:var(--border) transparent; }
+/* Keep scrolling cards below the caption and away from the frame, including Safari composited scrolling. */
+.scene-caption { flex-shrink:0; position:relative; z-index:1; background-color:var(--scene-panel); }
+.scene-scrollport { flex:1; min-height:0; position:relative; contain:paint; margin-block:8px; overflow-y:auto; overflow-x:hidden; overscroll-behavior:contain; scroll-behavior:auto!important; touch-action:pan-y pinch-zoom; scrollbar-width:thin; scrollbar-color:var(--border) transparent; }
 .scene-scrollport:focus-visible { outline:2px solid var(--primary); outline-offset:-3px; }
 .scene-scrollport>section { min-height:100%; display:flex; flex-direction:column; justify-content:center; background:transparent!important; }
 .scene-scrollport>section>div { width:100%; }
@@ -224,6 +225,7 @@ html.paged-portfolio, .paged-portfolio body { height:100%; overflow:hidden; over
  .scene-list { position:static; transform:none; width:100%; }
  .scene-shell { position:static; height:auto; visibility:visible!important; }
  .scene-surface,.scene-scrollport { height:auto; overflow:visible; }
+ .scene-scrollport { contain:none; margin-block:0; }
  .scene-help { display:none; }
 }
 .scene-shell:not([data-active=true]) .kinetic-core { --core-play:paused!important; }
