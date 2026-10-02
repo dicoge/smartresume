@@ -6,7 +6,7 @@ import { projects } from '../../data/projects'
 const { t, locale } = useI18n()
 const featured = projects.find(project => project.id === 'midnightPassport')!
 const resumePdfLink = computed(() => import.meta.env.BASE_URL + (locale.value === 'en' ? 'resume_en.pdf' : 'resume_zh.pdf'))
-const screenshot = import.meta.env.BASE_URL + 'projects/midnightPassport.webp'
+const cover = import.meta.env.BASE_URL + 'projects/midnightPassport.webp'
 </script>
 
 <template>
@@ -39,8 +39,8 @@ const screenshot = import.meta.env.BASE_URL + 'projects/midnightPassport.webp'
           <span class="featured-link">{{ t('editorial.explore') }} ↗</span>
         </div>
         <figure class="featured-image">
-          <img :src="screenshot" :alt="t('editorial.screenshot')" width="1345" height="770" fetchpriority="high" />
-          <figcaption>{{ t('editorial.screenshot') }}</figcaption>
+          <img :src="cover" :alt="t('projects.midnightPassport.title') + ' — ' + t('editorial.gameCover')" width="1672" height="941" fetchpriority="high" />
+          <figcaption>{{ t('editorial.gameCover') }}</figcaption>
         </figure>
       </a>
       <p class="scroll-cue">{{ t('motion.scroll') }} <span aria-hidden="true">↓</span></p>

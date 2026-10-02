@@ -18,6 +18,7 @@ export default {
   "scroll": "滑一下，切換下一段"
 },
   editorial: {
+    gameCover: "遊戲封面",
     appScreenshot: "App 實際畫面",
     demoUnavailable: "展示站目前無法連線",
   "eyebrow": "作品集 / 軟體與互動開發",

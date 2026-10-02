@@ -4,9 +4,9 @@ import { useI18n } from 'vue-i18n'
 const props = defineProps<{ projectId: string }>()
 const { t } = useI18n()
 const screenshots: Record<string, { file: string; width: number; height: number; caption: string }> = {
-  midnightPassport: { file: 'midnightPassport.webp', width: 1345, height: 770, caption: 'editorial.screenshot' },
+  midnightPassport: { file: 'midnightPassport.webp', width: 1672, height: 941, caption: 'editorial.gameCover' },
   tenLivesCity: { file: 'tenLivesCity.webp', width: 1092, height: 656, caption: 'editorial.screenshot' },
-  neonSpins: { file: 'neonSpins.webp', width: 1345, height: 837, caption: 'editorial.screenshot' },
+  neonSpins: { file: 'neonSpins.webp', width: 1672, height: 941, caption: 'editorial.gameCover' },
   emberMoon: { file: 'emberMoon.webp', width: 1345, height: 770, caption: 'editorial.screenshot' },
   holoHunter: { file: 'holoHunter.webp', width: 1440, height: 960, caption: 'editorial.appScreenshot' },
 }

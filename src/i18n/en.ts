@@ -18,6 +18,7 @@ export default {
   "scroll": "Swipe to the next section"
 },
   editorial: {
+    gameCover: "Game cover art",
     appScreenshot: "Actual app screenshot",
     demoUnavailable: "Demo currently unavailable",
   "eyebrow": "PORTFOLIO / SOFTWARE & INTERACTION",
