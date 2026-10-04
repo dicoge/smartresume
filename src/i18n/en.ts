@@ -63,6 +63,26 @@ export default {
     skillsTitle: 'Languages & Skills',
   },
   projects: {
+    borrowedLight: {
+      title: 'A Light Borrowed for the Night',
+      subtitle: 'A point-and-click journey between light and shadow',
+      description: "Return home the night before its demolition and repair your mother's old lamp. Explore rooms through light and darkness, examine objects and traces, and shape the light you leave behind.",
+    },
+    silentWires: {
+      title: 'Silent Wires: The Lantern Protocol',
+      subtitle: 'Cipher puzzles and a locked-room mystery',
+      description: "A delayed letter arrives after a white-hat hacker's death. Follow Morse code and keyboard ciphers, investigate the people behind the aliases, and uncover the secret of LANTERN.",
+    },
+    dungeonD3: {
+      title: 'DungeonD3: Dice Dungeon',
+      subtitle: 'A D20-powered dungeon adventure',
+      description: 'Roll a D20 through tombs, abysses and an ancient forge, facing altars, treasure chests and a Lich King. A pixel-art adventure built around chance-driven choices.',
+    },
+    helloWorld: {
+      title: 'Hello, World!',
+      subtitle: 'Learn programming through a text adventure',
+      description: 'Help an engineer repair a city computer overrun by bugs. Explore variables, conditions, loops, functions and recursion through a programming-themed text adventure.',
+    },
     inDevelopment: "In development",
     prototype: "Prototype",
     midnightPassport: {
@@ -124,11 +144,6 @@ export default {
       title: 'Web Page Scroll Effects',
       subtitle: 'Interactive Scroll Visual Experience',
       description: 'Interactive scrolling visual experience built with Vue and CSS Animation, featuring smooth transitions and captivating visual effects.',
-    },
-    dungeonD3: {
-      title: 'DungeonD3 Dungeon Warrior',
-      subtitle: 'D20 Turn-based Roguelike Tower Climb',
-      description: 'Hardcore D20 dice-based dungeon crawler! 5 floors of procedural generation, skill upgrades, equipment collection, and boss battles. Built with native HTML5 Canvas, TypeScript precisely crafts every life-or-death adventure.',
     },
     partSmart: {
       title: 'PartSmart PC Parts Checker',

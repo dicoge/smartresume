@@ -63,6 +63,26 @@ export default {
     skillsTitle: '程式語言與技能',
   },
   projects: {
+    borrowedLight: {
+      title: '借一夜的光',
+      subtitle: '陰陽切換的互動探索小品',
+      description: '在老家拆除前的最後一夜，修好母親留下的老燈。透過點燈與熄燈探索房間，尋找物件、讀懂痕跡，讓行動決定最後留下的光。',
+    },
+    silentWires: {
+      title: '靜默頻道：夜鴞的最後暗語',
+      subtitle: '密碼解謎 × 懸疑推理',
+      description: '白帽駭客「夜鴞」身亡後，一封延遲寄出的信揭開懸案。循著摩斯電碼與鍵盤暗語拆解線索，追查代號背後的人，尋找 LANTERN 的祕密。',
+    },
+    dungeonD3: {
+      title: 'DungeonD3 骰子地城',
+      subtitle: 'D20 擲骰地城冒險',
+      description: '以 D20 擲骰推進冒險，穿過墓穴、深淵與遠古熔爐，面對祭壇、寶箱與巫妖王。結合像素地城場景與運氣抉擇的互動小品。',
+    },
+    helloWorld: {
+      title: 'Hello, 世界！',
+      subtitle: '程式入門文字冒險',
+      description: '跟著工程師伊萊修復被墨蟲 Bug 弄壞的城市主機，在故事中認識變數、條件、迴圈、函式與遞迴，把程式基礎化為一場文字冒險。',
+    },
     inDevelopment: "開發中",
     prototype: "試作",
     midnightPassport: {
@@ -124,11 +144,6 @@ export default {
       title: '網頁滑動效果展示',
       subtitle: '互動式滾動視覺體驗',
       description: '運用 Vue 與 CSS Animation 打造的互動式滾動視覺效果網頁，帶來流暢的瀏覽體驗與吸睛的視覺過渡。',
-    },
-    dungeonD3: {
-      title: 'DungeonD3 地城勇者',
-      subtitle: 'D20 回合制 Roguelike 爬塔遊戲',
-      description: '硬派 D20 骰子運氣地城爬塔！5 層程序生成地城，技能升級、裝備收集、Boss 戰鬥。原生 HTML5 Canvas 打造，TypeScript 精準刻劃每場生死冒險。',
     },
     partSmart: {
       title: 'PartSmart 零件查價通',

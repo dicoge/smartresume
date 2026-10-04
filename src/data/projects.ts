@@ -2,6 +2,34 @@ import type { Project } from '../types'
 
 export const projects: Project[] = [
   {
+    id: 'borrowedLight',
+    emoji: '',
+    category: 'Game',
+    tags: ['Larch', 'Point & Click', 'Narrative Puzzle'],
+    stats: [],
+  },
+  {
+    id: 'silentWires',
+    emoji: '',
+    category: 'Game',
+    tags: ['Larch', 'Mystery', 'Cipher Puzzles'],
+    stats: [],
+  },
+  {
+    id: 'dungeonD3',
+    emoji: '',
+    category: 'Game',
+    tags: ['Larch', 'D20', 'Dungeon Adventure'],
+    stats: [],
+  },
+  {
+    id: 'helloWorld',
+    emoji: '',
+    category: 'Game',
+    tags: ['Larch', 'Text Adventure', 'Programming'],
+    stats: [],
+  },
+  {
     id: "midnightPassport",
     emoji: "",
     category: "Game",
