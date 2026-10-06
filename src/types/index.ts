@@ -10,6 +10,8 @@ export interface Project {
   demo?: string
   demoUnavailable?: boolean
   status?: 'inDevelopment' | 'prototype'
+  /** Small decorative brand mark shown beside the title (file in public/projects/). */
+  logo?: string
 }
 
 export interface SkillBar {

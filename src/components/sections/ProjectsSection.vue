@@ -50,6 +50,15 @@ const filteredProjects = computed(() => {
         </button>
       </div>
 
+      <aside
+        v-if="activeFilter === 'All' || activeFilter === 'Game'"
+        data-testid="game-note"
+        class="game-note"
+      >
+        <p class="eyebrow">{{ t('projects.gameNoteLabel') }}</p>
+        <p>{{ t('projects.gameNote') }}</p>
+      </aside>
+
       <!-- Projects Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
         <ProjectCard

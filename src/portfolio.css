@@ -157,3 +157,7 @@ footer { border-top:1px solid var(--border); }
 
 .project-shot { height:auto; aspect-ratio:16 / 10; }
 .project-status { align-self:flex-start; font-size:11px; color:var(--primary); border:1px solid var(--border); border-radius:3px; padding:3px 8px; margin-bottom:12px; }
+.game-note { margin:-16px 0 40px; padding:14px 16px; max-width:720px; background:var(--bg-secondary); border-left:2px solid var(--primary); }
+.game-note .eyebrow { margin-bottom:6px; font-size:10px; color:var(--primary); }
+.game-note p:last-child { font-size:14px; line-height:1.7; color:var(--text-secondary); }
+.project-logo { width:28px; height:28px; border-radius:7px; flex-shrink:0; align-self:center; }

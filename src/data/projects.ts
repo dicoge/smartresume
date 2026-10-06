@@ -81,6 +81,7 @@ export const projects: Project[] = [
     stats: ['🤖 AI 工具', '🚀 已上線'],
     github: 'https://github.com/dicoge/hunterCard',
     demo: 'https://holohunter.dicoge.com',
+    logo: 'holoHunter-mark.png',
   },
   {
     id: 'pixelOffice',

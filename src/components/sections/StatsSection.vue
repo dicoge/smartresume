@@ -14,17 +14,17 @@ const sectionRef = ref<HTMLElement | null>(null)
       <h2 class="section-title">{{ t('stats.title') }}</h2>
       <p class="section-subtitle">{{ t('stats.subtitle') }}</p>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mt-8">
         <div
           v-for="stat in githubStats"
           :key="stat.id"
-          class="p-6 rounded-2xl text-center transition-all duration-300"
+          class="px-2.5 py-4 sm:p-6 rounded-2xl text-center transition-all duration-300"
           style="background-color: var(--bg-secondary); border: 1px solid var(--border);"
         >
-          <div class="text-4xl font-extrabold gradient-text mb-2">
+          <div class="text-[1.625rem] lg:text-4xl font-extrabold gradient-text mb-2">
             {{ stat.value }}
           </div>
-          <div class="text-sm" style="color: var(--text-secondary);">
+          <div class="text-xs sm:text-sm" style="color: var(--text-secondary);">
             {{ t(`stats.${stat.id}`) }}
           </div>
         </div>

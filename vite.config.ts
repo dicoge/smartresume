@@ -18,7 +18,7 @@ export default defineConfig({
       includeAssets: ['icon-192.svg', 'icon-512.svg', 'icon-maskable.svg'],
       manifest: {
         name: '石少斌 SHIH SHAO-PIN - 軟體前端工程師',
-        short_name: '石少斌 Portfolio',
+        short_name: '石少斌',
         description: '軟體前端工程師，具 Unity / C# 遊戲開發與 Web 個人專案經驗；2022/06 - 2026/09 任職鈊象電子（IGS）',
         theme_color: '#080b12',
         background_color: '#080b12',
