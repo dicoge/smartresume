@@ -26,7 +26,7 @@ export default {
   "web": "Web 開發",
   "intro": "2022/06 至 2026/09 任職 IGS，使用 Unity / C# 開發遊戲介面與系統。個人專案延伸至 Vue.js、Node.js 與跨平台 App。",
   "personal": "個人專案",
-  "explore": "探索作品",
+  "explore": "查看專案",
   "screenshot": "遊戲實際畫面・局部",
   "schematic": "概念示意",
   "selectedWork": "作品選集 / 個人專案",
@@ -35,7 +35,7 @@ export default {
   nav: {
     about: '關於',
     projects: '作品',
-    techStack: '技術棧',
+    techStack: '技術與工具',
     contact: '聯絡',
   },
   hero: {
@@ -55,7 +55,7 @@ export default {
     subtitle: '嗨，我是石少斌，一位在遊戲與軟體開發領域深耕的工程師。',
     whatIDo: '專業領域',
     whatIDoContent: '2022/06 至 2026/09 任職鈊象電子（IGS），擔任軟體前端工程師，使用 Unity / C# 開發遊戲介面與系統功能。個人專案涵蓋 Node.js、Vue.js 與跨平台 App。',
-    currentFocus: '目前專注於：',
+    currentFocus: '開發方向：',
     focus1: 'Unity 遊戲開發與引擎優化',
     focus2: 'Node.js 後端服務與 API 開發',
     focus3: 'Vue.js 前端介面與使用者體驗',
@@ -154,7 +154,7 @@ export default {
     },
   },
   techStack: {
-    title: '技術棧',
+    title: '技術與工具',
     subtitle: '開發時常用的語言、框架與工具',
     languages: '核心程式語言',
     frameworks: '遊戲與 Web 框架',

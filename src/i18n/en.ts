@@ -26,7 +26,7 @@ export default {
   "web": "Web development",
   "intro": "At IGS from 2022/06 to 2026/09, I developed game interfaces and systems with Unity / C#. My personal work extends into Vue.js, Node.js and cross-platform apps.",
   "personal": "PERSONAL PROJECT",
-  "explore": "Explore the project",
+  "explore": "View project",
   "screenshot": "Game capture · detail",
   "schematic": "Concept illustration",
   "selectedWork": "SELECTED WORK / PERSONAL PROJECTS",
@@ -35,7 +35,7 @@ export default {
   nav: {
     about: 'About',
     projects: 'Projects',
-    techStack: 'Tech Stack',
+    techStack: 'Technologies & Tools',
     contact: 'Contact',
   },
   hero: {
@@ -55,7 +55,7 @@ export default {
     subtitle: "Hi, I'm SHIH SHAO-PIN, an engineer specializing in game and software development.",
     whatIDo: 'Areas of Expertise',
     whatIDoContent: 'From 2022/06 to 2026/09, I worked at IGS as a Software Frontend Engineer, developing game interfaces and systems with Unity / C#. My personal projects cover Node.js, Vue.js, and cross-platform apps.',
-    currentFocus: 'Currently focused on:',
+    currentFocus: 'Development Focus:',
     focus1: 'Unity game development and engine optimization',
     focus2: 'Node.js backend services and API development',
     focus3: 'Vue.js frontend interfaces and user experience',
@@ -154,7 +154,7 @@ export default {
     },
   },
   techStack: {
-    title: 'Tech Stack',
+    title: 'Technologies & Tools',
     subtitle: 'Languages, frameworks and tools I work with',
     languages: 'Programming Languages',
     frameworks: 'Game & Web Frameworks',
