@@ -53,14 +53,14 @@ export default {
   about: {
     title: 'About Me',
     subtitle: "Hi, I'm SHIH SHAO-PIN, an engineer specializing in game and software development.",
-    whatIDo: 'What I Do',
+    whatIDo: 'Areas of Expertise',
     whatIDoContent: 'From 2022/06 to 2026/09, I worked at IGS as a Software Frontend Engineer, developing game interfaces and systems with Unity / C#. My personal projects cover Node.js, Vue.js, and cross-platform apps.',
     currentFocus: 'Currently focused on:',
     focus1: 'Unity game development and engine optimization',
     focus2: 'Node.js backend services and API development',
     focus3: 'Vue.js frontend interfaces and user experience',
     focus4: 'Expo / React Native cross-platform App development',
-    skillsTitle: 'Languages & Skills',
+    skillsTitle: 'Technical Skills',
   },
   projects: {
     borrowedLight: {
@@ -113,7 +113,7 @@ export default {
     filterTool: 'Tool',
     filterGame: 'Game',
     gameNoteLabel: 'About these games',
-    gameNote: 'Game entries are interactive games and stories I built with Larch. Titles marked “In development” or “Prototype” are unfinished, and their descriptions note what is still being validated.',
+    gameNote: 'Game entries are interactive games and stories I built with Larch. Titles marked “In development” or “Prototype” are unfinished, and their content and gameplay may still change.',
     viewCode: 'GitHub',
     liveDemo: 'Live Demo',
     noProjects: 'No projects in this category',
@@ -154,8 +154,8 @@ export default {
     },
   },
   techStack: {
-    title: 'Tech Stack & Skills',
-    subtitle: 'Core Technologies and Development Tools',
+    title: 'Tech Stack',
+    subtitle: 'Languages, frameworks and tools I work with',
     languages: 'Programming Languages',
     frameworks: 'Game & Web Frameworks',
     ai_stack: 'AI & Game Technologies',

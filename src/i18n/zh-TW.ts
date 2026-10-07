@@ -53,14 +53,14 @@ export default {
   about: {
     title: '關於我',
     subtitle: '嗨，我是石少斌，一位在遊戲與軟體開發領域深耕的工程師。',
-    whatIDo: '我做什麼',
+    whatIDo: '專業領域',
     whatIDoContent: '2022/06 至 2026/09 任職鈊象電子（IGS），擔任軟體前端工程師，使用 Unity / C# 開發遊戲介面與系統功能。個人專案涵蓋 Node.js、Vue.js 與跨平台 App。',
     currentFocus: '目前專注於：',
     focus1: 'Unity 遊戲開發與引擎優化',
     focus2: 'Node.js 後端服務與 API 開發',
     focus3: 'Vue.js 前端介面與使用者體驗',
     focus4: 'Expo / React Native 跨平台 App 開發',
-    skillsTitle: '程式語言與技能',
+    skillsTitle: '技術專長',
   },
   projects: {
     borrowedLight: {
@@ -113,7 +113,7 @@ export default {
     filterTool: '工具',
     filterGame: '遊戲',
     gameNoteLabel: '關於遊戲作品',
-    gameNote: '遊戲類作品皆為我以 Larch 製作的互動遊戲與故事。標示「開發中」或「試作」者尚未完成，說明中會註明仍在驗證的部分。',
+    gameNote: '遊戲類作品皆為我以 Larch 製作的互動遊戲與故事。標示「開發中」或「試作」者尚未完成，內容與玩法仍可能調整。',
     viewCode: 'GitHub',
     liveDemo: '線上展示',
     noProjects: '尚無此分類作品',
@@ -154,8 +154,8 @@ export default {
     },
   },
   techStack: {
-    title: '技術棧與開發技能',
-    subtitle: '我所使用的技術棧與開發工具',
+    title: '技術棧',
+    subtitle: '開發時常用的語言、框架與工具',
     languages: '核心程式語言',
     frameworks: '遊戲與 Web 框架',
     ai_stack: 'AI 與遊戲技術',
