@@ -54,7 +54,7 @@ export default {
     title: '關於我',
     subtitle: '嗨，我是石少斌，一位在遊戲與軟體開發領域深耕的工程師。',
     whatIDo: '專業領域',
-    whatIDoContent: '2022/06 至 2026/09 任職鈊象電子（IGS），擔任軟體前端工程師，使用 Unity / C# 開發遊戲介面與系統功能。個人專案涵蓋 Node.js、Vue.js 與跨平台 App。',
+    whatIDoContent: '2022/06 至 2026/09 任職鈊象電子（IGS），擔任軟體前端工程師，使用 Unity / C# 開發遊戲介面與系統功能。個人專案涵蓋 Node.js、Vue.js 與跨平台 App。另有 Jenkins 專案建置自動化的實務經驗，個人專案也以 GitHub Actions 自動建置。',
     currentFocus: '開發方向：',
     focus1: 'Unity 遊戲開發與引擎優化',
     focus2: 'Node.js 後端服務與 API 開發',
@@ -130,7 +130,7 @@ export default {
     holoHunter: {
       title: 'HoloHunter 卡牌獵人',
       subtitle: '虛擬卡牌查價工具',
-      description: 'hololive 官方卡牌遊戲（hOCG）查價 App，支援卡號/成員搜尋、遊々亭實時價格、PWA 安裝。技術栈：Expo + React Native Web + TypeScript + Vercel Edge Functions + Puppeteer 爬蟲。',
+      description: 'hololive 官方卡牌遊戲（hOCG）查價 App，支援卡號/成員搜尋、遊々亭實時價格、PWA 安裝；以 GitHub Actions 自動建置並保存 Android 測試 APK。技術栈：Expo + React Native Web + TypeScript + Vercel Edge Functions + Puppeteer 爬蟲。',
     },
     pixelOffice: {
       title: 'Pixel Office 像素辦公室',
@@ -168,7 +168,7 @@ export default {
     subtitle: '開發時常用的語言、框架與工具',
     languages: '核心程式語言',
     frameworks: '遊戲與 Web 框架',
-    ai_stack: 'AI 與遊戲技術',
+    ai_stack: 'AI、遊戲技術與工具',
     specializations: '專業技術領域',
   },
   stats: {

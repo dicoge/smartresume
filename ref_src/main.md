@@ -31,8 +31,8 @@
 **Subtitle（zh-TW）：** 嗨，我是石少斌，一位在遊戲與軟體開發領域深耕的工程師。
 **Subtitle（en）：** Hi, I'm SHIH SHAO-PIN, an engineer specializing in game and software development.
 
-**What I Do（zh-TW）：** 2022/06 至 2026/09 任職鈊象電子（IGS），擔任軟體前端工程師，使用 Unity / C# 開發遊戲介面與系統功能。個人專案涵蓋 Node.js、Vue.js 與跨平台 App。
-**What I Do（en）：** From 2022/06 to 2026/09, I worked at IGS as a Software Frontend Engineer, developing game interfaces and systems with Unity / C#. My personal projects cover Node.js, Vue.js, and cross-platform apps.
+**What I Do（zh-TW）：** 2022/06 至 2026/09 任職鈊象電子（IGS），擔任軟體前端工程師，使用 Unity / C# 開發遊戲介面與系統功能。個人專案涵蓋 Node.js、Vue.js 與跨平台 App。另有 Jenkins 專案建置自動化的實務經驗，個人專案也以 GitHub Actions 自動建置。
+**What I Do（en）：** From 2022/06 to 2026/09, I worked at IGS as a Software Frontend Engineer, developing game interfaces and systems with Unity / C#. My personal projects cover Node.js, Vue.js, and cross-platform apps. I also have hands-on project experience with Jenkins build automation, and use GitHub Actions to automate builds for my personal projects.
 
 **Focus1（zh-TW）：** Unity 遊戲開發與引擎優化
 **Focus1（en）：** Unity game development and engine optimization
@@ -88,6 +88,20 @@
 - Expo
 - React Native
 
+### AI, Game Tech & Tools 🧠
+
+**Label（zh-TW）：** AI、遊戲技術與工具
+**Label（en）：** AI, Game Tech & Tools
+
+- Unity AI
+- Game Design Patterns
+- HTML5 Canvas
+- Puppeteer
+- Vercel
+- Render
+- Jenkins
+- GitHub Actions
+
 ### Specializations 🎯
 
 **Label（zh-TW）：** 專業技術領域
@@ -98,6 +112,7 @@
 - Full-Stack Development
 - Cross-platform App Development
 - Vercel / Render Deployment
+- CI/CD / Build Automation
 
 ---
 
@@ -136,7 +151,7 @@
 **GitHub:** https://github.com/dicoge/hunterCard
 **Demo:** https://card-hunter-mu.vercel.app
 
-Virtual Card Price Lookup App for hololive Official Card Game (hOCG).
+Virtual Card Price Lookup App for hololive Official Card Game (hOCG). GitHub Actions automatically builds Android test APKs and keeps them as downloadable artifacts.
 
 ### Vue Excel Dashboard 📊
 **Category:** Full-Stack

@@ -54,7 +54,7 @@ export default {
     title: 'About Me',
     subtitle: "Hi, I'm SHIH SHAO-PIN, an engineer specializing in game and software development.",
     whatIDo: 'Areas of Expertise',
-    whatIDoContent: 'From 2022/06 to 2026/09, I worked at IGS as a Software Frontend Engineer, developing game interfaces and systems with Unity / C#. My personal projects cover Node.js, Vue.js, and cross-platform apps.',
+    whatIDoContent: 'From 2022/06 to 2026/09, I worked at IGS as a Software Frontend Engineer, developing game interfaces and systems with Unity / C#. My personal projects cover Node.js, Vue.js, and cross-platform apps. I also have hands-on project experience with Jenkins build automation, and use GitHub Actions to automate builds for my personal projects.',
     currentFocus: 'Development Focus:',
     focus1: 'Unity game development and engine optimization',
     focus2: 'Node.js backend services and API development',
@@ -130,7 +130,7 @@ export default {
     holoHunter: {
       title: 'HoloHunter Card Hunter',
       subtitle: 'Virtual Card Price Lookup',
-      description: 'hOCG (hololive Official Card Game) price checker app with card search, yuyu-tei real-time pricing, and PWA install support. Built with Expo + React Native Web + TypeScript + Vercel Edge Functions + Puppeteer.',
+      description: 'hOCG (hololive Official Card Game) price checker app with card search, yuyu-tei real-time pricing, and PWA install support. GitHub Actions automatically builds Android test APKs and keeps them as downloadable artifacts. Built with Expo + React Native Web + TypeScript + Vercel Edge Functions + Puppeteer.',
     },
     pixelOffice: {
       title: 'Pixel Office',
@@ -168,7 +168,7 @@ export default {
     subtitle: 'Languages, frameworks and tools I work with',
     languages: 'Programming Languages',
     frameworks: 'Game & Web Frameworks',
-    ai_stack: 'AI & Game Technologies',
+    ai_stack: 'AI, Game Tech & Tools',
     specializations: 'Specializations',
   },
   stats: {

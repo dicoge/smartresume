@@ -14,11 +14,11 @@ export const techCategories: TechCategory[] = [
   {
     id: 'ai_stack',
     icon: '🧠',
-    items: ['Unity AI', 'Game Design Patterns', 'HTML5 Canvas', 'Puppeteer', 'Vercel', 'Render'],
+    items: ['Unity AI', 'Game Design Patterns', 'HTML5 Canvas', 'Puppeteer', 'Vercel', 'Render', 'Jenkins', 'GitHub Actions'],
   },
   {
     id: 'specializations',
     icon: '🎯',
-    items: ['Game Development', 'Performance Optimization', 'Full-Stack Development', 'Cross-platform App Development', 'Vercel / Render Deployment'],
+    items: ['Game Development', 'Performance Optimization', 'Full-Stack Development', 'Cross-platform App Development', 'Vercel / Render Deployment', 'CI/CD / Build Automation'],
   },
 ]
