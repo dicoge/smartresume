@@ -17,6 +17,7 @@ const image = computed(() => screenshots[props.projectId])
 const imageUrl = computed(() => image.value ? import.meta.env.BASE_URL + 'projects/' + image.value.file : '')
 const motifs: Record<string, string[]> = {
   helloWorld: ['HELLO, WORLD!', 'CODE', 'EXPLORE'],
+  tianmingDaitu: ['EXPLORE', 'BATTLE', 'CULTIVATE'], zeroLine: ['DECODE', 'VERIFY', 'SUBMIT'],
   holoHunter: ['SEARCH', 'COMPARE'], pixelOffice: ['AGENTS', 'CANVAS'],
   vueExcelDashboard: ['IMPORT', 'EDIT', 'EXPORT'], vueManageSystem: ['USERS', 'ROLES'],
   dcbotSeries: ['COMMAND', 'RESPONSE'], webPageSlip: ['SCROLL', 'MOTION'],

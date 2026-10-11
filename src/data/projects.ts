@@ -52,6 +52,30 @@ export const projects: Project[] = [
     status: "inDevelopment"
   },
   {
+    id: "tianmingDaitu",
+    emoji: "",
+    category: "Game",
+    tags: [
+      "Larch",
+      "RPG",
+      "Xianxia"
+    ],
+    stats: [],
+    status: "inDevelopment"
+  },
+  {
+    id: "zeroLine",
+    emoji: "",
+    category: "Game",
+    tags: [
+      "Larch",
+      "Puzzle",
+      "Investigation"
+    ],
+    stats: [],
+    status: "inDevelopment"
+  },
+  {
     id: "neonSpins",
     emoji: "",
     category: "Game",

@@ -66,17 +66,17 @@ export default {
     borrowedLight: {
       title: 'A Light Borrowed for the Night',
       subtitle: 'A point-and-click journey between light and shadow',
-      description: "Return home the night before its demolition and repair your mother's old lamp. Explore rooms through light and darkness, examine objects and traces, and shape the light you leave behind.",
+      description: "Return home the night before its demolition to repair your mother's old lamp. With the light on, handle real objects; with it off, read the traces the dead left behind. Collect items, turn a wooden box and arrange photos across the entryway, living room and backyard — your actions and placements lead to one of three endings.",
     },
     silentWires: {
       title: 'Silent Wires: The Lantern Protocol',
       subtitle: 'Cipher puzzles and a locked-room mystery',
-      description: "A delayed letter arrives after a white-hat hacker's death. Follow Morse code and keyboard ciphers, investigate the people behind the aliases, and uncover the secret of LANTERN.",
+      description: "A white-hat hacker dies in a locked room, and a delayed letter reopens the case. Crack Morse code, keyboard-shift, Caesar and hex ASCII clues, check contradictions in the physical evidence and break the suspects' alibis. Three-tier layered hints guide you when stuck without spoiling the answer.",
     },
     dungeonD3: {
       title: 'DungeonD3: Dice Dungeon',
       subtitle: 'A D20-powered dungeon adventure',
-      description: 'Roll a D20 through tombs, abysses and an ancient forge, facing altars, treasure chests and a Lich King. A pixel-art adventure built around chance-driven choices.',
+      description: 'Roll a D20 through five dungeon floors — forgotten tombs, a demon abyss and an ancient forge — trying your luck at altars and treasure chests before facing the Lich King in the Shadow Realm. A pixel-art adventure built around chance-driven choices.',
     },
     helloWorld: {
       title: 'Hello, World!',
@@ -88,12 +88,22 @@ export default {
     midnightPassport: {
       title: "Midnight Passport",
       subtitle: "A rainy midnight visual novel",
-      description: "An interactive story built in Larch. A rain-soaked station, character dialogue and story choices set the scene for the journey."
+      description: "The last train is pulling in, and you are the final ticket inspector at a rain-soaked station. Check tickets, question travelers and weigh details and contradictions to let them through or hold them back — five strangers' fates follow your judgment to different endings."
     },
     tenLivesCity: {
       title: "Ten Lives City",
-      subtitle: "Five-chapter RPG · In development",
-      description: "A native RPG built in Larch, combining five chapters of exploration, party turn-based battles and reincarnation choices. Endings and game balance are still being validated."
+      subtitle: "Five-chapter, ten-life RPG · In development",
+      description: "A five-chapter native RPG built in Larch. Travel from a harbor-town well, a mining city and the royal capital to an old king's tomb and the Black Sun Castle, growing with companions to defeat the Black Sun Lord. After finishing a life you can be reborn on the same save, up to ten lives, and what you learned and promised before changes your route and ending. Some endings and overall balance are still being validated."
+    },
+    tianmingDaitu: {
+      title: "Path of Fated Dice",
+      subtitle: "Xianxia cultivation RPG",
+      description: "A cultivation-themed RPG built in Larch, currently spanning three story arcs and five regions. Explore the map and progress through personal native RPG battles, rise through five cultivation tiers, grow your accessories and take on a five-layer endgame, alongside social features. Still in private development and testing; some features are still being validated."
+    },
+    zeroLine: {
+      title: "Zero Line",
+      subtitle: "Offline incident-investigation puzzle",
+      description: "A seven-chapter, 21-section puzzle game about investigating a fictional incident. From bits and ASCII, Morse signals and Caesar encoding to a toy CPU, SHA-256, time calibration and evidence sealing, repair the link, cross-check the data and decide how to submit the evidence across three endings. Includes layered hints and save-and-resume. Every facility and record is fictional and nothing connects to real systems; currently a private test build."
     },
     neonSpins: {
       title: "Neon Spins",
@@ -103,7 +113,7 @@ export default {
     emberMoon: {
       title: "Ember Moon",
       subtitle: "Dark fantasy cultivation story",
-      description: "A dark fantasy interactive story built in Larch. Character dialogue and story choices unfold beneath a burning moon."
+      description: "A dark fantasy xianxia interactive story built in Larch. A mortal youth carrying an extinguished moonfire seeks his own path to immortality among immortal sects, demon kingdoms and the lies of Heaven."
     },
     title: 'Featured Projects',
     subtitle: 'Showcasing my work in game development and web technologies',
