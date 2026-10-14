@@ -15,7 +15,7 @@ describe('ProjectsSection filtering', () => {
   it('should show all 17 projects when filter is "All"', () => {
     const activeFilter = ref<ProjectCategory>('All')
     const filteredProjects = createFilteredProjects(activeFilter.value)
-    expect(filteredProjects.value).toHaveLength(17)
+    expect(filteredProjects.value).toHaveLength(21)
   })
 
   it('should show 3 projects for "AI Tools" filter (holoHunter, pixelOffice, partSmart)', () => {
@@ -49,7 +49,7 @@ describe('ProjectsSection filtering', () => {
   it('should show 10 Larch projects for "Game" filter', () => {
     const activeFilter = ref<ProjectCategory>('Game')
     const filteredProjects = createFilteredProjects(activeFilter.value)
-    expect(filteredProjects.value).toHaveLength(10)
-    expect(filteredProjects.value.map(project => project.id)).toEqual(['borrowedLight', 'silentWires', 'dungeonD3', 'helloWorld', 'midnightPassport', 'tenLivesCity', 'tianmingDaitu', 'zeroLine', 'neonSpins', 'emberMoon'])
+    expect(filteredProjects.value).toHaveLength(14)
+    expect(filteredProjects.value.map(project => project.id)).toEqual(['borrowedLight', 'silentWires', 'dungeonD3', 'helloWorld', 'midnightPassport', 'tenLivesCity', 'tianmingDaitu', 'zeroLine', 'neonSpins', 'emberMoon', 'causeRevocable', 'underworldLaw', 'proveNonexistence', 'lastMerge'])
   })
 })

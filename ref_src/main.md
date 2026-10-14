@@ -262,8 +262,8 @@ Real-time PC parts price comparison tool aggregating quotes from multiple retail
 **Status:** inDevelopment
 **Subtitle（zh-TW）：** 修仙題材原生 RPG
 **Subtitle（en）：** Xianxia cultivation RPG
-**Description（zh-TW）：** 以 Larch 製作的修仙 RPG，目前內容涵蓋三段篇章、五個地域。在地圖上探索並以個人原生 RPG 戰鬥推進，歷經五階修為、培養可成長的飾品，最終挑戰五層終局，並搭配社交互動功能。仍在私人開發測試中，部分功能尚在驗證。
-**Description（en）：** A cultivation-themed RPG built in Larch, currently spanning three story arcs and five regions. Explore the map and progress through personal native RPG battles, rise through five cultivation tiers, grow your accessories and take on a five-layer endgame, alongside social features. Still in private development and testing; some features are still being validated.
+**Description（zh-TW）：** 以 Larch 製作的修仙 RPG，目前內容涵蓋三段篇章、五個地域。在地圖上探索並以個人原生 RPG 戰鬥推進，歷經五階修為、培養可成長的飾品，最終挑戰五層終局，並搭配社交互動功能。新增功法閣卡牌試煉：擲骰得出卦象，選擇劍、體、符功法挑戰卡牌關卡，通過後可解鎖進階功法與天命骰修。仍在私人開發測試中，部分功能尚在驗證，卡牌試煉也尚待實機遊玩確認。
+**Description（en）：** A cultivation-themed RPG built in Larch, currently spanning three story arcs and five regions. Explore the map and progress through personal native RPG battles, rise through five cultivation tiers, grow your accessories and take on a five-layer endgame, alongside social features. A new Hall of Techniques card trial rolls a die for an omen, then takes a sword, body or talisman technique into a card-battle run; passing unlocks advanced techniques and Dice Cultivation. Still in private development and testing; some features are still being validated, and the card trial has yet to be confirmed in hands-on play.
 
 #### 零號回線 / Zero Line
 **ID:** zeroLine
@@ -294,6 +294,46 @@ Real-time PC parts price comparison tool aggregating quotes from multiple retail
 **Subtitle（en）：** Dark fantasy cultivation story
 **Description（zh-TW）：** 以 Larch 製作的黑暗奇幻仙俠故事。凡人少年背負熄滅的月火，在仙門、妖國與天道謊言之間，尋找屬於自己的長生路。
 **Description（en）：** A dark fantasy xianxia interactive story built in Larch. A mortal youth carrying an extinguished moonfire seeks his own path to immortality among immortal sects, demon kingdoms and the lies of Heaven.
+
+#### 死因可撤銷 / Cause of Death: Revocable
+**ID:** causeRevocable
+**Category:** Game
+**Tags:** Larch, Text Puzzle, Causality
+**Status:** inDevelopment
+**Subtitle（zh-TW）：** 因果推理文字解謎
+**Subtitle（en）：** A cause-and-effect text puzzle
+**Description（zh-TW）：** 以 Larch 製作的六章文字解謎。值班修復員林澈在桌上看見一份九分鐘後的事故報告，最後一欄寫著自己的名字。排定撤離步驟、規劃救援路線、隔離事故原因並復原備份，用證據查出是誰改寫了時間線，最後在三種處置中做出選擇。目前為私人測試版。
+**Description（en）：** A six-chapter text puzzle built in Larch. As on-duty restorer Lin Che, you find an incident report dated nine minutes ahead, with your own name in the last field. Order the evacuation steps, plan rescue routes, isolate the cause and restore backups, use the evidence to show who rewrote the timeline, then choose among three resolutions. Currently a private test build.
+
+#### 陰間修法師 / The Underworld Lawmender
+**ID:** underworldLaw
+**Category:** Game
+**Tags:** Larch, Text Puzzle, Logic
+**Status:** inDevelopment
+**Subtitle（zh-TW）：** 改寫條文的文字解謎
+**Subtitle（en）：** A text puzzle about rewriting the law
+**Description（zh-TW）：** 以 Larch 製作的六章文字解謎。生者言照被借調到陰間一天，修改會被逐字執行的條文：調整適用範圍、優先順序、例外與追溯，讓每份卷宗得到該有的裁定，也改變阿芒、沈燈與梁簿的處境。最後依建立的制度走向三種結局之一。目前為私人測試版。
+**Description（en）：** A six-chapter text puzzle built in Larch. Yan Zhao, a living person seconded to the underworld for one day, amends laws that are enforced word for word — adjusting scope, priority, exceptions and retroactivity so each case file gets the right ruling, and changing what happens to A-Mang, Shen Deng and Liang Bu. The system you build leads to one of three endings. Currently a private test build.
+
+#### 請證明你不存在 / Please Prove You Don’t Exist
+**ID:** proveNonexistence
+**Category:** Game
+**Tags:** Larch, Text Puzzle, Mystery
+**Status:** inDevelopment
+**Subtitle（zh-TW）：** 身分查驗文字解謎
+**Subtitle（en）：** An identity-verification text puzzle
+**Description（zh-TW）：** 以 Larch 製作的六章文字解謎。你登入一個三年前已關閉的檔案系統，首頁卻顯示一份等你核准的訃告。三個帳號都願意幫忙，也各自隱瞞了一件事。設計測試、追查資料來源、確認同意範圍，判斷哪些話能被驗證，再決定這份訃告是否成立。三種結局，目前為私人測試版。
+**Description（en）：** A six-chapter text puzzle built in Larch. You log in to an archive system shut down three years ago and find an obituary awaiting your approval. Three accounts offer to help, and each is hiding something. Design tests, trace sources and check the scope of consent to decide what can be verified — and whether the obituary stands. Three endings; currently a private test build.
+
+#### 我們的最後一次合併 / Our Last Merge
+**ID:** lastMerge
+**Category:** Game
+**Tags:** Larch, Text Puzzle, Narrative
+**Status:** inDevelopment
+**Subtitle（zh-TW）：** 記憶整理文字解謎
+**Subtitle（en）：** A text puzzle about piecing memories together
+**Description（zh-TW）：** 以 Larch 製作的六章文字解謎。並排閱讀已故伴侶留下的三份記憶整理稿，依原件與證據逐句修復日期、來源，以及被自動摘要磨平的細節，最後決定如何保留一個人的複雜。三種結局，目前為私人測試版。
+**Description（en）：** A six-chapter text puzzle built in Larch. Read three memory drafts left by a late partner side by side, and use the originals and evidence to repair dates, sources and the details that automatic summaries smoothed away, then decide how to keep a person's complexity. Three endings; currently a private test build.
 
 ---
 

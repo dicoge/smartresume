@@ -98,7 +98,7 @@ export default {
     tianmingDaitu: {
       title: "Path of Fated Dice",
       subtitle: "Xianxia cultivation RPG",
-      description: "A cultivation-themed RPG built in Larch, currently spanning three story arcs and five regions. Explore the map and progress through personal native RPG battles, rise through five cultivation tiers, grow your accessories and take on a five-layer endgame, alongside social features. Still in private development and testing; some features are still being validated."
+      description: "A cultivation-themed RPG built in Larch, currently spanning three story arcs and five regions. Explore the map and progress through personal native RPG battles, rise through five cultivation tiers, grow your accessories and take on a five-layer endgame, alongside social features. A new Hall of Techniques card trial rolls a die for an omen, then takes a sword, body or talisman technique into a card-battle run; passing unlocks advanced techniques and Dice Cultivation. Still in private development and testing; some features are still being validated, and the card trial has yet to be confirmed in hands-on play."
     },
     zeroLine: {
       title: "Zero Line",
@@ -114,6 +114,26 @@ export default {
       title: "Ember Moon",
       subtitle: "Dark fantasy cultivation story",
       description: "A dark fantasy xianxia interactive story built in Larch. A mortal youth carrying an extinguished moonfire seeks his own path to immortality among immortal sects, demon kingdoms and the lies of Heaven."
+    },
+    causeRevocable: {
+      title: "Cause of Death: Revocable",
+      subtitle: "A cause-and-effect text puzzle",
+      description: "A six-chapter text puzzle built in Larch. As on-duty restorer Lin Che, you find an incident report dated nine minutes ahead, with your own name in the last field. Order the evacuation steps, plan rescue routes, isolate the cause and restore backups, use the evidence to show who rewrote the timeline, then choose among three resolutions. Currently a private test build."
+    },
+    underworldLaw: {
+      title: "The Underworld Lawmender",
+      subtitle: "A text puzzle about rewriting the law",
+      description: "A six-chapter text puzzle built in Larch. Yan Zhao, a living person seconded to the underworld for one day, amends laws that are enforced word for word — adjusting scope, priority, exceptions and retroactivity so each case file gets the right ruling, and changing what happens to A-Mang, Shen Deng and Liang Bu. The system you build leads to one of three endings. Currently a private test build."
+    },
+    proveNonexistence: {
+      title: "Please Prove You Don’t Exist",
+      subtitle: "An identity-verification text puzzle",
+      description: "A six-chapter text puzzle built in Larch. You log in to an archive system shut down three years ago and find an obituary awaiting your approval. Three accounts offer to help, and each is hiding something. Design tests, trace sources and check the scope of consent to decide what can be verified — and whether the obituary stands. Three endings; currently a private test build."
+    },
+    lastMerge: {
+      title: "Our Last Merge",
+      subtitle: "A text puzzle about piecing memories together",
+      description: "A six-chapter text puzzle built in Larch. Read three memory drafts left by a late partner side by side, and use the originals and evidence to repair dates, sources and the details that automatic summaries smoothed away, then decide how to keep a person's complexity. Three endings; currently a private test build."
     },
     title: 'Featured Projects',
     subtitle: 'Showcasing my work in game development and web technologies',

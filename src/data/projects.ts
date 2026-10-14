@@ -98,6 +98,54 @@ export const projects: Project[] = [
     status: "inDevelopment"
   },
   {
+    id: "causeRevocable",
+    emoji: "",
+    category: "Game",
+    tags: [
+      "Larch",
+      "Text Puzzle",
+      "Causality"
+    ],
+    stats: [],
+    status: "inDevelopment"
+  },
+  {
+    id: "underworldLaw",
+    emoji: "",
+    category: "Game",
+    tags: [
+      "Larch",
+      "Text Puzzle",
+      "Logic"
+    ],
+    stats: [],
+    status: "inDevelopment"
+  },
+  {
+    id: "proveNonexistence",
+    emoji: "",
+    category: "Game",
+    tags: [
+      "Larch",
+      "Text Puzzle",
+      "Mystery"
+    ],
+    stats: [],
+    status: "inDevelopment"
+  },
+  {
+    id: "lastMerge",
+    emoji: "",
+    category: "Game",
+    tags: [
+      "Larch",
+      "Text Puzzle",
+      "Narrative"
+    ],
+    stats: [],
+    status: "inDevelopment"
+  },
+  {
     id: 'holoHunter',
     emoji: '🃏',
     category: 'AI Tools',

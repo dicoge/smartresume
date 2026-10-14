@@ -11,13 +11,18 @@ const screenshots: Record<string, { file: string; width: number; height: number;
   tenLivesCity: { file: 'tenLivesCity.webp', width: 1092, height: 656, caption: 'editorial.screenshot' },
   neonSpins: { file: 'neonSpins.webp', width: 1672, height: 941, caption: 'editorial.gameCover' },
   emberMoon: { file: 'emberMoon.webp', width: 1345, height: 770, caption: 'editorial.screenshot' },
+  helloWorld: { file: 'helloWorld.webp', width: 640, height: 360, caption: 'editorial.gameCover' },
+  tianmingDaitu: { file: 'tianmingDaitu.webp', width: 640, height: 360, caption: 'editorial.gameCover' },
+  zeroLine: { file: 'zeroLine.webp', width: 640, height: 360, caption: 'editorial.gameCover' },
+  causeRevocable: { file: 'causeRevocable.webp', width: 640, height: 360, caption: 'editorial.gameCover' },
+  underworldLaw: { file: 'underworldLaw.webp', width: 640, height: 360, caption: 'editorial.gameCover' },
+  proveNonexistence: { file: 'proveNonexistence.webp', width: 640, height: 360, caption: 'editorial.gameCover' },
+  lastMerge: { file: 'lastMerge.webp', width: 640, height: 360, caption: 'editorial.gameCover' },
   holoHunter: { file: 'holoHunter.webp', width: 1440, height: 960, caption: 'editorial.appScreenshot' },
 }
 const image = computed(() => screenshots[props.projectId])
 const imageUrl = computed(() => image.value ? import.meta.env.BASE_URL + 'projects/' + image.value.file : '')
 const motifs: Record<string, string[]> = {
-  helloWorld: ['HELLO, WORLD!', 'CODE', 'EXPLORE'],
-  tianmingDaitu: ['EXPLORE', 'BATTLE', 'CULTIVATE'], zeroLine: ['DECODE', 'VERIFY', 'SUBMIT'],
   holoHunter: ['SEARCH', 'COMPARE'], pixelOffice: ['AGENTS', 'CANVAS'],
   vueExcelDashboard: ['IMPORT', 'EDIT', 'EXPORT'], vueManageSystem: ['USERS', 'ROLES'],
   dcbotSeries: ['COMMAND', 'RESPONSE'], webPageSlip: ['SCROLL', 'MOTION'],
