@@ -53,11 +53,11 @@ describe('game explanation', () => {
 
   it('every Game entry is tagged Larch and unfinished ones keep their status label', () => {
     const games = projects.filter(p => p.category === 'Game')
-    expect(games).toHaveLength(14)
+    expect(games).toHaveLength(15)
     expect(games.every(p => p.tags.includes('Larch'))).toBe(true)
     expect(Object.fromEntries(games.filter(p => p.status).map(p => [p.id, p.status]))).toEqual({
       tenLivesCity: 'inDevelopment', tianmingDaitu: 'inDevelopment', zeroLine: 'inDevelopment', neonSpins: 'prototype', emberMoon: 'inDevelopment',
-      causeRevocable: 'inDevelopment', underworldLaw: 'inDevelopment', proveNonexistence: 'inDevelopment', lastMerge: 'inDevelopment',
+      causeRevocable: 'inDevelopment', underworldLaw: 'inDevelopment', proveNonexistence: 'inDevelopment', lastMerge: 'inDevelopment', tombNoReturn: 'inDevelopment',
     })
   })
 
@@ -68,7 +68,7 @@ describe('game explanation', () => {
     const button = (label: string) => wrapper.findAll('.project-filters button').find(b => b.text() === label)!
     await button('Game').trigger('click')
     expect(note().exists()).toBe(true)
-    expect(wrapper.findAll('[data-testid="project-card"]')).toHaveLength(14)
+    expect(wrapper.findAll('[data-testid="project-card"]')).toHaveLength(15)
     await button('Tool').trigger('click')
     expect(note().exists()).toBe(false)
   })

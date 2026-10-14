@@ -135,6 +135,11 @@ export default {
       subtitle: "A text puzzle about piecing memories together",
       description: "A six-chapter text puzzle built in Larch. Read three memory drafts left by a late partner side by side, and use the originals and evidence to repair dates, sources and the details that automatic summaries smoothed away, then decide how to keep a person's complexity. Three endings; currently a private test build."
     },
+    tombNoReturn: {
+      title: "No Return Beneath the Tomb",
+      subtitle: "Tomb-exploration card roguelike",
+      description: "An original single-player tomb-exploration card roguelike built in Larch. Descend as one of three explorers — Qi Yuansheng the mechanism surveyor, Tie Sui the guard, or Liu Chendeng the talisman lamp keeper — through seven chapters of tomb chambers and branching encounters, building a deck and collecting relics along the way. Taking burial treasures adds “Tomb Debt” curses to your deck, and the run ends with a choice among three endings. Still in private development and testing; hands-on play and overall balance are still being validated."
+    },
     title: 'Featured Projects',
     subtitle: 'Showcasing my work in game development and web technologies',
     filterAll: 'All',

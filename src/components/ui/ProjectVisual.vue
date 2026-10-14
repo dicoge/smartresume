@@ -18,6 +18,7 @@ const screenshots: Record<string, { file: string; width: number; height: number;
   underworldLaw: { file: 'underworldLaw.webp', width: 640, height: 360, caption: 'editorial.gameCover' },
   proveNonexistence: { file: 'proveNonexistence.webp', width: 640, height: 360, caption: 'editorial.gameCover' },
   lastMerge: { file: 'lastMerge.webp', width: 640, height: 360, caption: 'editorial.gameCover' },
+  tombNoReturn: { file: 'tombNoReturn.jpg', width: 1280, height: 720, caption: 'editorial.gameCover' },
   holoHunter: { file: 'holoHunter.webp', width: 1440, height: 960, caption: 'editorial.appScreenshot' },
 }
 const image = computed(() => screenshots[props.projectId])

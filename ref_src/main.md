@@ -335,6 +335,16 @@ Real-time PC parts price comparison tool aggregating quotes from multiple retail
 **Description（zh-TW）：** 以 Larch 製作的六章文字解謎。並排閱讀已故伴侶留下的三份記憶整理稿，依原件與證據逐句修復日期、來源，以及被自動摘要磨平的細節，最後決定如何保留一個人的複雜。三種結局，目前為私人測試版。
 **Description（en）：** A six-chapter text puzzle built in Larch. Read three memory drafts left by a late partner side by side, and use the originals and evidence to repair dates, sources and the details that automatic summaries smoothed away, then decide how to keep a person's complexity. Three endings; currently a private test build.
 
+#### 墓下無歸 / No Return Beneath the Tomb
+**ID:** tombNoReturn
+**Category:** Game
+**Tags:** Larch, Card Roguelike, Deckbuilding
+**Status:** inDevelopment
+**Subtitle（zh-TW）：** 古墓探索卡牌 Roguelike
+**Subtitle（en）：** Tomb-exploration card roguelike
+**Description（zh-TW）：** 以 Larch 製作的原創單人古墓探索卡牌 Roguelike。從勘探機關的祁遠繩、護衛破敵的鐵穗與以符術鎮邪的柳沉燈中選一人下墓，穿越七章墓室與分支遭遇，一路組牌組、收集遺物；拿走陪葬品會讓牌組多出「陰債」詛咒，最後在三種結局中做出選擇。仍在私人開發測試中，實機遊玩與整體平衡尚待驗證。
+**Description（en）：** An original single-player tomb-exploration card roguelike built in Larch. Descend as one of three explorers — Qi Yuansheng the mechanism surveyor, Tie Sui the guard, or Liu Chendeng the talisman lamp keeper — through seven chapters of tomb chambers and branching encounters, building a deck and collecting relics along the way. Taking burial treasures adds “Tomb Debt” curses to your deck, and the run ends with a choice among three endings. Still in private development and testing; hands-on play and overall balance are still being validated.
+
 ---
 
 ## GitHub Stats

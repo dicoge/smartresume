@@ -146,6 +146,18 @@ export const projects: Project[] = [
     status: "inDevelopment"
   },
   {
+    id: "tombNoReturn",
+    emoji: "",
+    category: "Game",
+    tags: [
+      "Larch",
+      "Card Roguelike",
+      "Deckbuilding"
+    ],
+    stats: [],
+    status: "inDevelopment"
+  },
+  {
     id: 'holoHunter',
     emoji: '🃏',
     category: 'AI Tools',
